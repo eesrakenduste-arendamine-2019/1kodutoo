@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+#container {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+}
+#clock-container {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex: 1;
+}
+#clock, #date {
+    text-align: center;
+    font-size: xx-large;
+}
+#options {
+    padding: 20px;
+    text-align: center;
+    background-color: #efefef;
+}
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
