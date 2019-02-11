@@ -10,18 +10,28 @@
 <body>
     <div id="container">
         <div id="options">
-            <input type="checkbox" name="show-date" id="show-date"> Show date
-            <input type="checkbox" name="show-time" id="show-time"> Show time
-            <input type="checkbox" name="dark-theme" id="dark-theme"> Dark theme
+            <input type="checkbox" name="show-date" id="show-date" checked> Show date |
+            <input type="checkbox" name="show-time" id="show-time" checked> Show time |
+            <input type="checkbox" name="dark-theme" id="dark-theme"> Dark theme |
+            <label for="time-size">Clock size: </label>
+            <select name="time-size" id="time-size">
+                <option value="0" selected>Small</option>
+                <option value="1">Medium</option>
+                <option value="2">Large</option>
+            </select>
         </div>
         <div id="clock-container">
-                <div id="clock">12:48</div>
-                <div id="date">Esmaspäev 11.02.2019</div>
+                <div id="clock"></div>
+                <div id="date"></div>
         </div>
         <footer>
-            Repo: <a href="https://github.com/KareVulli/1kodutoo">https://github.com/KareVulli/1kodutoo</a>
+            Made by: Marvin Helstein | 
+            Repo: <a href="https://github.com/KareVulli/1kodutoo">https://github.com/KareVulli/1kodutoo</a> |
+            <small>Powered by <a href="https://momentjs.com/">moment.js</a></small>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/et.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

@@ -4,9 +4,12 @@ html, body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
+    transition: background-color 0.4s ease-out, color 0.4s ease-out;
 }
+
 #container {
     min-height: 100%;
     position: relative;
@@ -14,6 +17,7 @@ html, body {
     flex-direction: column;
     padding-bottom: 3rem;
 }
+
 #clock-container {
     min-height: 100%;
     position: relative;
@@ -23,15 +27,26 @@ html, body {
     align-content: center;
     flex: 1;
 }
+
 #clock, #date {
     text-align: center;
     font-size: xx-large;
 }
+
+#clock.clock-medium {
+    font-size: 6em;
+}
+
+#clock.clock-large {
+    font-size: 12em;
+}
+
 #options {
     padding: 20px;
     text-align: center;
     background-color: #efefef;
 }
+
 footer {
     position: absolute;
     right: 0;
@@ -40,4 +55,30 @@ footer {
     padding: 1rem;
     background-color: #efefef;
     text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+body.dark-theme {
+    background-color: #222;
+    color: #ddd;
+}
+
+.dark-theme footer, .dark-theme #options {
+    background-color: #333333;
+    color: #ddd;
+}
+
+small {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-theme small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+a {
+    color: inherit;
 }
