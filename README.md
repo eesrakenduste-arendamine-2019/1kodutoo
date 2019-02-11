@@ -16,9 +16,9 @@ See also the list of [contributors](https://github.com/KareVulli/1kodutoo/contri
 
 **Default settings:**
 
-![Default settings](https://8jl8qw.am.files.1drv.com/y4mpKWBD9WCr-bxuQkxiQ2KLpvaACgaL-Ikj5YaLIG2fU6iC-P1-RMBbdLFouUWJJsjDZ0eU13W93y6XQR0p1QUD9BD9O3F4st50ON07cTsnfgqcsrMYZaBhEVNtze9kwXSwRMEb87YulimziFP0lzSdiJS6Rri1vjdc57qoLerBiOXV78oaU4WBkW9m_YOvJ_ue8f6z4QQLmrFCjZFQ0OAvw/Screenshot_2019-02-11%20Clock.png?psid=1)
+![Default settings](http://oi64.tinypic.com/wrm6hh.jpg)
 
 **Dark theme:**
 
-![Dark theme]()
+![Dark theme](http://i63.tinypic.com/259bdkx.jpg)
 
