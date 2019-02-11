@@ -1,3 +1,5 @@
+# Autor: Caupo Helvik
+
 # 1kodutoo
 1. kodutöö Eesrakenduste arendamises.
 
