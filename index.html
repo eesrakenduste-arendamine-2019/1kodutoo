@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="et">
+<meta>
+  <title>1. Kodutöö</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container">
+  <div id="author"><strong>Autor:</strong> Caupo Helvik</div>
+  <div><a target="_blank" href="https://github.com/Caupz/1kodutoo">Githubi viide</a></div>
+
+  <div id="clock-label"></div>
+  <div id="date-label"></div><br>
+  <div class="setting">
+    <label for="clock-color">Kella suurus</label><br>
+    <input id="clock-size" type="number" value="42" />
+  </div>
+  <div class="setting">
+    <label for="clock-color">Tekstivärv</label><br>
+    <input id="clock-color" type="color" value="#FFFFFF" />
+  </div>
+  <div class="setting">
+    <label for="background-color">Taustavärv</label><br>
+    <input id="background-color" type="color" value="#6d90e0"/>
+  </div>
+  <div class="setting">
+    <label for="align">Teksti paigutus</label><br>
+    <select id="align">
+      <option value="0">Keskel</option>
+      <option value="1">Vasakul</option>
+      <option value="2">Paremal</option>
+    </select>
+  </div>
+</div>
+
+<script>
+    let clockSize = document.querySelector("#clock-size");
+    clockSize.addEventListener("change", function() {
+        document.querySelector("#clock-label").style.fontSize = document.querySelector("#clock-size").value+"px";
+    });
+    clockSize.addEventListener("onkeyup", function() {
+        document.querySelector("#clock-label").style.fontSize = document.querySelector("#clock-size").value+"px";
+    });
+
+
+    document.querySelector("#clock-color").addEventListener("change", function() {
+        document.querySelector("body").style.color = document.querySelector("#clock-color").value;
+    });
+    document.querySelector("#background-color").addEventListener("change", function() {
+        document.querySelector("body").style.background = document.querySelector("#background-color").value;
+    });
+    document.querySelector("#align").addEventListener("change", function() {
+        let aligns = ["center", "left", "right"];
+        document.querySelector("#container").style.textAlign = aligns[document.querySelector("#align").value];
+    });
+</script>
+</body>
+</html>

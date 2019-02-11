@@ -1,0 +1,54 @@
+body {
+	font-family: Arial;
+	background: #6d90e0;
+	color: #FFF;
+}
+input {
+	width: 42px;
+}
+a {
+	background: #FFF;
+	color: #000;
+	padding: 10px;
+	border-radius: 8px;
+	display: inline-block;
+	font-weight: bold;
+	text-decoration: none;
+}
+input, select {
+	background: #FFF;
+	border: none;
+	padding: 10px 10px;
+	border-radius: 8px;
+	height: 42px;
+	margin: 10px 0;
+}
+
+#container {
+	text-align: center;
+	margin: 10% auto;
+	width: 800px;
+}
+
+#author {
+	font-size: 26px;
+}
+
+#clock-label {
+	font-size: 42px;
+}
+
+.setting {
+	display: inline-block;
+	margin: 20px;
+}
+
+#clock-size {
+	padding: 0px 10px;
+}
+
+@media only screen and (max-width: 800px) {
+	#container {
+		width: 100%;
+	}
+}
