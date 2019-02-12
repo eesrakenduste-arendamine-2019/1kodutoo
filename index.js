@@ -13,14 +13,14 @@ function init(){
 
   dayContainerElement = document.querySelector("#dayContainer");
   //changeColorButton.addEventListener("click", changeBackroundColor);
-  window.addEventListener("mousemove", changeBackroundColor);
+  //window.addEventListener("mousemove", changeBackroundColor);
 
   startClock();
 }
 
 
 
-function changeBackroundColor(){
+/*function changeBackroundColor(){
   console.log("Muudan värvi");
   const r = Math.round(Math.random()*255);
   const g = Math.round(Math.random()*255);
@@ -28,7 +28,7 @@ function changeBackroundColor(){
 
   clockContainer.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
   //document.body.style.backgroundColor =  'rgb('+r+','+g+','+b+')';
-}
+}*/
 
 function startClock(){
   updateClock();
@@ -38,9 +38,10 @@ function startClock(){
 }
 
 function updateClock(){
-  const date = new Date();
+  const date = String(new Date().getHours()).padStart(2, "0") + ":" + String(new Date().getMinutes()).padStart(2, "0") + ":" + String(new Date().getSeconds()).padStart(2, "0");
   clockContainer.innerHTML = date;
   let day;
+  let month;
 
   function getDay() {
     switch(new Date().getDay()){
@@ -69,6 +70,51 @@ function updateClock(){
   }
   getDay();
   dayContainerElement.innerHTML = day;
+
+  function getMonth(){
+    switch(new Date().getMonth()){
+      case 0:
+        month = "Jaanuar";
+        break;
+      case 1:
+        month = "Veebruar";
+        break;
+      case 2:
+        month = "Märts";
+        break;
+      case 3:
+        month = "Aprill";
+        break;
+      case 4:
+        month = "Mai";
+        break;
+      case 5:
+        month = "Juuni";
+        break;
+      case 6:
+        month = "Juuli";
+        break;
+      case 7:
+        month = "August";
+        break;
+      case 8:
+        month = "September";
+        break;
+      case 9:
+        month = "Oktoober";
+        break;
+      case 10:
+        month = "November";
+        break;
+      case 11:
+        month = "Detsember";
+        break;
+    }
+  }
+  getMonth();
+
+  const dateTime = new Date().getDate() + ". " + month;
+  dateContainer.innerHTML = dateTime;
 
 }
 /*const a = 6;
