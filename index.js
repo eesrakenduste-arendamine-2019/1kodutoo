@@ -12,23 +12,22 @@ function init(){
   clockContainer = document.querySelector("#clockContainer");
 
   dayContainerElement = document.querySelector("#dayContainer");
-  //changeColorButton.addEventListener("click", changeBackroundColor);
-  //window.addEventListener("mousemove", changeBackroundColor);
+  clockContainer.addEventListener("click", changeColor);
 
   startClock();
 }
 
 
 
-/*function changeBackroundColor(){
-  console.log("Muudan värvi");
+function changeColor(){
   const r = Math.round(Math.random()*255);
   const g = Math.round(Math.random()*255);
   const b = Math.round(Math.random()*255);
 
-  clockContainer.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
-  //document.body.style.backgroundColor =  'rgb('+r+','+g+','+b+')';
-}*/
+  clockContainer.style.color = 'rgb('+r+','+g+','+b+')';
+  dateContainer.style.color = 'rgb('+r+','+g+','+b+')';
+  dayContainer.style.color = 'rgb('+r+','+g+','+b+')';
+}
 
 function startClock(){
   updateClock();
@@ -117,18 +116,12 @@ function updateClock(){
   dateContainer.innerHTML = dateTime;
 
 }
-/*const a = 6;
-let short = 5;
-function doMath(){
-  var short = document.getElementById('math');
-  //short.innerHTML = Math.round(4.4);
-  //short.innerHTML = Math.ceil(4.1);
-  //short.innerHTML = Math.floor(4.6);
-  //short.innerHTML = Math.pow(4, 3);
-  short.innerHTML = Math.round(Math.random()*100);
-}
-window.onload = function(){
-  doMath();
-};
 
-console.log(short);*/
+//Sidenav menu
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}

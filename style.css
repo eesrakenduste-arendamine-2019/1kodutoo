@@ -1,0 +1,87 @@
+body {
+  background-color: powderblue;
+}
+
+#clockContainer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -100px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: Arial;
+  font-size: 150px;
+  font-weight: bold;
+}
+#dateContainer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: Arial;
+  font-size: 50px;
+  font-weight: bold;
+}
+#dayContainer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 50px;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: Arial;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/*Originaalne kood sidebari tarvis võetud: https://www.w3schools.com/howto/howto_js_sidenav.asp*/
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #2E2E2E; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav h1 {
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 35px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

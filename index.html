@@ -5,56 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
   <title>Clock</title>
-  <style>
-  body{
-    background-color: #41BAB6;
-  }
-  #clockContainer{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -100px;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-family: Arial;
-    font-size: 150px;
-    font-weight: bold;
-  }
-  #dateContainer{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-family: Helvetica;
-    font-size: 50px;
-    font-weight: bold;
-  }
-  #dayContainer{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: 50px;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-family: Helvetica;
-    font-size: 50px;
-    font-weight: bold;
-  }
-
-
-  </style>
 </head>
+
 <body>
 
   <div id="clockContainer"></div>
-  <!--<button id="clockButton">Muuda värvi</button>-->
   <div id="dateContainer"></div>
   <div id="dayContainer"></div>
+  <!-- Kood võetud: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+  <div id="mySidenav" class="sidenav">
+    <h1>Menüü</h1>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#Size">Muuda suurust</a>
+      <a href="#Bground">Muuda värvi</a>
+      <a href="#Music">Muuda tausta</a>
+  </div>
 
+  <div id="main">
+    <span style="font-size:60px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
 </body>
 </html>
