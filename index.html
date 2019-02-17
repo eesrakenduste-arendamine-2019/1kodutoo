@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+
+<style>
+#clockContainer{
+  position: absolute;
+  font-size: 500%;
+  font-family: "Aldrich";
+}
+#dateContainer{
+  position: absolute;
+  font-size: 250%;
+  font-family: "Aldrich";
+}
+#dayContainer{
+  position: absolute;
+  font-size: 250%;
+  font-family: "Aldrich";
+}
+#myBtn{
+  position:absolute;
+}
+</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="index.js"></script>
   <title>Clock</title>
+
 </head>
 <body>
-  <div id="clockContainer"></div>
   <div id="dayContainer"></div>
-  <button id="clockButton">yarrvutame</button>
+  <div id="nameContainer"></div>
+  <p>Viide rakenduse <a href="https://github.com/kertliinat/1kodutoo" target="_blank"> repositooriumile</a>
+  <div id="dateContainer"></div>
+<!--  <button type="button" id="myBtn" onclick="changeSize()">Nuppjupp</button>-->
+  <div id="clockContainer"></div>
+  <br>
+  <p>Fondi värvivalikud: </p>
+<button type="button" id="myColorBtn" onclick="changeFontColorToWhite()">Font valgeks</button><br><br>
+<button type="button" id="my1stColorBtn" onclick="changeFontColorToBlack()">Font mustaks</button><br><br>
+<!--<button type="button" id="my2ndColorBtn" onclick="changeColorToRed()">Font punaseks</button><br><br>-->
+<button type="button" id="myRandomFontColorBtn" onclick="randomizeFontColor()">Juhuslik värv</button>
+<br>
+<p>Fondi stiilivalikud: </p>
+<button type="button" id="myBtn" onclick="changeFont()">Times New Roman</button><br><br>
+<button type="button" id="my2ndBtn" onclick="defaultFont()">Aldrich</button>
+<p>Taustavärvi valikud: </p>
+<button type="button" id="myBckgrndBtn" onclick="changeBckgColorToWhite()">Valgeks</button><br><br>
+<button type="button" id="my2ndBckgrndBtn" onclick="originalBckColor()">Siniseks</button><br><br>
+<button type="button" id="myRandomBckgrndBtn" onclick="randomizeBckColor()">Juhuslik värv</button>
+<p>Öö/päev valikud: </p>
+<button type="button" id="nightModeBtn" onclick="nightMode()">Öine režiim</button><br><br>
+<button type="button" id="dayModeBtn" onclick="dayMode()">Päevane režiim</button>
+<p>Kella suurus:</p>
+<button type="button" id="decrease" onclick="decreaseSize()">Vähenda kella suurust</button><br><br>
+<button type="button" id="default" onclick="returnSize()">Algne suurus</button>
 
 
 </body>
