@@ -1,24 +1,27 @@
 # 1. Kodutöö
 
-This is a simple date an time displayer.
+See on lihtne kellaaja ja kuupäeva näitaja.
 
-## Built With
+**Funktsionaalsus:**
+* Võimalik on kella või kuupäeva peita. 
+* Kella suurust saab vajadusel muuta.
+* Lehel saab valida tumeda teema.
 
-* [moment.js](http://momentjs.com) - Date and time formatter
+## Arendaja
 
-## Authors
+* **Marvin Helstein**
 
-* **Marvin Helstein** - *Main developer*
+## Kasutatud teegid
 
-See also the list of [contributors](https://github.com/KareVulli/1kodutoo/contributors) who participated in this project.
+* [moment.js](https://momentjs.com) - Kella ja kuupäeva vormindaja
 
-## Preview
+## Eelvaade
 
-**Default settings:**
+**Vaikimisi seaded:**
 
 ![Default settings](http://oi64.tinypic.com/wrm6hh.jpg)
 
-**Dark theme:**
+**Tume teema:**
 
 ![Dark theme](http://i63.tinypic.com/259bdkx.jpg)
 
