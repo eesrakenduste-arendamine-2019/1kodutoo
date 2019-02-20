@@ -7,18 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="clock.css">
     <script type="text/javascript "src="clock.js"></script>
-    <title>Clock Application</title>
+    <title>Clock</title>
 </head>
-<body>
+<body id = "mainbody">
 <!--KELLAD-->
-<div id = "clockContainer"></div>
-
-
+<div id = "body"><!--Selleks et footer oleks alati paigutatud lehe allalpool-->
+<div id = "clockContainer">
+  <span id="hour"></span><span id="minute"></span><span id="second"></span>
+  <br/>
+  <span id="weekday"></span>
+  <br/>
+  <span id="day"></span>
+  <span id="month"></span>
+  <span id="year"></span>
+</div>
 
 <!--KELLA MUUTUMISE NUPUD-->
-<div id = "buttonWrapper"></div>
-
-
+<div id = "buttonWrapper">
+  <button id="change-color">COLOR</button>
+  <button id="change-image">BACKGOUND</button>
+  <button id="onoff-music">MUSIC</button>
+  <button id="reset">RESET</button>
+</div>
+</div>
 <!--AUTOR-->
 <footer id="nimi">Tatjana Kuznetsova
     <br><a href="https://github.com/kuznetsovatatjana/1kodutoo">Github</a></br>
