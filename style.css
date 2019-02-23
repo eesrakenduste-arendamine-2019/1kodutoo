@@ -1,0 +1,96 @@
+body {
+  }
+div.container {
+    margin: 150px auto;
+    width: 50%;
+}
+div.timeContainer{
+    color: white;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    font-family: Times New Roman;
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+  }
+div.dayContainer{
+    color: white;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    font-family: Times New Roman;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+button, label {
+    height: 20px;
+    width: 150px;
+    background-color: rgba(168, 157, 157, 0.466);
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+div.buttonContainer{
+  padding: 20px;
+  text-align: center;
+  border-width: 3px;
+  border-style: double;  /* solid, dashed, dotted, inset groove, double */
+  border-color: rgba(12, 12, 12, 0.315);
+  background-color: rgba(98, 116, 124, 0.192);
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.buttoncontainer.h1 {
+  color: white;
+}
+/*input[type="color"] {
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+}*/
+.slidecontainer {
+  width: 100px; /* Width of the outside container */
+}
+.slider {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 15px;
+  border-radius: 5px;   
+  background: rgba(168, 157, 157, 0.61);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background:rgb(168, 157, 157);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(168, 157, 157);
+  cursor: pointer;
+}
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}

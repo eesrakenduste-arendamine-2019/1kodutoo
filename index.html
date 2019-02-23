@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <script src="index2.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Clock</title>
 </head>
 <body>
-  <p>Tegemata veel!</p>
+<div id="container" class="container">
+  <div id="timeContainer" class="timeContainer"></div>
+  <div id="dayContainer" class ="dayContainer"></div>
+</div>
+  <div id="buttonContainer" class="buttonContainer">
+    <button id="change-color">Suvaline värv</button>
+    <button id="change-text-font">Arial</button><br>
+    <label for="colorChange">Taustavärv: </label>
+    <input id="colorChange" type="color" onchange="changeColor(this.value)" value="#FFFFFF"/>
+    <label for="textColorChange">Kirjavärv: </label>
+    <input id="textColorChange" type="color" onchange="changeTextColor(this.value)" value="#FFFFFF"/><br>
+    <div class="slidercontainer"><input id="slider" class="slider" min="1" max="10" value='10' step="1" onchange="showVal(this.value)" type="range"/></div> 
+  </div>
 </body>
+<footer><hr>maded by Gertin Pakkonen. <a href="http://github.com/gertpak/1kodutoo" target="_blank">Repositoorium</a></div></footer>
 </html>
