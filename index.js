@@ -1,24 +1,28 @@
 /*jshint esversion: 6*/
 let clockContainer;
+let dateContainer;
 let changeColorButton;
 let dayContainerElement;
+let authorContainer;
 
 window.onload = function(){
   init();
 };
 
 function init(){
-  changeColorButton = document.querySelector("#clockButton");
   clockContainer = document.querySelector("#clockContainer");
-
+  dateContainer = document.querySelector("#dateContainer");
   dayContainerElement = document.querySelector("#dayContainer");
+  authorContainer = document.querySelector("#author");
+
   clockContainer.addEventListener("click", changeColor);
+  dateContainer.addEventListener("click", changeColor);
+  dayContainerElement.addEventListener("click", changeColor);
 
   startClock();
 }
 
-
-
+//Värvi vahetus
 function changeColor(){
   const r = Math.round(Math.random()*255);
   const g = Math.round(Math.random()*255);
@@ -26,9 +30,21 @@ function changeColor(){
 
   clockContainer.style.color = 'rgb('+r+','+g+','+b+')';
   dateContainer.style.color = 'rgb('+r+','+g+','+b+')';
-  dayContainer.style.color = 'rgb('+r+','+g+','+b+')';
+  dayContainerElement.style.color = 'rgb('+r+','+g+','+b+')';
+  main.style.color = 'rgb('+r+','+g+','+b+')';
+  authorContainer.style.color = 'rgb('+r+','+g+','+b+')';
 }
 
+//Reset color
+function resetColor(){
+  clockContainer.style.color = 'rgb(255,255,255)';
+  dateContainer.style.color = 'rgb(255,255,255)';
+  dayContainerElement.style.color = 'rgb(255,255,255)';
+  main.style.color = 'rgb(255,255,255)';
+  authorContainer.style.color = 'rgb(255,255,255)';
+}
+
+//Kell
 function startClock(){
   updateClock();
   window.setInterval(function(){
@@ -36,62 +52,65 @@ function startClock(){
   }, 1000);
 }
 
+//Kella update
 function updateClock(){
   const date = String(new Date().getHours()).padStart(2, "0") + ":" + String(new Date().getMinutes()).padStart(2, "0") + ":" + String(new Date().getSeconds()).padStart(2, "0");
   clockContainer.innerHTML = date;
   let day;
   let month;
 
+  //Päeva saamine
   function getDay() {
     switch(new Date().getDay()){
       case 0:
-        day = "Pühapäev";
+        day = "Sunday";
         break;
       case 1:
-        day = "Esmaspäev";
+        day = "Monday";
         break;
       case 2:
-        day = "Teisipäev";
+        day = "Tuesday";
         break;
       case 3:
-        day = "Kolmapäev";
+        day = "Wednesday";
         break;
       case 4:
-        day = "Neljapäev";
+        day = "Thursday";
         break;
       case 5:
-        day = "Reede";
+        day = "Friday";
         break;
       case 6:
-        day = "Laupäev";
+        day = "Saturday";
         break;
     }
   }
   getDay();
   dayContainerElement.innerHTML = day;
 
+  //Kuu saamine
   function getMonth(){
     switch(new Date().getMonth()){
       case 0:
-        month = "Jaanuar";
+        month = "January";
         break;
       case 1:
-        month = "Veebruar";
+        month = "February";
         break;
       case 2:
-        month = "Märts";
+        month = "March";
         break;
       case 3:
-        month = "Aprill";
+        month = "April";
         break;
       case 4:
-        month = "Mai";
+        month = "May";
         break;
       case 5:
-        month = "Juuni";
+        month = "June";
         break;
       case 6:
-        month = "Juuli";
+        month = "July";
         break;
       case 7:
         month = "August";
@@ -100,13 +119,13 @@ function updateClock(){
         month = "September";
         break;
       case 9:
-        month = "Oktoober";
+        month = "Oktober";
         break;
       case 10:
         month = "November";
         break;
       case 11:
-        month = "Detsember";
+        month = "December";
         break;
     }
   }
@@ -117,11 +136,15 @@ function updateClock(){
 
 }
 
-//Sidenav menu
+//Sidenav avane ja sulge
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.opacity = 0;
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  setTimeout(function() {
+    document.getElementById("main").style.opacity = 1;
+  }, 500);
 }

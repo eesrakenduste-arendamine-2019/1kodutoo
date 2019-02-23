@@ -5,26 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="index.js"></script>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Clock</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Nova+Mono');
+    @import url('https://fonts.googleapis.com/css?family=Aldrich');
+    @import url('https://fonts.googleapis.com/css?family=B612+Mono');
+
+  </style>
 </head>
 
 <body>
-
-  <div id="clockContainer"></div>
-  <div id="dateContainer"></div>
-  <div id="dayContainer"></div>
+  <div class="dateAndTime">
+    <div id="clockContainer"></div>
+    <div id="dateContainer"></div>
+    <div id="dayContainer"></div>
+  </div>
   <!-- Kood võetud: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
   <div id="mySidenav" class="sidenav">
-    <h1>Menüü</h1>
+    <h1>Menu</h1>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#Size">Muuda suurust</a>
-      <a href="#Bground">Muuda värvi</a>
-      <a href="#Music">Muuda tausta</a>
+      <a href="javascript:void(0)" onclick="changeTheme()">Change theme</a>
+      <a href="javascript:void(0)" onclick="changeFontSize()">Change font size</a>
+      <a href="javascript:void(0)" onclick="resetColor()">Reset color</a>
+      <a target="_blank" href="https://github.com/erkkisula/1kodutoo">Repository</a>
   </div>
+  
 
   <div id="main">
     <span style="font-size:60px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
+
+  <div id="author">
+    <marquee behavior="scroll" direction="left">Author: Erkki Sula</marquee>
   </div>
 </body>
 </html>

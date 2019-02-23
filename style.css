@@ -1,63 +1,86 @@
-body {
-  background-color: powderblue;
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('fonts/Braciola MS ExB.ttf');
+}
+@font-face{
+  font-family: 'lcd-clock';
+  src: url('fonts/digital-7\ \(mono\).ttf');
 }
 
-#clockContainer{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: -100px;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-family: Arial;
-  font-size: 150px;
-  font-weight: bold;
+@font-face{
+  font-family: 'beach';
+  src: url('fonts/Kingthings\ Trypewriter\ 2.ttf');
 }
-#dateContainer{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-family: Arial;
-  font-size: 50px;
-  font-weight: bold;
+
+body {
+  background-color: #2E2E2E;
+  background-image: url('backgrounds/theme1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-position: center center;*/
 }
-#dayContainer{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: 50px;
-  transform: translate(-50%, -50%);
+
+#author {
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-family: Arial;
-  font-size: 50px;
-  font-weight: bold;
+  font-family:'digital-clock-font';
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+}
+
+.dateAndTime{
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family:'digital-clock-font';
+  transition: margin-left .5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size:150px;
+}
+
+.dateAndTime #clockContainer{
+  text-align: center;
+  font-size: 90%;
+}
+
+.dateAndTime #dateContainer{
+  font-size: 40%;
+}
+
+.dateAndTime #dayContainer{
+  font-size: 40%;
+}
+
+.dateAndTime:hover{
+  cursor: pointer;
 }
 
 /*Originaalne kood sidebari tarvis võetud: https://www.w3schools.com/howto/howto_js_sidenav.asp*/
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  background-color: #2E2E2E; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: #2E2E2E;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  opacity: 0.6;
 }
 .sidenav h1 {
   padding: 0px 8px 8px 32px;
   text-decoration: none;
   font-size: 35px;
-  color: #818181;
+  color: #f1f1f1;
   display: block;
   transition: 0.3s;
+  opacity: 0.9;
 }
 .sidenav a {
   padding: 8px 8px 8px 32px;
@@ -66,9 +89,11 @@ body {
   color: #818181;
   display: block;
   transition: 0.3s;
+  opacity: 0.9;
 }
-.sidenav a:hover {
+.sidenav a:hover, .offcanvas a:focus{
   color: #f1f1f1;
+  cursor: pointer;
 }
 .sidenav .closebtn {
   position: absolute;
@@ -80,6 +105,8 @@ body {
 #main {
   transition: margin-left .5s;
   padding: 16px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
