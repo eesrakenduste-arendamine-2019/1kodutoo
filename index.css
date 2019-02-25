@@ -1,0 +1,72 @@
+body{
+	background-color: black;
+	
+}
+
+.li{
+	color: yellow;
+}
+
+
+.date{
+	position: absolute;
+	top: 53%;
+    left: 50%;
+	transform: translateX(-53%) translateY(-50%);
+	color: #00FFFF;
+	font-family:Lucida Console;
+	font-size: 25px;
+	text-shadow: 2px 2px green;
+}
+
+.time{
+	position: absolute;
+	top: 55%;
+    left: 50%;
+	transform: translateX(-55%) translateY(-50%);
+	color: #00FFFF;
+	font-family:Lucida Console;
+	font-size: 65px;
+	text-shadow: 3px 3px red;
+}
+.day{
+	position: absolute;
+	top: 47%;
+    left: 49.5%;
+	transform: translateX(-47%) translateY(-49.5%);
+	color: #00FFFF;
+	font-family:Lucida Console;
+	text-shadow: 2px 2px green;
+	font-size: 25px;
+}
+.input{
+	position: absolute;
+	top: 74%;
+    left: 40%;
+	transform: translateX(-74%) translateY(-40%);
+	
+}
+
+.decrease{
+	position: absolute;
+	top: 74%;
+    left: 46%;
+	transform: translateX(-74%) translateY(-46%);
+}
+	
+.increase{
+	position: absolute;
+	top: 74.2%;
+    left: 53%;
+	transform: translateX(-74.2%) translateY(-53%);
+}
+	
+
+h3{
+	color: white;
+	
+
+}
+
+
+
