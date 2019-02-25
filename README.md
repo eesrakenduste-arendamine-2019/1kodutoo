@@ -1,3 +1,5 @@
+Rait Väiko.
+
 Koodis on tegemist kellaga, mis näitab mis päev hetkel on,
 seejärel kuupäeva ja mis kuu on ning lõpuks täpset kellaaega sekunditega.
 
