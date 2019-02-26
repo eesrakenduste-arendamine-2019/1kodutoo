@@ -11,7 +11,6 @@ window.onload = function () {
 function init () {
     clockContainer = document.querySelector('#clock');
     clockContainer.addEventListener('click', changeSize);
-    console.log(clockContainer);
     //vaheta värvi nupp
     changeColorButton = document.querySelector('#change-color');
     changeColorButton.addEventListener('click', changeColor);
@@ -47,7 +46,6 @@ function reset(){
 }
 //vaheta värvi funktsioon
 function changeColor () {
-    console.log('muudan värvi');
 
     const r = Math.round(Math.random() * 255);
     const g = Math.round(Math.random() * 255);
@@ -57,7 +55,6 @@ function changeColor () {
 }
 //vaheta suuruse funktsioon
 function changeSize (){ //w3schools
-    console.log('muudan suuruse');
     var s = document.getElementById('clock');
     var sstyle = window.getComputedStyle(s, null).getPropertyValue('font-size');
     if (sstyle == "25px") {
@@ -70,7 +67,6 @@ function changeSize (){ //w3schools
 var x = 0; //stackoverflow
 var pics = ['plant.png', 'owl.png', 'blueberry.png'];
 function changeBackground (){
-    console.log('change background');
     var b = document.getElementById('mainbody');
     b.style.backgroundImage = 'url('+pics[(x++)%3]+')';
 }
