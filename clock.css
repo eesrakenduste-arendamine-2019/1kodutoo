@@ -4,8 +4,24 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url("blueberry.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    font-family: 'Indie Flower';
+    font-size: 20px;
+    width: 100%;
+
+}
+
+#body{
+    padding-bottom: 80px;
+    width: 100%;
+}
+
 #clock{
-    color: black;
+    color: white;
     text-align: center;
     font-weight: bold;
     font-size: 25px;
@@ -15,4 +31,56 @@
     padding: 50px;
     width: 500px;
     margin: 100px auto;
+}
+
+button {
+    background-color: transparent;
+    border: solid;
+    border-color: white;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Indie Flower';
+    font-weight: bolder;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline;
+
+}
+
+.button-wrapper{
+    margin: 0 auto;
+    width: 511px;
+}
+
+footer{
+    height: 80px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: white;
 }
