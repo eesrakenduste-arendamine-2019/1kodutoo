@@ -1,12 +1,12 @@
-body {
-  }
+
 div.container {
     margin: 150px auto;
-    width: 50%;
+    height: 5%;
+    width: 70%; 
+    float:left; 
 }
 div.timeContainer{
     color: white;
-    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
     font-family: Times New Roman;
     font-size: 150px;
     font-weight: bold;
@@ -14,7 +14,6 @@ div.timeContainer{
   }
 div.dayContainer{
     color: white;
-    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
     font-family: Times New Roman;
     font-size: 50px;
     font-weight: bold;
@@ -29,29 +28,37 @@ button, label {
     font-size: 13px;
     color: white;
     text-decoration: none;
-    margin: 4px 2px;
     cursor: pointer;
+    margin:5px;
 }
 div.buttonContainer{
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   border-width: 3px;
-  border-style: double;  /* solid, dashed, dotted, inset groove, double */
+  border-style: double; 
   border-color: rgba(12, 12, 12, 0.315);
   background-color: rgba(98, 116, 124, 0.192);
-  margin-bottom: 10px;
   border-radius: 20px;
+  width:20%; 
+  float:right; 
+  margin: 150px 20px;
 }
 .buttoncontainer.h1 {
   color: white;
 }
-/*input[type="color"] {
-	border-radius: 50%;
-	width: 32px;
-	height: 32px;
-}*/
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(136, 135, 135, 0.178);
+  text-align: center;
+}
+
 .slidecontainer {
-  width: 100px; /* Width of the outside container */
+  width: 100px;
+  margin: 10px;
 }
 .slider {
   -webkit-appearance: none;
@@ -85,7 +92,8 @@ div.buttonContainer{
 input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
-	width: 32px;
+  width: 32px;
+  margin: 5px;
 	height: 32px;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -93,4 +101,50 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 }
 input[type="color"]::-webkit-color-swatch {
 	border: none;
+}
+
+.clock {
+  width: 22rem;
+  height: 22rem;
+  border:6px solid white;
+  border-radius:50%;
+  margin: auto;
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+.hand {
+  width:50%;
+  height:6px;
+  background:black;
+  position: absolute;
+  top:50%;
+  transform-origin: 100%; 
+  transform: rotate(90deg);   
+  transition: all 0.05s; 
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1)
+}
+.min-hand{
+  background:rgba(117,134,153,1);
+}
+.second-hand{
+  height: 3px;
+}
+.hour-hand {
+  background: linear-gradient(to left, rgba(117,134,153,1) 0%,rgba(117,134,153,1) 70%,rgba(117,134,153,1) 70%,rgba(117,134,153,0) 53%,rgba(117,134,153,0) 100%);
+  z-index: 99;
+}
+.analogBack{
+  position: absolute;
+  left: -9.5px;
+  top: -7px;
+  transform: scale(0.89);
 }
