@@ -24,12 +24,11 @@ let increaseFontButton;
 let decreaseFontButton;
 
 window.onload = function() {
+    forceHttps();
     init();
 };
 
 function init(){
-    forceHttps();
-
     // Initialize HTML element selectors
     clockText = document.querySelector("#clockText");
     weekDayText = document.querySelector("#weekDayText");
@@ -66,6 +65,7 @@ function init(){
     });
 
     startClock();
+    getColors();
 }
 
 function forceHttps(){
