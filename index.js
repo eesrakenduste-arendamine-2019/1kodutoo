@@ -1,5 +1,9 @@
 /*jshint esversion: 6*/
 
+let formattedTime;
+let formattedWeekDay;
+let formattedDate;
+
 let clockText;
 let weekDayText;
 let dateText;
@@ -8,10 +12,7 @@ let textColorPicker;
 let textColorButton;
 let bgColorPicker;
 let bgColorButton;
-
-let formattedTime;
-let formattedWeekDay;
-let formattedDate;
+let clockFontPicker;
 
 window.onload = function() {
     init();
@@ -32,6 +33,7 @@ function init(){
     textColorButton = document.querySelector("#textColorButton");
     bgColorPicker = document.querySelector("#bgColorPicker");
     bgColorButton = document.querySelector("#bgColorButton");
+    clockFontPicker = document.querySelector("#clockFontPicker");
 
     // Add events to elements
     textColorPicker.addEventListener('input', (event) => {
@@ -44,7 +46,10 @@ function init(){
     });
     bgColorButton.addEventListener('click', randomizeBackgroundColor);
 
-    getColors();
+    clockFontPicker.addEventListener('input', (event) => {
+        setBodyFont(clockFontPicker.selectedIndex);
+    });
+
     startClock();
 }
 
@@ -59,7 +64,6 @@ function getColors(){
     textColorPicker.value = rgbToHex(clockText.style.color);
     bgColorPicker.value = rgbToHex(document.body.style.backgroundColor);
 }
-
 
 function setBackgroundColor(hex){
     console.log(`Background color changed to ${hex}`);
@@ -98,6 +102,12 @@ function randomizeTextColor(){
     dateText.style.color = `rgb(${r},${g},${b})`;
     getColors();
 }
+
+function setBodyFont(selection) {
+    // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_fontfamily2
+    var listValue = clockFontPicker.options[selection].text;
+    document.body.style.fontFamily = listValue;
+  }
 
 function startClock(){
     window.setInterval(function(){

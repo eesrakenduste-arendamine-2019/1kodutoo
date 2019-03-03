@@ -1,5 +1,8 @@
-p, a, label, button, select {
+body {
     font-family: 'GlacialIndifferenceRegular';
+}
+
+p, a, label, button, select {
     font-weight: normal;
     font-style: normal;
     text-align: center;
