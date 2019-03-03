@@ -4,6 +4,8 @@ https://greeny.cs.tlu.ee/~madiote/eesrakendused/1kodutoo/
 
 Madis Otenurm
 
+[![](https://vgy.me/Q8IucU.png)](https://vgy.me/Q8IucU.png)
+
 ## Omadused
 
 * TODO: värvivalija lehe avamisel
