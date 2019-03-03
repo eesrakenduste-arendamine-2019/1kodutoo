@@ -8,21 +8,27 @@ let clockText;
 let weekDayText;
 let dateText;
 
+let clockSize;
+let weekDaySize;
+let dateSize;
+
 let textColorPicker;
 let textColorButton;
+
 let bgColorPicker;
 let bgColorButton;
+
 let clockFontPicker;
+
+let increaseFontButton;
+let decreaseFontButton;
 
 window.onload = function() {
     init();
 };
 
 function init(){
-    // Force HTTPS using JS
-    if (location.protocol == 'http:'){
-        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-    }
+    forceHttps();
 
     // Initialize HTML element selectors
     clockText = document.querySelector("#clockText");
@@ -34,6 +40,8 @@ function init(){
     bgColorPicker = document.querySelector("#bgColorPicker");
     bgColorButton = document.querySelector("#bgColorButton");
     clockFontPicker = document.querySelector("#clockFontPicker");
+    increaseFontButton = document.querySelector("#increaseFontButton")
+    decreaseFontButton = document.querySelector("#decreaseFontButton")
 
     // Add events to elements
     textColorPicker.addEventListener('input', (event) => {
@@ -50,7 +58,20 @@ function init(){
         setBodyFont(clockFontPicker.selectedIndex);
     });
 
+    increaseFontButton.addEventListener('click', function() {
+        changeFontSizes("+");
+    });
+    decreaseFontButton.addEventListener('click', function() {
+        changeFontSizes("-");
+    });
+
     startClock();
+}
+
+function forceHttps(){
+    if (location.protocol == 'http:'){
+        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    }
 }
 
 function rgbToHex(rgb){
@@ -58,11 +79,6 @@ function rgbToHex(rgb){
     let hex = '#' + rgb.substr(4, rgb.indexOf(')') - 4).split(',').map((color) => 
                     parseInt(color).toString(16)).join('');
     return hex;
-}
-
-function getColors(){
-    textColorPicker.value = rgbToHex(clockText.style.color);
-    bgColorPicker.value = rgbToHex(document.body.style.backgroundColor);
 }
 
 function setBackgroundColor(hex){
@@ -103,6 +119,23 @@ function randomizeTextColor(){
     getColors();
 }
 
+function changeFontSizes(modifier){
+    getFontSizes();
+
+    let size = 1.5;
+
+    if(modifier == "+"){
+        clockText.style.fontSize = clockSize * size + "px";
+        weekDayText.style.fontSize = weekDaySize * size + "px";
+        dateText.style.fontSize = dateSize * size + "px";
+    }
+    else if (modifier == "-"){
+        clockText.style.fontSize = clockSize / size + "px";
+        weekDayText.style.fontSize = weekDaySize / size + "px";
+        dateText.style.fontSize = dateSize / size + "px";
+    }
+}
+
 function setBodyFont(selection) {
     // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_fontfamily2
     var listValue = clockFontPicker.options[selection].text;
@@ -124,6 +157,17 @@ function startClock(){
         formattedWeekDay = date.toLocaleDateString("et-EE", weekDayFormat);
         formattedDate = date.toLocaleString("et-EE", dateFormat);
     }, 1000); // 1000 ms = 1 s
+}
+
+function getColors(){
+    textColorPicker.value = rgbToHex(clockText.style.color);
+    bgColorPicker.value = rgbToHex(document.body.style.backgroundColor);
+}
+
+function getFontSizes(){
+    clockSize = parseInt((window.getComputedStyle(clockText).fontSize).replace("px",""));
+    weekDaySize = parseInt((window.getComputedStyle(weekDayText).fontSize).replace("px",""));
+    dateSize = parseInt((window.getComputedStyle(dateText).fontSize).replace("px",""));
 }
 
 function updateClock() {
