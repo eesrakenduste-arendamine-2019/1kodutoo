@@ -1,0 +1,34 @@
+p, a, label, button, select {
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+} 
+
+#containers {
+    top: 50%;
+    left: 50%;
+    display: grid;
+    margin: none;
+    padding: none;
+}
+
+#options {
+    position:absolute;
+    bottom:1em;
+    left:1em;
+}
+
+#clockContainer > #clockText {
+    font-size: 20vw;
+}
+
+#weekDayContainer > #weekDayText {
+    font-size: 8vw;
+}
+
+#dateContainer > #dateText {
+    font-size: 5vw;
+}
