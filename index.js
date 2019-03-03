@@ -33,23 +33,23 @@ function init(){
     bgColorPicker = document.querySelector("#bgColorPicker");
     bgColorButton = document.querySelector("#bgColorButton");
 
-    //getColors();
-
     // Add events to elements
-    textColorPicker.addEventListener('onchange', (event) => {
+    textColorPicker.addEventListener('input', (event) => {
         setTextColor(textColorPicker.value);
     });
     textColorButton.addEventListener('click', randomizeTextColor);
-    bgColorPicker.addEventListener('onchange', (event) => {
+
+    bgColorPicker.addEventListener('input', (event) => {
         setBackgroundColor(bgColorPicker.value);
     });
     bgColorButton.addEventListener('click', randomizeBackgroundColor);
 
+    getColors();
     startClock();
 }
 
 function rgbToHex(rgb){
-    //https://stackoverflow.com/a/33511903
+    // https://stackoverflow.com/a/33511903
     let hex = '#' + rgb.substr(4, rgb.indexOf(')') - 4).split(',').map((color) => 
                     parseInt(color).toString(16)).join('');
     return hex;
@@ -63,7 +63,7 @@ function getColors(){
 
 function setBackgroundColor(hex){
     console.log(`Background color changed to ${hex}`);
-
+    
     document.body.style.backgroundColor = hex;
 }
 
@@ -80,9 +80,10 @@ function randomizeBackgroundColor(){
     const g = randomColor();
     const b = randomColor();
 
-    console.log(`Background color changed to ${r},${g},${b}`);
+    console.log(`Background color changed to ` + rgbToHex(`rgb(${r},${g},${b})`));
 
     document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+    getColors();
 }
 
 function randomizeTextColor(){
@@ -90,11 +91,12 @@ function randomizeTextColor(){
     const g = randomColor();
     const b = randomColor();
 
-    console.log(`Text color changed to ${r},${g},${b}`);
+    console.log(`Text color changed to ` + rgbToHex(`rgb(${r},${g},${b})`));
 
     clockText.style.color = `rgb(${r},${g},${b})`;
     weekDayText.style.color = `rgb(${r},${g},${b})`;
     dateText.style.color = `rgb(${r},${g},${b})`;
+    getColors();
 }
 
 function startClock(){
