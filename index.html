@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="design.css">
+  <title>Clock</title>
+</head>
+<body>
+<div>
+    <p><div id="name" class="type">Daniel Golubkov</p>
+	<a href="https://github.com/dangol9/1kodutoo" class="link">Github</a>
+  </div>
+  
+  <div id="clockContainer" class="time"></div>
+  
+  <div id="dayContainer" class="day"></div>
+  
+  <div id="monthAndYearContainer" class="yearandmonth"></div>
+  
+   <div id = "menu">
+   <br><button id="clockButton" class="type">Muuda tausta värvi</button>
+   <br><button id="clockBackgroundButton" class="type">Muuda kella värvi</button>
+   <br><button id="hide" class="type">Peida kuupäeva</button>
+   <br><button id="show" class="type">Näita kuupäeva</button>
+   <br><button id="hide2" class="type">Peida nädalapäeva</button>
+   <br><button id="show2" class="type">Näita nädalapäeva</button><br>
+   <br><div class="type">Vali oma taustapilt</p>
+   <input onclick="peidaValikud()" type='file' id='picupload' name="background-image"/>
+   <br><button id="hidemenu" class="type">Peida menuu</button>
+   </div>
+   </div>
+   <br><button id="showmenu" class="type">Näita menuu</button><br>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+   
+$(document).ready(function(){
+$("#hide").click(function(){
+    $('#monthAndYearContainer').fadeOut();
+  });
+  $("#show").click(function(){
+    $("#monthAndYearContainer").fadeIn();
+  });
+});
+
+$(document).ready(function(){
+$("#hide2").click(function(){
+    $('#dayContainer').fadeOut();
+  });
+  $("#show2").click(function(){
+    $("#dayContainer").fadeIn();
+  });
+});
+
+$(document).ready(function(){
+$("#hidemenu").click(function(){
+    $('#menu').fadeOut();
+  });
+  $("#showmenu").click(function(){
+    $("#menu").fadeIn();
+  });
+});
+</script>
+   </body>
+</html>

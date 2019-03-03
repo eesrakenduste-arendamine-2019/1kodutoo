@@ -1,0 +1,70 @@
+@font-face 
+{
+    font-family: 'digital';
+    src: URL('fonts/DS-DIGIT') format('truetype');
+}
+
+@font-face 
+{
+    font-family: 'forwa';
+    src: URL('fonts/FFFFORWA') format('truetype');
+}
+
+html, body 
+{
+    padding: 0px;
+    margin: 0px;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.type
+{
+    padding:0px;
+    margin:0px;
+    font-family: forwa;
+}
+
+.link
+{
+    font-family: forwa;
+    text-decoration: none;
+    color: black;
+}
+
+.time 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 100px;
+    font-family: digital;
+    letter-spacing: 7px;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.day 
+{
+	position: absolute;
+	top: 40%;
+	left: 38%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 60px;
+    font-family: digital;
+	letter-spacing: 7px;
+}
+
+.yearandmonth 
+{
+	position: absolute;
+	top: 60%;
+	left: 65%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 60px;
+    font-family: digital;
+	letter-spacing: 7px;
+}
