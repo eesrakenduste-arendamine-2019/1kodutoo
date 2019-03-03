@@ -1,13 +1,40 @@
 html, body {
     margin: 0;
     height: 100%;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Righteous', cursive;
     box-sizing: border-box;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
-    transition: background-color 0.4s ease-out, color 0.4s ease-out;
+    transition: background-color 0.4s ease-out, color 0.4s ease-out, font-size 0.2s ease-out;
+}
+
+#notification {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #98ffa1;
+    border: 2px solid #199600;
+    border-radius: 5px;
+    padding: 5px;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+    pointer-events: none;
+}
+
+#notification p {
+    padding: 0;
+    margin: 0;
+}
+
+#notification.hidden {
+    transition: opacity 0.5s ease-out;
+}
+
+.dark-theme #notification {
+    background: #2c2c2c;
+    border: 2px solid #083000;
 }
 
 #container {
@@ -28,23 +55,60 @@ html, body {
     flex: 1;
 }
 
-#clock, #date {
+#clock, #date, #colors {
     text-align: center;
-    font-size: xx-large;
 }
 
-#clock.clock-medium {
-    font-size: 6em;
+#clock {
+    font-size: 3em;
 }
 
-#clock.clock-large {
-    font-size: 12em;
+#clock .time-part {
+    display: inline-block;
+}
+
+.color-picker {
+    display: block;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 8px;
+	width: 100%;
+    height: 16px;
+    text-align: center;
+
+}
+
+.color-picker:hover {
+    border: 3px solid #199600;
+}
+
+.dark-theme .color-picker:hover {
+    border: 3px solid #ddd;
+}
+
+
+input[type="color"] {
+	opacity: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+
+#date {
+    font-size: 2em;
 }
 
 #options {
     padding: 20px;
     text-align: center;
     background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
@@ -58,7 +122,7 @@ footer {
 }
 
 .hidden {
-    display: none;
+    opacity: 0!important;
 }
 
 body.dark-theme {
@@ -81,4 +145,71 @@ small {
 
 a {
     color: inherit;
+}
+
+
+.time-size-container {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.separator {
+    padding: 0 8px;
+}
+
+input[type=checkbox] {
+    margin-left: 0;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgb(255, 255, 255);
+    border-radius: 50%; 
+    border: 1px solid rgb(27, 27, 27);
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgb(255, 255, 255);
+    border-radius: 50%; 
+    border: 1px solid rgb(27, 27, 27);
+}
+  
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #888888;
+    border-radius: 5px;
+}
+  
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #888888;
+    border-radius: 5px;
+    color: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #888888;
+    border-radius: 5px;
 }

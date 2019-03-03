@@ -6,32 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clock</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 </head>
 <body>
     <div id="container">
         <div id="options">
-            <input type="checkbox" name="show-date" id="show-date" checked> Show date |
-            <input type="checkbox" name="show-time" id="show-time" checked> Show time |
-            <input type="checkbox" name="dark-theme" id="dark-theme"> Dark theme |
-            <label for="time-size">Clock size: </label>
-            <select name="time-size" id="time-size">
-                <option value="0" selected>Small</option>
-                <option value="1">Medium</option>
-                <option value="2">Large</option>
-            </select>
+            <label>
+                <input type="checkbox" name="show-date" id="show-date" checked="checked"> Show date
+            </label>
+            <span class="separator">|</span>
+            <label>
+            <input type="checkbox" name="show-colors" id="show-colors" autocomplete="off"> Change time colors
+            </label>
+            <span class="separator">|</span>
+            <label>
+            <input type="checkbox" name="dark-theme" id="dark-theme"> Dark theme
+            </label>
+            <span class="separator">|</span>
+            <span>Clock size:</span>
+            <input type="range" min="1" max="10" value="3" name="time-size" id="time-size">
         </div>
         <div id="clock-container">
-                <div id="clock"></div>
-                <div id="date"></div>
+            <div id="clock">
+                <div class="time-part">
+                    <div class="color-picker hidden">
+                        <input class="time-color" name="hours-color" id="hours-color" type="color">
+                    </div>
+                    <span id="hours"></span>
+                </div>
+                :
+                <div class="time-part">
+                    <div class="color-picker hidden">
+                        <input class="time-color" name="minutes-color" id="minutes-color" type="color">
+                    </div>
+                    <span id="minutes"></span>
+                </div>
+                :
+                <div class="time-part">
+                    <div class="color-picker hidden">
+                        <input class="time-color" name="seconds-color" id="seconds-color" type="color">
+                    </div>
+                    <span id="seconds"></span>
+                </div>
+            </div>
+            <div id="date"></div>
         </div>
         <footer>
             Made by: Marvin Helstein | 
-            Repo: <a href="https://github.com/KareVulli/1kodutoo">https://github.com/KareVulli/1kodutoo</a> |
-            <small>Powered by <a href="https://momentjs.com/">moment.js</a></small>
+            Repository: <a href="https://github.com/KareVulli/1kodutoo">https://github.com/KareVulli/1kodutoo</a>
+            | <small><a id="reset" href="#">Reset settings</a></small>
         </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/et.js"></script>
+    <div id="notification" class="hidden">
+        <p>Settings saved successfully!</p>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
