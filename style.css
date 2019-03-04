@@ -11,6 +11,11 @@ body {
     font-size: 60px;
     font-family: Orbitron;
     letter-spacing: 7px;
+	display: inline-block;
+}
+.date {
+    position: relative;
+    font-size: 52px;
 }
 .author {
 	position: absolute;
