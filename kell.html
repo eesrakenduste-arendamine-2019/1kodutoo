@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="kell.js"></script>
+  <title>Clock</title>
+  <link rel="stylesheet" type="text/css" href="kell.css">
+</head>
+<body>
+  <div class="dateAndTime">
+    <div id="clockContainer"></div>
+    <div id="dayContainer" class="day"></div>
+    <div id="dateContainer" class="date"></div>
+    <div id="timeContainer" class="clock"></div>
+  </div>
+  <!-- Sidenav-i koodi näited võetud: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h1 style="color:white;">Henri Tammo</h1>
+  <button id="clockButton">Muuda värvi</button>
+  <a></a>
+  <button id="default">Default sätted</button>
+  <a></a>
+  <button id="text">Muuda teksti värvi</button>
+  <a>Temaatikad</a>
+  <button id="theme1">City</button>
+  <button id="theme2">Clock</button>
+  <button id="theme3">Zen</button>
+  <a>Font</a>
+  <Button id="small">Small</Button>
+  <Button id="normal">Normal</Button>
+  <Button id="big">Big</Button>
+  <a></a>
+  <a></a>
+  <a></a>
+  <a target="_blank" href="https://github.com/HenriTammo/1kodutoo">Repositroorium</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()", style="color:white;">☰</span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+</div>
+</body>
+</html>
