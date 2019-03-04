@@ -1,0 +1,234 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Righteous', cursive;
+    box-sizing: border-box;
+}
+
+body, footer, .animate {
+    transition: background-color 0.4s ease-out, color 0.4s ease-out;
+}
+
+.animate-font {
+    transition: font-size 0.2s linear;
+}
+
+#notification {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #98ffa1;
+    border: 2px solid #199600;
+    border-radius: 5px;
+    padding: 5px;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+    pointer-events: none;
+}
+
+#notification p {
+    padding: 0;
+    margin: 0;
+}
+
+#notification.hidden {
+    transition: opacity 0.5s ease-out;
+}
+
+.dark-theme #notification {
+    background: #2c2c2c;
+    border: 2px solid #083000;
+}
+
+#container {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#clock-container {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex: 1;
+}
+
+#clock, #date, #colors {
+    text-align: center;
+}
+
+#clock {
+    font-size: 3em;
+}
+
+#clock .time-part {
+    display: inline-block;
+}
+
+.color-picker {
+    display: block;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 8px;
+	width: 100%;
+    height: 16px;
+    text-align: center;
+
+}
+
+.color-picker:hover {
+    border: 3px solid #199600;
+}
+
+.dark-theme .color-picker:hover {
+    border: 3px solid #ddd;
+}
+
+
+input[type="color"] {
+	opacity: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+
+#date {
+    font-size: 2em;
+}
+
+#options {
+    padding: 20px;
+    text-align: center;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0!important;
+}
+
+body.dark-theme {
+    background-color: #222;
+    color: #ddd;
+}
+
+.dark-theme footer, .dark-theme #options {
+    background-color: #333333;
+    color: #ddd;
+}
+
+small {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-theme small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+a {
+    color: inherit;
+}
+
+
+.time-size-container {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.separator {
+    padding: 0 8px;
+}
+
+input[type=checkbox] {
+    margin-left: 0;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    padding-top: 2px;
+    padding-left: 5px;
+    height: 22px;
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgb(255, 255, 255);
+    border-radius: 50%; 
+    border: 1px solid rgb(27, 27, 27);
+    height: 16px;
+    width: 16px;
+    margin-top: -5px;
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgb(255, 255, 255);
+    border-radius: 50%; 
+    border: 1px solid rgb(27, 27, 27);
+    height: 16px;
+    width: 16px;
+}
+
+input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgb(255, 255, 255);
+    border-radius: 50%; 
+    border: 1px solid rgb(27, 27, 27);
+    height: 16px;
+    width: 16px;
+    margin-top: 0.5px;
+}
+  
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #888888;
+    border-radius: 5px;
+}
+  
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #888888;
+    border-radius: 5px;
+    color: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #888888;
+    border-radius: 5px;
+}
