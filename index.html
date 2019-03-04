@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="index.js"></script> 
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Kell</title>
+    <!-- https://fontlibrary.org/en/font/glacial-indifference -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>  
+</head>
+<body>
+    <div id="containers">
+        <div id="clockContainer"><p id="clockText"></p></div>
+        <div id="weekDayContainer"><p id="weekDayText"></p></div>
+        <div id="dateContainer"><p id="dateText"></p></div>
+    </div>
+    <div id="options">
+        <div class="group">
+            <label for="textColorPicker">Tekst:</label>
+            <input id="textColorPicker" type="color" value="#000000"/> 
+            <button id="textColorButton">Juhuslik</button>
+        </div>
+
+        <div class="group">
+            <label for="bgColorPicker">Taust:</label>
+            <input id="bgColorPicker" type="color" value="#FFFFFF" /> 
+            <button id="bgColorButton">Juhuslik</button>
+        </div>
+
+        <div class="group">
+            <label for="clockFontPicker">Font:</label>
+            <select id="clockFontPicker">
+                <option>Glacial Indifference</option>
+                <option>Arial</option>
+                <option>Times New Roman</option>
+                <option>Helvetica</option>
+                <option>Courier New</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label for="increaseFontButton">Suurus:</label>
+            <button id="increaseFontButton">+</button>
+            <button id="decreaseFontButton">-</button>
+        </div>
+
+        <div class="group">
+            <p>Madis Otenurm | <a href="https://github.com/madiote/1kodutoo">Lähtekood</a></p> 
+        </div>
+    </div>
+</body>
+</html>
