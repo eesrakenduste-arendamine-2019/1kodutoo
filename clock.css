@@ -6,13 +6,24 @@
 
 body{
     background-image: url("blueberry.png");
-    background-repeat: no-repeat;
+
     background-position: left top;
     background-attachment: fixed;
     font-family: 'Indie Flower';
     font-size: 20px;
-    width: 100%;
+    /* Full height */
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 #body{
@@ -50,8 +61,9 @@ button {
 }
 
 .button-wrapper{
-    margin: 0 auto;
-    width: 511px;
+    display: flex;
+    justify-content:center;
+
 }
 
 footer{
