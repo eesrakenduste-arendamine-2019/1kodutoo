@@ -1,3 +1,13 @@
+﻿Henri Tammo
+Pilt default leheküljest ja sidebarist on üleval minu winscp kaustas.
+Leht algselt näitab musta tausta ja valges tekstis kella, kuupäeva ning päeva. Kui vajutada üleval vasakul asuvale nuppule siis see näitab lehekülje erinevaid funktsioone.
+Muuda värvi nupp muudab tausta värvi suvaliselet.
+Default nupp taastab leheküljele musta tausta, valge teksti ning originaalse fonti ja suuruse.
+Muuda teksti värvi nupp muudab teksti värvi suvaliselt.
+Temaatika nupud City, Clock ja Zen annavad leheküljele uue taustapildi ja fondi.
+Font nupud Small, Normal ja Big muudavad teksti suurust.
+Link minu on lehe sidebari sees, selle avamiseks vajutage sõnale repositoorium.
+
 # 1kodutoo
 1. kodutöö Eesrakenduste arendamises.
 
