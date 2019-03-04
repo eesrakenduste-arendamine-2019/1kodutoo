@@ -8,7 +8,7 @@ p, a, label, button, select {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
-} 
+}
 
 #containers {
     top: 50%;
@@ -19,19 +19,19 @@ p, a, label, button, select {
 }
 
 #options {
-    position:absolute;
-    bottom:1em;
-    left:1em;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
 }
 
-#clockContainer > #clockText {
+#clockContainer>#clockText {
     font-size: 20vw;
 }
 
-#weekDayContainer > #weekDayText {
+#weekDayContainer>#weekDayText {
     font-size: 8vw;
 }
 
-#dateContainer > #dateText {
+#dateContainer>#dateText {
     font-size: 5vw;
 }

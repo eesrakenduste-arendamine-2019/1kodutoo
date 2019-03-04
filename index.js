@@ -1,183 +1,178 @@
 /*jshint esversion: 6*/
 
-let formattedTime;
-let formattedWeekDay;
-let formattedDate;
+// Custom time, weekday and date formats using system time
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+const timeFormat = { hour: 'numeric', minute: 'numeric' };
+const weekDayFormat = { weekday: 'long' };
+const dateFormat = { day: 'numeric', month: 'long', year: 'numeric' };
 
-let clockText;
-let weekDayText;
-let dateText;
-
-let clockSize;
-let weekDaySize;
-let dateSize;
-
-let textColorPicker;
-let textColorButton;
-
-let bgColorPicker;
-let bgColorButton;
-
-let clockFontPicker;
-
-let increaseFontButton;
-let decreaseFontButton;
-
-window.onload = function() {
+window.onload = function () {
     forceHttps();
     init();
 };
 
-function init(){
+function init() {
     // Initialize HTML element selectors
-    clockText = document.querySelector("#clockText");
-    weekDayText = document.querySelector("#weekDayText");
-    dateText = document.querySelector("#dateText");
+    const clockText = document.querySelector("#clockText");
+    const weekDayText = document.querySelector("#weekDayText");
+    const dateText = document.querySelector("#dateText");
 
-    textColorPicker = document.querySelector("#textColorPicker");
-    textColorButton = document.querySelector("#textColorButton");
-    bgColorPicker = document.querySelector("#bgColorPicker");
-    bgColorButton = document.querySelector("#bgColorButton");
-    clockFontPicker = document.querySelector("#clockFontPicker");
-    increaseFontButton = document.querySelector("#increaseFontButton")
-    decreaseFontButton = document.querySelector("#decreaseFontButton")
+    const textColorPicker = document.querySelector("#textColorPicker");
+    const textColorButton = document.querySelector("#textColorButton");
+    const bgColorPicker = document.querySelector("#bgColorPicker");
+    const bgColorButton = document.querySelector("#bgColorButton");
+    const clockFontPicker = document.querySelector("#clockFontPicker");
+    const increaseFontButton = document.querySelector("#increaseFontButton");
+    const decreaseFontButton = document.querySelector("#decreaseFontButton");
 
     // Add events to elements
     textColorPicker.addEventListener('input', (event) => {
         setTextColor(textColorPicker.value);
     });
-    textColorButton.addEventListener('click', randomizeTextColor);
+    textColorButton.addEventListener('click', (event) => {
+        randomizeElementColor(textColorPicker);
+    });
 
-    bgColorPicker.addEventListener('input', (event) => {
+    bgColorPicker.addEventListener('input', () => {
         setBackgroundColor(bgColorPicker.value);
     });
-    bgColorButton.addEventListener('click', randomizeBackgroundColor);
+    bgColorButton.addEventListener('click', (event) => {
+        randomizeElementColor(bgColorPicker);
+    });
 
-    clockFontPicker.addEventListener('input', (event) => {
+    clockFontPicker.addEventListener('input', () => {
         setBodyFont(clockFontPicker.selectedIndex);
     });
 
-    increaseFontButton.addEventListener('click', function() {
-        changeFontSizes("+");
+    increaseFontButton.addEventListener('click', () => {
+        changeFontSizes(true);
     });
-    decreaseFontButton.addEventListener('click', function() {
-        changeFontSizes("-");
+    decreaseFontButton.addEventListener('click', () => {
+        changeFontSizes(false);
     });
 
     startClock();
-    getColors();
-}
 
-function forceHttps(){
-    if (location.protocol == 'http:'){
-        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    function setBackgroundColor(hex) {
+        console.log(`Background color changed to ${hex}`);
+        document.body.style.backgroundColor = hex;
+    }
+
+    function setTextColor(hex) {
+        console.log(`Text color changed to ${hex}`);
+        clockText.style.color = hex;
+        weekDayText.style.color = hex;
+        dateText.style.color = hex;
+    }
+
+    function randomizeElementColor(element){
+        element.value = getRandomColorHex();
+        triggerInputEvent(element);
+    }
+
+    function changeFontSizes(increase) {
+        const multiplier = 1.5;
+        if (increase) {
+            increaseFontSize(clockText, multiplier);
+            increaseFontSize(weekDayText, multiplier);
+            increaseFontSize(dateText, multiplier);
+        } else {
+            decreaseFontSize(clockText, multiplier);
+            decreaseFontSize(weekDayText, multiplier);
+            decreaseFontSize(dateText, multiplier);
+        }
+    }
+
+    function setBodyFont(selection) {
+        // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_fontfamily2
+        const listValue = clockFontPicker.options[selection].text;
+        document.body.style.fontFamily = listValue;
+    }
+
+    function startClock() {
+        window.setInterval(function () {
+            updateClock(new Date());
+        }, 1000); // 1000 ms = 1 s
+    }
+
+    function updateClock(date) {
+        const formattedTime = date.toLocaleString("et-EE", timeFormat);
+        const formattedWeekDay = date.toLocaleDateString("et-EE", weekDayFormat);
+        const formattedDate = date.toLocaleString("et-EE", dateFormat);
+        clockText.innerHTML = formattedTime;
+        weekDayText.innerHTML = formattedWeekDay;
+        dateText.innerHTML = formattedDate;
+        document.title = formattedTime;
+    }   
+
+    function getFontSize(element) {
+        const fontSize = window.getComputedStyle(element).fontSize;
+        if (!fontSize)
+            return null;
+        return parseInt(fontSize.replace("px", ""));
+    }
+
+    function setFontSize(element, size) {
+        element.style.fontSize = `${size}px`;
+    }
+
+    function increaseFontSize(element, multiplier) {
+        const maxPx = 500;
+        const currentSize = getFontSize(element);
+        if (!currentSize || currentSize > 500)
+            return;
+        setFontSize(element, currentSize * multiplier);
+    }
+
+    function decreaseFontSize(element, multiplier) {
+        const minPx = 3;
+        const currentSize = getFontSize(element);
+        if (!currentSize || currentSize < minPx)
+            return;
+        setFontSize(element, currentSize / multiplier);
     }
 }
 
-function rgbToHex(rgb){
-    // https://stackoverflow.com/a/33511903
-    let hex = '#' + rgb.substr(4, rgb.indexOf(')') - 4).split(',').map((color) => 
-                    parseInt(color).toString(16)).join('');
-    return hex;
-}
-
-function setBackgroundColor(hex){
-    console.log(`Background color changed to ${hex}`);
-    
-    document.body.style.backgroundColor = hex;
-}
-
-function setTextColor(hex){
-    console.log(`Text color changed to ${hex}`);
-
-    clockText.style.color = hex;
-    weekDayText.style.color = hex;
-    dateText.style.color = hex;
-}
-
-function randomizeBackgroundColor(){
-    const r = randomColor();
-    const g = randomColor();
-    const b = randomColor();
-
-    console.log(`Background color changed to ` + rgbToHex(`rgb(${r},${g},${b})`));
-
-    document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
-    getColors();
-}
-
-function randomizeTextColor(){
-    const r = randomColor();
-    const g = randomColor();
-    const b = randomColor();
-
-    console.log(`Text color changed to ` + rgbToHex(`rgb(${r},${g},${b})`));
-
-    clockText.style.color = `rgb(${r},${g},${b})`;
-    weekDayText.style.color = `rgb(${r},${g},${b})`;
-    dateText.style.color = `rgb(${r},${g},${b})`;
-    getColors();
-}
-
-function changeFontSizes(modifier){
-    getFontSizes();
-
-    let size = 1.5;
-
-    if(modifier == "+"){
-        clockText.style.fontSize = clockSize * size + "px";
-        weekDayText.style.fontSize = weekDaySize * size + "px";
-        dateText.style.fontSize = dateSize * size + "px";
-    }
-    else if (modifier == "-"){
-        clockText.style.fontSize = clockSize / size + "px";
-        weekDayText.style.fontSize = weekDaySize / size + "px";
-        dateText.style.fontSize = dateSize / size + "px";
+function forceHttps() {
+    // Ensures that the Greeny page is loaded over HTTPS - https://stackoverflow.com/a/4597085
+    if (window.location.href.indexOf("greeny.cs.tlu.ee") != -1) {
+        if (location.protocol == 'http:'){
+            location.href = 'https:' + window.location.href.substring
+                                       (window.location.protocol.length);
+       }
     }
 }
 
-function setBodyFont(selection) {
-    // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_fontfamily2
-    var listValue = clockFontPicker.options[selection].text;
-    document.body.style.fontFamily = listValue;
-  }
-
-function startClock(){
-    window.setInterval(function(){
-        const date = new Date();
-        updateClock();
-
-        // Custom time, weekday and date formats using system time
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-        let timeFormat = { hour: 'numeric', minute: 'numeric' };
-        let weekDayFormat = { weekday: 'long' };
-        let dateFormat = { day: 'numeric', month: 'long', year: 'numeric' };
-
-        formattedTime = date.toLocaleString("et-EE", timeFormat); 
-        formattedWeekDay = date.toLocaleDateString("et-EE", weekDayFormat);
-        formattedDate = date.toLocaleString("et-EE", dateFormat);
-    }, 1000); // 1000 ms = 1 s
+function triggerInputEvent(element) {
+    // https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+    element.dispatchEvent(new Event("input", {
+        bubbles: true
+    }));
 }
 
-function getColors(){
-    textColorPicker.value = rgbToHex(clockText.style.color);
-    bgColorPicker.value = rgbToHex(document.body.style.backgroundColor);
+function getRandomColorRgb() {
+    // https://stackoverflow.com/a/2917197
+    return {
+        r: randomColorComponent(),
+        g: randomColorComponent(),
+        b: randomColorComponent()
+    };
 }
 
-function getFontSizes(){
-    clockSize = parseInt((window.getComputedStyle(clockText).fontSize).replace("px",""));
-    weekDaySize = parseInt((window.getComputedStyle(weekDayText).fontSize).replace("px",""));
-    dateSize = parseInt((window.getComputedStyle(dateText).fontSize).replace("px",""));
+function randomColorComponent() {
+    return Math.round(Math.random() * 255);
 }
 
-function updateClock() {
-    clockText.innerHTML = formattedTime;
-    weekDayText.innerHTML = formattedWeekDay;
-    dateText.innerHTML = formattedDate;
-    document.title = formattedTime;
+function getRandomColorHex() {
+    return rgbToHex(getRandomColorRgb());
 }
 
-function randomColor(){
-    return Math.round(Math.random()*255);
+function componentToHex(c) {
+    // https://stackoverflow.com/a/5624139
+    const hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
 }
 
+function rgbToHex(rgb) {
+    return "#" + componentToHex(rgb.r) + componentToHex(rgb.g) + componentToHex(rgb.b);
+}
