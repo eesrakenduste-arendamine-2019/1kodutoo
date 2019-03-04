@@ -2,10 +2,12 @@ body {
     background: #45A598;
     color: #fff;
 }
+
 a {
     font-size: 1em;
     color: #fff;
 }
+
 #myClock {
     position: fixed;
     top: 40%;
