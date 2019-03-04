@@ -2,15 +2,18 @@ body {
     background: #45A598;
     color: #fff;
 }
-
+a {
+    font-size: 1em;
+    color: #fff;
+}
 #myClock {
     position: fixed;
     top: 40%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 140px;
-    border: 5px dotted #fff;
-    padding: 0px 7px 0px 7px;
+    font-size: 12em;
+    border: 0.05em dotted #fff;
+    padding: 0em 0.09em 0em 0.09em;
 }
 
 #myDate {
@@ -18,8 +21,8 @@ body {
     top: 65%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 80px;
-    padding: 5px 0px 5px 0px;
+    font-size: 6em;
+    padding: 1em 0em 1em 0em;
 }
 
 #myDay {
@@ -27,12 +30,12 @@ body {
     top: 80%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 70px;
-    padding: 5px 0px 5px 0px;
+    font-size: 5em;
+    padding: 1em 0em 1em 0em;
 }
 
 #options {
     position: fixed;
-    bottom: 2px;
-    right: 2px;
+    bottom: 1em;
+    right: 1em;
 }
