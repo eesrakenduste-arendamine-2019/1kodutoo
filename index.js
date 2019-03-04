@@ -5,6 +5,10 @@ let changeColorButton;
 let dayContainer;
 let monthAndYearContainer;
 let changeClockColorButton;
+let div;
+let div2;
+
+
 window.onload = function(){
   init();
 };
@@ -15,13 +19,56 @@ function init(){
   clockContainer = document.querySelector('#clockContainer');
   changeColorButton.addEventListener('click', changeBackgroundColor);
   changeClockColorButton.addEventListener('click', changeClockColor);
+    
+	document.getElementById('dayContainer').addEventListener('mousedown', mouseDown, false);
+    document.getElementById('monthAndYearContainer').addEventListener('mousedown', mouseDown2, false);
+	window.addEventListener('mouseup', mouseUp, false);
+    window.addEventListener('mouseup', mouseUp2, false);
+  
   startClock();
+
+}
+//
+function mouseUp()
+{
+    window.removeEventListener('mousemove', divMove, true);
 }
 
+function mouseDown(e){
+  window.addEventListener('mousemove', divMove, true);
+}
+
+function divMove(e){
+  div = document.getElementById('dayContainer');
+  div.style.position = 'absolute';
+  div.style.top = e.clientY + 'px';
+  div.style.left = e.clientX + 'px';
+ 
+}
+
+function mouseUp2()
+{
+    window.removeEventListener('mousemove', divMove2, true);
+}
+
+function mouseDown2(i){
+  window.addEventListener('mousemove', divMove2, true);
+}
+
+function divMove2(i){
+    
+  div2 = document.getElementById('monthAndYearContainer');
+  div2.style.position = 'absolute';
+  div2.style.top = i.clientY + 'px';
+  div2.style.left = i.clientX + 'px';
+ 
+}
+//
 function peidaValikud()
 {
 document.getElementById("clockButton").style.visibility = 'hidden';
 }
+
 
  function changeClockColor(){
   const r = Math.round(Math.random()*255);

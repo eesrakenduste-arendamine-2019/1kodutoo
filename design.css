@@ -70,3 +70,7 @@ html, body
     font-family: digital;
 	letter-spacing: 7px;
 }
+
+::selection {
+    background: transparent;
+}
