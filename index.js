@@ -67,7 +67,7 @@ function changeTextColor() {
 }
 
 function changeClockSize() {
-  myClock.style.fontSize = Math.random() * (250 - 50) + 50 + "px";
+  myClock.style.fontSize = Math.random() * (20 - 4) + 4 + "em";
 }
 
 function changeFont(selection) {
