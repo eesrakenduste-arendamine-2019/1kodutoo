@@ -19,6 +19,8 @@ Menüüs saab:
 
 Lisaks saab:
 > Peidata/näidata menüü
+> Liigutada kuupäeva
+> Liigutada nädalapäeva
 
 Kella pilt:
 ![Screenshot](SavedImage.JPG)
