@@ -1,4 +1,13 @@
 # Autor: Caupo Helvik
+Screenshot asub failide hulgas.
+
+# Funktsionaalsus
+Saab muuta:
+- Kella teksti suurust
+- Teksti värvi
+- Tausta värvi
+- Joondada lehe sisu vasakule, paremale ja keskele
+
 
 # 1kodutoo
 1. kodutöö Eesrakenduste arendamises.
