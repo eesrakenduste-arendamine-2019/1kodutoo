@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("blueberry.png");
+
+    background-position: left top;
+    background-attachment: fixed;
+    font-family: 'Indie Flower';
+    font-size: 20px;
+    /* Full height */
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#body{
+    padding-bottom: 80px;
+    width: 100%;
+}
+
+#clock{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 8px;
+    padding: 50px;
+    width: 500px;
+    margin: 100px auto;
+}
+
+button {
+    background-color: transparent;
+    border: solid;
+    border-color: white;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Indie Flower';
+    font-weight: bolder;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline;
+
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content:center;
+
+}
+
+footer{
+    height: 80px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: white;
+}
