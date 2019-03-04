@@ -1,3 +1,9 @@
+Daria Kreydina
+viide:http://greeny.cs.tlu.ee/~darikre/front/kell/
+ekranipildi viide:http://greeny.cs.tlu.ee/~darikre/front/kell/kell.png
+Kell milisekunditega, nuppu vajutamisel saab muuta: asukoht, värv, suurus.
+
+
 # 1kodutoo
 1. kodutöö Eesrakenduste arendamises.
 
