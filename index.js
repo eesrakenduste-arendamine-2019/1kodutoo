@@ -6,6 +6,7 @@ let dayContainerElement;
 var formatStatus = window.localStorage.getItem("format");
 var session = window.localStorage.getItem("format");
 var clockSize = 60;
+var dateSize = 18;
 if(formatStatus == 0){
 	session = "";
 	formatStatus = 0;
@@ -19,13 +20,13 @@ window.onload = function(){
   if(window.localStorage.getItem("size") > 0){
 	var clock = document.getElementById( 'txt' );
 	clockSize = parseInt(window.localStorage.getItem("size"));
+	dateSize = parseInt(window.localStorage.getItem("dateSize"));
 	document.getElementById( 'txt' ).style.fontSize = clockSize+"px";
-}
-	if(window.localStorage.getItem("r") != 0){
-		var r = window.localStorage.getItem("r");
-		var g = window.localStorage.getItem("g");
-		var b = window.localStorage.getItem("b");
-		clock.style.color = `rgb(${r},${g},${b})`;
+	}
+	const localValue = localStorage.getItem('color');
+	if(JSON.parse(localValue).r != 0){
+		var color = JSON.parse(localValue);
+		clock.style.color = `rgb(${color.r},${color.g},${color.b})`;
 	}
 };
 
@@ -40,20 +41,26 @@ function startButtons(){
 	var clockLarger = document.getElementById( 'clockLarger' );
 	var clockSmaller = document.getElementById( 'clockSmaller' );
 	var clock = document.getElementById( 'txt' );
+	var date = document.getElementById('date');
 	clock.style.fontSize = clockSize+"px"; 
 	clockLarger.onclick = function(){
 		if(clockSize <= 500){
 			clockSize += 10;
+			dateSize += 3;
 		}
 		clock.style.fontSize = clockSize+"px"; 
 		window.localStorage.setItem("size", clockSize);
 	}
 	clockSmaller.onclick = function(){
 		clock = document.getElementById( 'txt' );
+		date = document.getElementById('date');
 		if(clockSize > 10){
 			clockSize -= 10;
+			dateSize -= 3;
 		}
+		date.style.fontsize = dateSize+"px";
 		clock.style.fontSize = clockSize+"px";
+		window.localStorage.setItem("dateSize", dateSize);
 		window.localStorage.setItem("size", clockSize);
 	}
 	clockFormat.onclick = function(){
@@ -66,14 +73,17 @@ function startButtons(){
   };
 	
 	 color.onclick= function(){
-	    const r = Math.round(Math.random()*255);
-		const g = Math.round(Math.random()*255);
-		const b = Math.round(Math.random()*255);
+	  const r = Math.round(Math.random()*255);
+      const g = Math.round(Math.random()*255);
+	  const b = Math.round(Math.random()*255);
+	  const obj = {
+		r: r,
+		g: g,
+		b: b
+	  };
 	  clock = document.getElementById( 'txt' );
+	  localStorage.setItem('color', JSON.stringify(obj));
 	  clock.style.color = `rgb(${r},${g},${b})`;
-	  window.localStorage.setItem("r", r);
-	  window.localStorage.setItem("g", g);
-	  window.localStorage.setItem("b", b);
   };
 }
 
@@ -88,12 +98,10 @@ function startTime() {
   getMonth();
   startButtons();
 	if (formatStatus == 1){
-	  if(h == 0){
+	  if(h == 0 || h  < 12){
         h = 12;
 		session = "AM";
-    }
-    
-    if(h > 12){
+    } else {
         h = h - 12;
 		session = "PM";
     }
@@ -101,7 +109,7 @@ function startTime() {
   m = checkTime(m);
   s = checkTime(s);
   document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s + " " +session + "<br/>" + day + "<br/>" + dayOfMonth + "." + month;
+  h + ":" + m + ":" + s + " " +session + "<br/><div id='date' class='date'>" + day + " - " + dayOfMonth + "." + month+"<div/>";
   var t = setTimeout(startTime, 500);
 }
 
