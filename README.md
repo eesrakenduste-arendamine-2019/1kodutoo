@@ -8,7 +8,7 @@ Kella suurust on võimalik muuta slideriga. Samuti on võimalik ka muuta nii tau
 Tegin ekraanile ala, mille sees saab kella liigutada, klikkides hiirega ala sisse liigub kell klikitud koordinaatidele.
 Samuti on võimalik panna muusika mängima.
 
-Kella asukoht: greeny.cs.tlu.ee/~kaspeel/public_html/EesrakendusteArendamine/1kodutoo ja http://www.tlu.ee/~ras127/kell/
+Kella asukoht: http://greeny.cs.tlu.ee/~kaspeel/EesrakendusteArendamine/1kodutoo/ ja http://www.tlu.ee/~ras127/kell/
 
 <img src="kell.png">
 <img src="kell2.png">
