@@ -1,0 +1,59 @@
+body{
+  background: Black;
+}
+
+
+.clock {
+    font-style: italic;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 90px;
+    letter-spacing: 7px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.day {
+    font-style: italic;
+    color: white;
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 90px;
+    letter-spacing: 7px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.date {
+    font-style: italic;
+    color: white;
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 90px;
+    letter-spacing: 7px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.taustaNupp {
+  background-color: white;
+  color: black;
+  border: 2px solid #000000; /*Must*/
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+.kellaNupp {
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color: white;
+  color: black;
+  border: 2px solid #000000; /*Must*/
+  font-size: 15px;
+}
+.kellaSuurus {
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color: white;
+  color: black;
+  border: 2px solid #000000; /*Must*/
+  font-size: 15px;
+}
