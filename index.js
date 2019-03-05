@@ -41,12 +41,10 @@ function startButtons(){
 	var clockLarger = document.getElementById( 'clockLarger' );
 	var clockSmaller = document.getElementById( 'clockSmaller' );
 	var clock = document.getElementById( 'txt' );
-	var date = document.getElementById('date');
 	clock.style.fontSize = clockSize+"px"; 
 	clockLarger.onclick = function(){
 		if(clockSize <= 500){
 			clockSize += 10;
-			dateSize += 3;
 		}
 		clock.style.fontSize = clockSize+"px"; 
 		window.localStorage.setItem("size", clockSize);
@@ -56,11 +54,8 @@ function startButtons(){
 		date = document.getElementById('date');
 		if(clockSize > 10){
 			clockSize -= 10;
-			dateSize -= 3;
 		}
-		date.style.fontsize = dateSize+"px";
 		clock.style.fontSize = clockSize+"px";
-		window.localStorage.setItem("dateSize", dateSize);
 		window.localStorage.setItem("size", clockSize);
 	}
 	clockFormat.onclick = function(){
