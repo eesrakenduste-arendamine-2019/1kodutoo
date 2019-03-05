@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="index.js"></script>
+  <link rel='stylesheet' type='text/css' href='index.css'>
+
+  <title>Clock</title>
+
+</head>
+<body>
+<!--Erinevad Elemendid-->
+  <div id="MyClockDisplay" class="clock"></div>
+  <div id="MyClockDisplay2" class="day"></div>
+  <div id="MyClockDisplay3" class="month"></div>
+  <div id="dayContainer"></div>
+  <div id="Day()"></div>
+
+<!--Muusika-->
+  <audio id="soundDisplay" class="sound" controls="controls"><source src="../Muusika/Again.mp3" type="audio/mpeg" /></audio>
+
+<!--Nimi ja reposatoorium-->
+  <p class="textAuthor">Sander Hanni</p>
+  <p class="textAuthor2">github.com/Sanderzhanni/1kodutoo/tree/master</p>
+
+<!--Jargnevad dropdown menud-->
+  <div class="dropdown">
+  <button onclick="resizeText()" class="dropbtn">Font size</button>
+  <div id="myDropdown" class="dropdown-content">
+    <button onclick="resizeTextInc()" class="dropbtn2">Large font</button>
+    <button onclick="resizeTextDec()" class="dropbtn2">Small font</button>
+    <button onclick="resizeTextRes()" class="dropbtn2">Reset font</button>
+  </div>
+
+<button onclick="changeColor()" class="dropbtn">Text color</button>
+<div id="myDropdown2" class="dropdown-content2">
+  <button onclick="textR()" class="dropbtn2">Red</button>
+  <button onclick="textB()" class="dropbtn2">Black</button>
+  <button onclick="textW()" class="dropbtn2">White</button>
+  <button onclick="textO()" class="dropbtn2">Orange</button>
+  <button onclick="textRes()" class="dropbtn2">Reset color</button>
+</div>
+
+<button onclick="changeMusic()" class="dropbtn">Change music</button>
+<div id="myDropdown3" class="dropdown-content3">
+    <button onclick="changeMusic1()" class="dropbtn2">Again</button>
+    <button onclick="changeMusic2()" class="dropbtn2">Technicolor</button>
+    <button onclick="changeMusic3()" class="dropbtn2">Lemon</button>
+</div>
+<button onclick="backG()" class="dropbtn">Change background</button>
+</div>
+
+</body>
+</html>
