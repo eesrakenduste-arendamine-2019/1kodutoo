@@ -1,0 +1,103 @@
+body{
+  background-size: cover;
+
+}
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('fonts/digital-7\ \(italic)\.ttf');
+}
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    font-family: 'digital-clock-font';
+    letter-spacing: 7px;
+}
+.day {
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    font-family: 'digital-clock-font';
+    letter-spacing: 7px;
+}
+.date {
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    font-family: 'digital-clock-font';
+    letter-spacing: 7px;
+}
+.nupp {
+  background-color: black;
+  color: white;
+  border: 2px solid #000000; /*Must*/
+  font-size: 15px;
+}
+.nupp2 {
+  background-color: black;
+  color: white;
+  border: 2px solid #000000; /*Must*/
+  font-size: 15px;
+
+}
+.nupp3 {
+  background-color: black;
+  color: white;
+  border: 2px solid #000000; /*Must*/
+  font-size: 15px;
+
+}
+.nupp4 {
+  background-color: black;
+  color: white;
+  border: 2px solid #000000; /*Must*/
+  font-size: 15px;
+
+}
+.nupp5 {
+  background-color: black;
+  color: white;
+  border: 2px solid #000000; /*Must*/
+  font-size: 15px;
+
+}
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: black; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
