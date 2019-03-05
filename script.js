@@ -66,7 +66,6 @@ function changeColor() {
   const red = Math.round(Math.random() * 255);
   const green = Math.round(Math.random() * 255);
   const blue = Math.round(Math.random() * 255);
-  //document.getElementById("test").style.color = `rgb(${red}, ${green}, ${blue})`;
   document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
@@ -84,7 +83,6 @@ function changeLang() {
       console.log("error with lang");
 
   }
-
 }
 
 function animateClock(span) {
@@ -110,5 +108,4 @@ function playRadio() {
     default:
       console.log("Error with audio");
   }
-  audio.play();
 }
