@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Digital clock</title>
+  <script src="clock.js"></script>
+  <link rel="stylesheet" type="text/css" href="clock.css">
+</head>
+<body>
+  <a href="https://github.com/Merilinv/1kodutoo">Eesrakenduste arendamine Merilin Võrk, 3.rühm (IF18), link repositooriumile</a>.
+  <div class="clickbar">
+  Kella suurus
+    <p onclick="fontSize('.container',10)">&bigtriangleup;</p>
+  	<p onclick="fontSize('.container',-10)">&bigtriangledown;</p>
+
+	Tunnid
+    <p onclick="fontSize('#hours',10)">&bigtriangleup;</p>
+  	<p onclick="fontSize('#hours',-10)">&bigtriangledown;</p>
+
+	Minutid
+  	<p onclick="fontSize('#minutes',10)">&bigtriangleup;</p>
+  	<p onclick="fontSize('#minutes',-10)">&bigtriangledown;</p>
+
+	Sekundid
+  	<p onclick="fontSize('#seconds',10)">&bigtriangleup;</p>
+  	<p onclick="fontSize('#seconds',-10)">&bigtriangledown;</p>
+
+	Päev
+    <p onclick="fontSize('#day',10)">&bigtriangleup;</p>
+  	<p onclick="fontSize('#day',-10)">&bigtriangledown;</p>
+
+	Kuupäev
+    <p onclick="fontSize('#date',10)">&bigtriangleup;</p>
+  	<p onclick="fontSize('#date',-10)">&bigtriangledown;</p>
+
+	Liiguta kella
+    <p onclick="clockUpDown(1);">&dtrif; </p>
+    <p onclick="clockUpDown(-1);">&utrif; </p>
+    <p onclick="clockLeftRight(-1);">&ltrif;</p>
+	  <p onclick="clockLeftRight(1);">&rtrif; </p>
+
+	Font
+    <p onclick="font();">&xoplus;</p>
+
+	Fondi värvus
+    <p onclick="color();">&xoplus;</p>
+
+	Taustavärv
+    <p onclick="backgroundColor();">&xoplus;</p>
+  </div>
+
+    <div class="container">
+      <div id="hours" class="hours"></div>
+      <div id="minutes" class="minutes"></div>
+      <div id="seconds" class="seconds"></div><br>
+      <div id="day" class="day"></div>
+      <div id="date" class="date"></div>
+    </div>
+
+</body>
+</html>
