@@ -9,3 +9,5 @@ Tegin ekraanile ala, mille sees saab kella liigutada, klikkides hiirega ala siss
 Samuti on võimalik panna muusika mängima.
 
 Pilt rakendusest: https://prntscr.com/mt6w1o
+
+<img src="https://prntscr.com/mt6w1o">
