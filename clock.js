@@ -141,6 +141,7 @@ function draw () {
           isFullscreen ? document.cancelFullScreen() : element.requestFullScreen();
       }
 
+    /* Funktsioon peidab footeri, slaideri ja värvivahetuse */
     function hideMenu(){
         if (hidden) {
             hidden = false;
