@@ -9,7 +9,8 @@
     <script src="clock.js"></script>
 </head>
 <body>
-<div class="slidecontainer">
+<canvas id="clock" onclick="getCoordinates (event)">This browser doesn't support html canvas!</canvas>
+<div class="container">
     <p>Click anywhere to change position.</p>
     <label>Click here to play some music :)</label>
     <audio controls loop>
@@ -27,7 +28,7 @@
     <button onclick="changeColor()">Change</button>
     <br><br>
 </div>
-    <canvas id="clock" onclick="getCoordinates (event)">This browser doesn't support html canvas!</canvas>
+    
     <footer>
         <a href="https://github.com/rasmus127/1kodutoo" target="_blank">Kaspar Rasmus Eelmaa (+ GITHUB)</a>
     </footer>

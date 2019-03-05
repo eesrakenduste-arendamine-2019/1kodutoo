@@ -48,7 +48,7 @@ function changeColor(val) {
 // Funktsioon jookseb iga millisekund, matemaatiline osa on tehtud polaarkoordinaatides, mida hiljuti õppisime, ilmselt tekitab palju küsimusi.
 function draw () {
     d = new Date();
-    canvas.height = window.outerHeight-330;
+    canvas.height = window.outerHeight-120;
     canvas.width = window.outerWidth-50;
     if (pos.x - newPos.x < 3 && newPos.x - pos.x < 3) {
 
