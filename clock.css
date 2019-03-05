@@ -1,0 +1,79 @@
+h1 {
+	text-align: center;
+	color: white;
+	font-size: 100px;
+  text-transform: uppercase;
+	padding-top: 150px;
+}
+
+body, html, section {
+	font-family: "Montserrat", sans-serif;
+    height: 100%;
+}
+
+#BG {
+    background-image: url("pic1.jpg");
+    height: 102.25%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	margin-top: -100px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: -25px;
+}
+
+#clock{
+	text-align: center;
+	color: white;
+	font-size: 35px;
+	padding-top: 0px;
+}
+
+#smallbox{
+  display: block;
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+  border: 1px solid white;
+}
+
+#github{
+	font-size: 20px;
+  margin-top: 30px;
+}
+
+#github a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#github a:hover{
+  color: grey;
+}
+
+div {
+	text-align: center;
+	color: white;
+}
+
+button{
+	background-color: white;
+  border: none;
+  color: black;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 12px;
+  margin: 10px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+	background-color: #FF0000;
+	color: white;
+}
