@@ -141,6 +141,7 @@ function draw () {
           isFullscreen ? document.cancelFullScreen() : element.requestFullScreen();
       }
 
+    /* Funktsioon peidab footeri,slaideri, värvidemuutja ja play/pause nupu */
     function hideMenu(){
         if (hidden) {
             hidden = false;
