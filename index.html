@@ -4,57 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Kell - versioon 2</title>
+    <script src="http://functionheart.kentpirma.eu/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <title>BinaryClock</title>
+    <style>
+        *{
+            font-family: arial;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .footer {
+           position: fixed;
+           bottom: 10px;
+           width: 20%;
+           left: 40%;
+           right: 40%;
+           background-color: black;
+           color: white;
+           text-align: center;
+           border-radius: 10px;
+           animation: pulse 10s ease-out infinite;
+        }
+
+        /* slider css is taken from here: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 99%;
+            height: 25px;
+            background: #e7e7e7;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1; /* Fully shown on mouse-over */
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+
+        /* animations */
+        @keyframes pulse
+        {
+             0% {
+                  box-shadow: 0 0 0 0vh rgba(0, 0, 0, 0.1);
+             }
+             30% {
+                  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0);
+             }
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <div id="colorMenu" class="colorSelect">
-            <svg id="colorIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 980">
-                <title>color_icon</title>
-                    <path
-                        d="M490 0C220.5 0 0 220.5 0 490S220.5 980 490 980c46.3 0 81.7-35.4 81.7-81.7 0-21.8-8.2-40.8-21.8-54.4s-21.8-32.7-21.8-54.4c0-46.3 35.4-81.7 81.7-81.7h98C857.5 707.8 980 585.3 980 435.6 980 196 759.5 0 490 0ZM190.6 490c-46.3 0-81.7-35.4-81.7-81.7s35.4-81.7 81.7-81.7 81.7 35.4 81.7 81.7S236.8 490 190.6 490ZM353.9 272.2c-46.3 0-81.7-35.4-81.7-81.7s35.4-81.7 81.7-81.7 81.7 35.4 81.7 81.7S400.2 272.2 353.9 272.2Zm272.2 0c-46.3 0-81.7-35.4-81.7-81.7s35.4-81.7 81.7-81.7 81.7 35.4 81.7 81.7S672.4 272.2 626.1 272.2ZM789.4 490c-46.3 0-81.7-35.4-81.7-81.7s35.4-81.7 81.7-81.7 81.7 35.4 81.7 81.7S835.7 490 789.4 490Z" />
-            </svg>
-            <div class="colorButton" id="colBtn0"></div>
-            <div class="colorButton" id="colBtn1"></div>
-            <div class="colorButton" id="colBtn2"></div>
-            <div class="colorButton" id="colBtn3"></div>
-            <div class="colorButton" id="colBtn4"></div>
-        </div>
-        <div id="clockContainer">
-            <div id="clockDisp">
-                <div id="clockTime">
-                    <div id="hours"></div>
-                    <div id="colon">:</div>
-                    <div id="minutes"></div>
-                </div>
-                <div id="clockBarContainer">
-                    <div id="clockBar"></div>
-                </div>
-                <div id="clockDate">
-                    <div id="day"></div>|
-                    <div id="date"></div>
-                </div>
-            </div>
-            <div class="amoeba" id="amoeba1">
-                <svg class="bubbleAnim" width="100%" height="100%" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M73.6796875,13.609375 C135.275414,-12.7868791 186.039062,-2.06640625 239.238281,58.3359375 C292.4375,118.738281 238.148437,226.039063 164.246094,237.207031 C90.34375,248.375 21.8554687,202.410156 5.796875,158.375 C-10.2617188,114.339844 12.0839615,40.0056291 73.6796875,13.609375 Z"
-                        fill-rule="nonzero">
-                        <animate dur="15s" repeatCount="indefinite" attributeName="d"
-                            values="M73.6796875,13.609375 C135.275414,-12.7868791 186.039062,-2.06640625 239.238281,58.3359375 C292.4375,118.738281 238.148437,226.039063 164.246094,237.207031 C90.34375,248.375 21.8554687,202.410156 5.796875,158.375 C-10.2617188,114.339844 12.0839615,40.0056291 73.6796875,13.609375 Z;M79.9112373,9.55982238 C150.878906,-6.11595887 194.052943,-9.37808726 239.469831,58.2863849 C284.886719,125.950857 239.469831,206.628906 164.477644,232.157479 C89.485456,257.686051 22.5703125,215.917969 6.02842477,151.325447 C-10.513463,86.732926 8.94356828,25.2356036 79.9112373,9.55982238 Z;M63.9112373,19.5598224 C136.015625,-8.828125 180.677943,-13.798324 228.469831,69.2863849 C276.261719,152.371094 222.469831,227.125 148.477644,235.157479 C74.485456,243.189957 12.2304688,214.621094 4.51953125,154.574219 C-3.19140625,94.5273437 -8.19315047,47.9477698 63.9112373,19.5598224 Z;M84.3554688,12.65625 C156.459856,-15.7316974 201.43185,8.201676 241.469831,68.2863849 C281.507812,128.371094 229.576381,234.157479 152.477644,234.157479 C75.3789062,234.157479 39.078125,220.332031 11.0351562,168.683594 C-17.0078125,117.035156 12.251081,41.0441974 84.3554688,12.65625 Z;M76.5546875,12.8085937 C148.477644,-14.1328125 203.372175,2.28247863 238.335938,70.328125 C273.2997,138.373771 237.469831,210.203125 148.477644,229.157479 C59.485456,248.111832 41.2421875,220.582031 13.1992188,168.933594 C-14.84375,117.285156 4.63173148,39.75 76.5546875,12.8085937 Z;M73.6796875,13.609375 C135.275414,-12.7868791 186.039062,-2.06640625 239.238281,58.3359375 C292.4375,118.738281 238.148437,226.039063 164.246094,237.207031 C90.34375,248.375 21.8554687,202.410156 5.796875,158.375 C-10.2617188,114.339844 12.0839615,40.0056291 73.6796875,13.609375 Z;"
-                            fill="freeze" calcMode="spline"
-                            keysplines="0.47, 0, 0.745, 0.715;0.39, 0.575, 0.565, 1;0.47, 0, 0.745, 0.715;0.39, 0.575, 0.565, 1;0.47, 0, 0.745, 0.715">
-                    </path>
-                </svg>
-            </div>
-            <div class="bgPulse"></div>
-        </div>
-
-        <p id="name">&copy; Vahur Vogt |<a href="https://github.com/internet8/1kodutoo"> github.com/vvogt/1kodutoo</a></p>
-    </main>
-
-
+    <input type="range" min="50" max="150" value="100" oninput="changeSize(this.value)" class="slider" id="sizeR">
+    <input type="range" min="100" max="500" value="100" oninput="changeX(this.value)" class="slider" id="x">
+    <input type="range" min="100" max="500" value="100" oninput="changeY(this.value)" class="slider" id="y">
+    <input type="range" min="1" max="7" value="1" oninput="changeColor(this.value)" class="slider" id="color">
+    <span class="footer">Kent Pirma: <a href="https://github.com/internet8/1kodutoo">Github</a><span id="date"></span></span>
 </body>
 </html>

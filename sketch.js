@@ -28,7 +28,8 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    clear();
+    //background(0);
     d = new Date();
     // converting integers to binary string using toString()
     second = Number(d.getSeconds()).toString(2);
@@ -58,37 +59,45 @@ function draw() {
                 if (current.charAt(j) == "1") {
                     switch(colorVal) {
                         case 1:
-                        fill(166, 0, 10);
+                            fill(255, 247, 72);
+                            document.body.style.backgroundColor = "#3C1A5B";
                             break;
                         case 2:
-                            fill(0, 100, 20);
+                            fill(139, 216, 189);
+                            document.body.style.backgroundColor = "#243665";
                             break;
                         case 3:
-                            fill(0, 0, 166);
+                            fill(41, 95, 45);
+                            document.body.style.backgroundColor = "#FFE67C";
                             break;
                         case 4:
-                            fill(166, 166, 10);
+                            fill(235, 33, 136);
+                            document.body.style.backgroundColor = "#080A52";
                             break;
                         case 5:
-                            fill(166, 0, 166);
+                            fill(204, 243, 129);
+                            document.body.style.backgroundColor = "#4831D4";
                             break;
                         case 6:
-                            fill(166, 50, 80);
+                            fill(249, 97, 103);
+                            document.body.style.backgroundColor = "#FCE77D";
                             break;
                         case 7:
-                            fill(96, 0, 85);
+                            fill(223, 103, 140);
+                            document.body.style.backgroundColor = "#3D155F";
                             break;
                         default:
                     }
                 } else {
                     fill(255);
                 }
+                strokeWeight(5);
                 // drawing circle with radius, which is based on the amp level
                 ellipse(posX + j * 2*rad, posY + i * 2*rad, rad + amp.getLevel()*200);
             }
         }
     }
-    document.getElementById("date").innerHTML = " | Today is: " + d.toISOString().slice(0,10) + ", " + days[d.getDay()];
+    document.getElementById("date").innerHTML = " | " + d.toISOString().slice(0,10) + " " + days[d.getDay()];
 }
 
 // detecting if play button is pressed
