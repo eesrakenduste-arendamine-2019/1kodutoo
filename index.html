@@ -14,7 +14,7 @@
     Your browser does not support HTML5 video.
 </video>
 <canvas id="clock" onclick="getCoordinates (event)" style="z-index: 0;">This browser doesn't support html canvas!</canvas>
-<div class="container">
+<div class="container" id="container">
     <p>Click anywhere to change position.</p>
     <br>
     <label>Size: </label>
@@ -29,7 +29,8 @@
     <label>Play music: </label>
         <button onclick="showVideo()" id="btn" class="button">Play/Pause</button>
 </div>
-    <footer>
+     <div class="container2"><button onclick="hideMenu()" class="button" id="hideBtn">Hide</button></div>   
+    <footer id="footer">
         <a href="https://github.com/rasmus127/1kodutoo" target="_blank">Kaspar Rasmus Eelmaa (+ GITHUB)</a>
     </footer>
 </body>

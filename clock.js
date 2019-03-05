@@ -3,6 +3,7 @@ let d = new Date();
 let r = 250;
 let slider;
 let canvas;
+let hidden = true;
 let isFullscreen;
 let colorS = "#ffffff";
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -139,4 +140,21 @@ function draw () {
           document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen || function () { return false; };
           isFullscreen ? document.cancelFullScreen() : element.requestFullScreen();
       }
+
+    function hideMenu(){
+        if (hidden) {
+            hidden = false;
+            document.getElementById("container").style.zIndex = "-3";
+            document.getElementById("container").style.display = "none";
+            document.getElementById("footer").style.display = "none";
+            hideBtn.innerHTML = 'Show';
+        } else {
+            hidden = true;
+            document.getElementById("container").style.zIndex = "1";
+            document.getElementById("container").style.display = "block";
+            document.getElementById("footer").style.display = "block";
+            hideBtn.innerHTML = 'Hide';
+
+        }
+    }
 
