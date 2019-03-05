@@ -10,4 +10,4 @@ Samuti on võimalik panna muusika mängima.
 
 Pilt rakendusest: https://prntscr.com/mt6w1o
 
-<img src="https://prntscr.com/mt6w1o">
+<img src="kell.png">
