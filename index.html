@@ -2,27 +2,8 @@
 <html lang="en">
 <head>
 <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
-
-<style>
-#clockContainer{
-  position: absolute;
-  font-size: 500%;
-  font-family: "Aldrich";
-}
-#dateContainer{
-  position: absolute;
-  font-size: 250%;
-  font-family: "Aldrich";
-}
-#dayContainer{
-  position: absolute;
-  font-size: 250%;
-  font-family: "Aldrich";
-}
-#myBtn{
-  position:absolute;
-}
-</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="index.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -31,32 +12,49 @@
 
 </head>
 <body>
-  <div id="dayContainer"></div>
-  <div id="nameContainer"></div>
-  <p>Viide rakenduse <a href="https://github.com/kertliinat/1kodutoo" target="_blank"> repositooriumile</a>
-  <div id="dateContainer"></div>
 <!--  <button type="button" id="myBtn" onclick="changeSize()">Nuppjupp</button>-->
-  <div id="clockContainer"></div>
-  <br>
-  <p>Fondi värvivalikud: </p>
-<button type="button" id="myColorBtn" onclick="changeFontColorToWhite()">Font valgeks</button><br><br>
-<button type="button" id="my1stColorBtn" onclick="changeFontColorToBlack()">Font mustaks</button><br><br>
-<!--<button type="button" id="my2ndColorBtn" onclick="changeColorToRed()">Font punaseks</button><br><br>-->
-<button type="button" id="myRandomFontColorBtn" onclick="randomizeFontColor()">Juhuslik värv</button>
-<br>
-<p>Fondi stiilivalikud: </p>
-<button type="button" id="myBtn" onclick="changeFont()">Times New Roman</button><br><br>
-<button type="button" id="my2ndBtn" onclick="defaultFont()">Aldrich</button>
-<p>Taustavärvi valikud: </p>
-<button type="button" id="myBckgrndBtn" onclick="changeBckgColorToWhite()">Valgeks</button><br><br>
-<button type="button" id="my2ndBckgrndBtn" onclick="originalBckColor()">Siniseks</button><br><br>
-<button type="button" id="myRandomBckgrndBtn" onclick="randomizeBckColor()">Juhuslik värv</button>
-<p>Öö/päev valikud: </p>
-<button type="button" id="nightModeBtn" onclick="nightMode()">Öine režiim</button><br><br>
-<button type="button" id="dayModeBtn" onclick="dayMode()">Päevane režiim</button>
-<p>Kella suurus:</p>
-<button type="button" id="decrease" onclick="decreaseSize()">Vähenda kella suurust</button><br><br>
-<button type="button" id="default" onclick="returnSize()">Algne suurus</button>
+
+  <div class="w3-sidebar" style="display:none" id="sidenav">
+    <button class="buttonclose" onclick="w3_close()">X</button><br>
+    <div id="nameContainer"></div>
+    <p>Viide rakenduse <a href="https://github.com/kertliinat/1kodutoo" target="_blank">repositooriumile</a>
+    <p>Fondi värvivalikud: </p>
+    <button class="buttoncolorwhite" onclick="changeFontColorToWhite()">V</button>
+    <button class="buttoncolorblack" onclick="changeFontColorToBlack()">M</button>
+    <!--<button type="button" id="my2ndColorBtn" onclick="changeColorToRed()">Font punaseks</button><br><br>-->
+    <button class="buttoncolorRND" onclick="randomizeFontColor()">J</button>
+    <br>
+    <p>Fondi stiilivalikud: </p>
+    <button class="buttonTNR" onclick="changeFont()">Times</button>
+    <button class="buttonAldrich" onclick="defaultFont()">Aldrich</button>
+    <p>Taustavärvi valikud: </p>
+    <button class="buttoncolorwhite" onclick="changeBckgColorToWhite()">V</button>
+    <button class="buttoncolorRND" onclick="randomizeBckColor()">J</button>
+    <p>Öö/päev valikud: </p>
+    <button class="buttonNightMode" onclick="nightMode()">Öö</button>
+    <button class="buttondayMode" onclick="dayMode()">Päev</button>
+    <p>Kella suurus:</p>
+    <button class="buttonReduce" onclick="decreaseSize()">50%</button>
+    <button class="buttonOriginalSize" onclick="returnSize()">100%</button>
+    <audio id="player" src="krabid.mp3"></audio>
+      <div>
+          <p>Muusika:</p>
+          <button class="playbutton" onclick="document.getElementById('player').play()"> ►</button>
+          <button class="pausebutton" onclick="document.getElementById('player').pause()">❚❚</button>
+          <button class="volplus" onclick="document.getElementById('player').volume += 0.1">🔊</button>
+          <button class="volminus" onclick="document.getElementById('player').volume -= 0.1">🔈</button>
+      </div>
+  </div>
+
+<button class="buttonopen" onclick="w3_open()">Ava</button>
+
+
+
+  <div><div id="clockContainer"></div>
+        <div id="dateContainer"></div>
+        <div id="dayContainer"></div>
+
+  </div>
 
 
 </body>

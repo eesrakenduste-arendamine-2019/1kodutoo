@@ -7,72 +7,97 @@ let dateContainer;
 let nameContainer;
 let newFont = "Times New Roman";
 
+//var clockCID = document.getElementById("clockContainer");
+
 
 window.onload = function(){
   init();
-
-  document.getElementById("clockContainer").style.right = "40%";
-  document.getElementById("clockContainer").style.top = "40%";
-
-  document.getElementById("dayContainer").style.right = "45%";
-  document.getElementById("dayContainer").style.top = "50%";
-
-  document.getElementById("dateContainer").style.right = "39%";
-  document.getElementById("dateContainer").style.top = "55%";
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
+  var date = new Date();
+  if(date.getHours() < 24 && date.getHours() >= 8){
+    dayMode();
+  }else if(date.getHours() >= 20 || date.getHours() < 8){
+    nightMode();
+  }
 
   /*document.getElementById("myBtn").style.top = "15%";
   document.getElementById("myBtn").style.right = "94%";
 */
-  document.getElementById("myColorBtn").style.top = "95%";
+  //document.getElementById("myColorBtn").style.top = "95%";
 
-  document.body.style.background = "#4db8ff";
+  //document.body.style.background = "#4db8ff";
+  document.getElementById("sidenav").style.background = "#99ffff";
 
   nameContainer = document.querySelector('#nameContainer');
   nameContainer.innerHTML= "Kert Liinat";
 
-  var date = new Date();
-
-  if(date.getHours() < 20 && date.getHours() >= 8){
-    dayMode();
-  }else if(date.getHours() >= 20 && date.getHours() < 8){
-    nightMode();
-  }
-
 };
 
+function w3_open() {
+  document.getElementById("sidenav").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("sidenav").style.display = "none";
+}
+
 function returnSize(){
-  document.getElementById("clockContainer").style.fontSize = "500%";
-  document.getElementById("clockContainer").style.right = "40%";
-  document.getElementById("clockContainer").style.top = "40%";
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
+  clockCID.fontSize = "500%";
+  clockCID.right = "44%";
+  clockCID.top = "41%";
 }
 
 function decreaseSize(){
-  document.getElementById("clockContainer").style.fontSize = "250%";
-  document.getElementById("clockContainer").style.right = "46%";
-  document.getElementById("clockContainer").style.top = "45%";
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
+  clockCID.fontSize = "250%";
+  clockCID.right = "47%";
+  clockCID.top = "45%";
 
 }
 
 function nightMode(){
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
   document.body.style.background = "#003366";
-  document.getElementById("clockContainer").style.color = "#ccccff";
-  document.getElementById("dayContainer").style.color = "#ccccff";
-  document.getElementById("dateContainer").style.color = "#ccccff";
+  clockCID.color = "#ccccff";
+  dayCID.color = "#ccccff";
+  dateCID.color = "#ccccff";
+  clockCID.textShadow = "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black";
+  dayCID.textShadow = "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black";
+  dateCID.textShadow = "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black";
 
 }
 
 function dayMode(){
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
   document.body.style.background = "#ccffff";
-  document.getElementById("clockContainer").style.color = "#000033";
-  document.getElementById("dayContainer").style.color = "#000033";
-  document.getElementById("dateContainer").style.color = "#000033";
+  clockCID.color = "#003366";
+  dayCID.color = "#003366";
+  dateCID.color = "#003366";
+  clockCID.textShadow = "0px 0 black, 0 0px black, 0px 0 black, 0 0px black";
+  dayCID.textShadow = "0px 0 black, 0 0px black, 0px 0 black, 0 0px black";
+  dateCID.textShadow = "0px 0 black, 0 0px black, 0px 0 black, 0 0px black";
+
+
+
 }
 
 function randomizeBckColor(){
   const r = Math.round(Math.random()*255);
   const g = Math.round(Math.random()*255);
   const b = Math.round(Math.random()*255);
-  document.body.style.backgroundColor = 'rgb('+ r+' , '+ g +' , '+ b +')';
+  //document.body.style.backgroundColor = 'rgb('+ r+' , '+ g +' , '+ b +')';
+  document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
 }
 
 function changeBckgColorToWhite(){
@@ -84,46 +109,65 @@ function originalBckColor(){
 }
 
 function randomizeFontColor(){
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
   const r = Math.round(Math.random()*255);
   const g = Math.round(Math.random()*255);
   const b = Math.round(Math.random()*255);
-  document.getElementById("clockContainer").style.color = 'rgb('+ r+' , '+ g +' , '+ b +')';
-  document.getElementById("dayContainer").style.color = 'rgb('+ r+' , '+ g +' , '+ b +')';
-  document.getElementById("dateContainer").style.color = 'rgb('+ r+' , '+ g +' , '+ b +')';
+  clockCID.color = 'rgb('+ r+' , '+ g +' , '+ b +')';
+  dayCID.color = 'rgb('+ r+' , '+ g +' , '+ b +')';
+  dateCID.color = 'rgb('+ r+' , '+ g +' , '+ b +')';
 
 }
 
 function changeFontColorToWhite(){
-  document.getElementById("clockContainer").style.color = "White";
-  document.getElementById("dayContainer").style.color = "White";
-  document.getElementById("dateContainer").style.color = "White";
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
+  clockCID.color = "White";
+  dayCID.color = "White";
+  dateCID.color = "White";
 }
 
 function changeFontColorToBlack(){
-  document.getElementById("clockContainer").style.color = "Black";
-  document.getElementById("dayContainer").style.color = "Black";
-  document.getElementById("dateContainer").style.color = "Black";
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
+  clockCID.color = "Black";
+  dayCID.color = "Black";
+  dateCID.color = "Black";
 }
 function changeFontColorToRed(){
-  document.getElementById("clockContainer").style.color = "Red";
-  document.getElementById("dayContainer").style.color = "Red";
-  document.getElementById("dateContainer").style.color = "Red";
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
+  clockCID.color = "Red";
+  dayCID.color = "Red";
+  dateCID.color = "Red";
 }
 
 
 
 function defaultFont(){
-  document.getElementById("clockContainer").style.fontFamily = "Aldrich";
-  document.getElementById("dayContainer").style.fontFamily = "Aldrich";
-  document.getElementById("dateContainer").style.fontFamily = "Aldrich";
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
+  clockCID.fontFamily = "Aldrich";
+  dayCID.fontFamily = "Aldrich";
+  dateCID.fontFamily = "Aldrich";
 }
 
 function changeFont(){
-  document.getElementById("clockContainer").style.fontFamily = newFont;
-  document.getElementById("dayContainer").style.fontFamily = newFont;
-  document.getElementById("dateContainer").style.fontFamily = newFont;
-}
+  var clockCID = document.getElementById("clockContainer").style;
+  var dateCID = document.getElementById("dateContainer").style;
+  var dayCID = document.getElementById("dayContainer").style;
+  clockCID.fontFamily = newFont;
+  dayCID.fontFamily = newFont;
+  dateCID.fontFamily = newFont;
 
+
+}
 /*function changeSize(){
   document.getElementById("clockContainer").style.width = "100px";
 }*/
@@ -131,17 +175,12 @@ function changeFont(){
 function init(){
   //changeColorButton = document.querySelector('#clockButton');
   clockContainer = document.querySelector('#clockContainer');
-
-
   //changeColorButton.addEventListener('click', changeBackgroundColor);
-
   //window.addEventListener('mousemove',changeBackgroundColor);
   //dayContainerElement =
   dayContainer = document.querySelector('#dayContainer');
   startClock();
 }
-
-
 function changeBackgroundColor(){
   console.log("Muudan värvi");
   const r = Math.round(Math.random()*255);
@@ -150,14 +189,9 @@ function changeBackgroundColor(){
   clockContainer.style.backgroundColor = 'rgb('+ r+' , '+ g +' , '+ b +')';
   //document.body.style.backgroundColor = 'rgb('+ r+' , '+ g +' , '+ b +')';
 }
-
-
-
 function pad(d) {
     return (d < 10) ? '0' + d.toString() : d.toString();
 }
-
-
 function startClock(){
   updateClock();
   window.setInterval(function(){
@@ -173,10 +207,6 @@ function updateClock(){
   clockContainer.innerHTML = HMS;
   dayContainer = document.querySelector('#dayContainer');
   dateContainer = document.querySelector('#dateContainer');
-
-
-
-
 
   function getM(){
     switch(new Date().getMonth()){
