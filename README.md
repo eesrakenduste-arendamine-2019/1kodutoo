@@ -9,3 +9,4 @@ Tegin ekraanile ala, mille sees saab kella liigutada, klikkides hiirega ala siss
 Samuti on võimalik panna muusika mängima.
 
 <img src="kell.png">
+<img src="kell2.png">
