@@ -20,7 +20,7 @@ body {
   margin-top: 0%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; // space-evenly
+  justify-content: center;
 }
 
 .hours, .minutes, .seconds {
