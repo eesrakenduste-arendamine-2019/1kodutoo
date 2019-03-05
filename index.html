@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://functionheart.kentpirma.eu/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <title>BinaryClock</title>
+    <style>
+        *{
+            background-color: black;
+            font-family: arial;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 99%;
+            height: 25px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1; /* Fully shown on mouse-over */
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #a20000;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #a20000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <span>Kent Pirma: <a href="https://github.com/internet8/jsBinaryClock">Github</a></span>
+    <span id="date"></span>
+    <input type="range" min="50" max="150" value="100" oninput="changeSize(this.value)" class="slider" id="sizeR">
+    <input type="range" min="100" max="500" value="100" oninput="changeX(this.value)" class="slider" id="x">
+    <input type="range" min="100" max="500" value="100" oninput="changeY(this.value)" class="slider" id="y">
+</body>
+</html>
