@@ -8,6 +8,4 @@ Kella suurust on võimalik muuta slideriga. Samuti on võimalik ka muuta nii tau
 Tegin ekraanile ala, mille sees saab kella liigutada, klikkides hiirega ala sisse liigub kell klikitud koordinaatidele.
 Samuti on võimalik panna muusika mängima.
 
-Pilt rakendusest: https://prntscr.com/mt6w1o
-
 <img src="kell.png">
