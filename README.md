@@ -31,5 +31,3 @@ Kell - greeny.cs.tlu.ee/~erkksul/eesrakendustearendus/Kodutööd/1kodutoo/
 GitHub - https://github.com/erkkisula/1kodutoo
 
 Kuvatõmmised - greeny.cs.tlu.ee/~erkksul/eesrakendustearendus/Kodutööd/1kodutoo/screens või GitHubis screens kaustas.
-##Autor
-Erkki Sula
