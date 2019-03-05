@@ -1,0 +1,41 @@
+body {
+background-image: url("https://pixelz.cc/wp-content/uploads/2016/11/annapurna-massif-himalayas-nepal-4k-wallpaper.jpg");
+background-size: 100%;
+}
+#aeg {
+  color: white;
+  max-width: 50%;
+  margin: auto;
+  /*border: 2px solid black;*/
+  text-align: center;
+  padding: 10px;
+  font-size: 100px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-shadow: 2px 2px 4px #000000;
+}
+#kuupaev {
+  color: white;
+  max-width: 50%;
+  margin: auto;
+  /*border: 2px solid black;*/
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-shadow: 2px 2px 4px #000000;
+}
+#nimi {
+  font-size: 17px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+}
+#nupud {
+  position: absolute;
+  bottom: 100px;
+}
+#repo {
+  color: white;
+  position: absolute;
+  bottom: 60px;
+}
