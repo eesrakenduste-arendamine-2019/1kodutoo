@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="clock.js"></script>
+</head>
+<body>
+<div class="slidecontainer">
+    <p>Click anywhere to change position.</p>
+    <label>Click here to play some music :)</label>
+    <audio controls loop>
+        <source src="time.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+      </audio>
+      <br>
+    <label>Size: </label>
+    <input type="range" min="150" max="500" value="250" class="slider" oninput="changeRadius(this.value)" id="range">
+    <br>
+    <label>Background-color: </label>
+    <input type="color" name="favcolor" value="#000000" id="color">
+    <label>Clock-color: </label>
+    <input type="color" name="favcolor" value="#ffffff" id="colorS">
+    <button onclick="changeColor()">Change</button>
+    <br><br>
+</div>
+    <canvas id="clock" onclick="getCoordinates (event)">This browser doesn't support html canvas!</canvas>
+    <footer>
+        <a href="https://github.com/rasmus127/Eesrakenduste-Arendamine/tree/master/1kodut%C3%B6%C3%B6" target="_blank">Kaspar Rasmus Eelmaa (+ GITHUB)</a>
+    </footer>
+</body>
+</html>
