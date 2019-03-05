@@ -22,6 +22,8 @@ footer {
     height: 30px;
     text-align: center;
 }
+
+/*   Slaider võetud - https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 .slider {
     -webkit-appearance: none;
     width: 25%;
