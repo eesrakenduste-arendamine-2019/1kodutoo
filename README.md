@@ -1,4 +1,12 @@
 # 1kodutoo
+
+
+AUTORI NIMI: SANDER HEINSAR
+
+Veebilehel näeb kella, kella saab väiksemaks muuta, kella värvi saab muuta ning ka taustavärvi saab muuta!
+
+Minu ekraanipilt on üles laetud gitis.
+
 1. kodutöö Eesrakenduste arendamises.
 
 ## Tähtaeg 06.03.2018 23:59
