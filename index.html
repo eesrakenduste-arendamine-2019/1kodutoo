@@ -22,6 +22,7 @@
     <div id="dateContainer"></div>
     <div id="dayContainer"></div>
   </div>
+
   <!-- Kood võetud: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
   <div id="mySidenav" class="sidenav">
     <h1>Menu</h1>
@@ -32,13 +33,24 @@
       <a target="_blank" href="https://github.com/erkkisula/1kodutoo">Repository</a>
   </div>
   
-
   <div id="main">
     <span style="font-size:60px;cursor:pointer" onclick="openNav()">&#9776;</span>
   </div>
 
-  <div id="author">
-    <marquee behavior="scroll" direction="left">Author: Erkki Sula</marquee>
+  
+
+  <div id="author">Author: Erkki Sula</div>
+  <div id="song" style = "cursor:pointer" onclick="openMusicNav()">Now playing: Luxe & Rain - U</div>
+
+  <div id="musicnav" class="musicnav">
+    <audio id="myAudio" autoplay loop>
+        <source src="music/track1.mp3" type="audio/mpeg">
+    </audio>
+    <h1 style="cursor:pointer" onclick="closeMusicNav()">Music controls</h1>
+      <h2 id="volume"></h2>
+      <a href="javascript:void(0)" id="playpause" onclick="playPause()"">Pause</a>
+      <a href="javascript:void(0)" id="volumeup" onclick="volumeUp()"">Volume +</a>
+      <a href="javascript:void(0)" id="volumedown" onclick="volumeDown()"">Volume -</a>
   </div>
 </body>
 </html>

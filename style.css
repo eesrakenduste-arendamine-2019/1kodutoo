@@ -9,12 +9,17 @@
 
 @font-face{
   font-family: 'beach';
-  src: url('fonts/Kingthings\ Trypewriter\ 2.ttf');
+  src: url('fonts/software_tester_7.ttf');
+}
+
+@font-face{
+  font-family: 'menu1';
+  src: url('fonts/Formula1-Regular.ttf');
 }
 
 body {
   background-color: #2E2E2E;
-  background-image: url('backgrounds/theme1.jpg');
+  /*background-image: url('backgrounds/theme1day.jpeg');*/
   background-size: cover;
   background-repeat: no-repeat;
   /*background-position: center center;*/
@@ -27,6 +32,15 @@ body {
   position: fixed;
   bottom: 5px;
   width: 100%;
+}
+#song {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family:'digital-clock-font';
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+
 }
 
 .dateAndTime{
@@ -59,6 +73,52 @@ body {
   cursor: pointer;
 }
 
+.musicnav{
+  width: 250px;
+  height: 0;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  background-color: #2E2E2E;
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.6;
+}
+.musicnav h1 {
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-family: menu1;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+.musicnav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: menu1;
+  font-size: 20px;
+  color: #bebcbcef;
+  display: block;
+  transition: 0.3s;
+}
+.musicnav a:hover, .offcanvas a:focus{
+  color: #f1f1f1;
+  background-color: #bebcbc65;
+  cursor: pointer;
+}
+
+.musicnav h2 {
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-family: menu1;
+  font-size: 20px;
+  color: #bebcbcef;
+  display: block;
+  transition: 0.3s;
+}
+
 /*Originaalne kood sidebari tarvis võetud: https://www.w3schools.com/howto/howto_js_sidenav.asp*/
 .sidenav {
   height: 100%;
@@ -76,20 +136,20 @@ body {
 .sidenav h1 {
   padding: 0px 8px 8px 32px;
   text-decoration: none;
+  font-family: menu1;
   font-size: 35px;
   color: #f1f1f1;
   display: block;
   transition: 0.3s;
-  opacity: 0.9;
 }
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-family: menu1;
+  font-size: 20px;
+  color: #bebcbcef;
   display: block;
   transition: 0.3s;
-  opacity: 0.9;
 }
 .sidenav a:hover, .offcanvas a:focus{
   color: #f1f1f1;
