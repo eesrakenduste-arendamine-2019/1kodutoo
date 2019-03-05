@@ -1,3 +1,4 @@
+// Muutujate deklareerimine
 let d = new Date();
 let r = 250;
 let slider;
@@ -14,6 +15,7 @@ let newPos = {
 };
 
 
+// Funktsionaalsus, mis peab jooksma peale lehe laadimist
 window.onload = function clock () {
     slider = document.getElementById("range");
     canvas = document.getElementById("clock");
@@ -22,10 +24,8 @@ window.onload = function clock () {
     setInterval(draw, 1);
 };
 
-window.onresize = function() {
-    //draw();
-}
 
+// Funktsioon tagastab koordinaadid
 function getCoordinates (e) {
     newPos = {
         x : e.clientX,
@@ -34,16 +34,18 @@ function getCoordinates (e) {
     //console.log(newPos.x);
 }
 
+// Funktsioon muudab raadiust
 function changeRadius(val) {
   r = val;
   //console.log(r);
 }
-
+// Funktsioon vahetab kella värvi
 function changeColor(val) {
     document.documentElement.style.background = document.getElementById("color").value;
     colorS = document.getElementById("colorS").value;
 }
 
+// Funktsioon jookseb iga millisekund, matemaatiline osa on tehtud polaarkoordinaatides, mida hiljuti õppisime, ilmselt tekitab palju küsimusi.
 function draw () {
     d = new Date();
     canvas.height = window.outerHeight-330;
@@ -71,7 +73,9 @@ function draw () {
     ctx.fillText(today, (pos.x)-60, (pos.y));
     ctx.fillText(weekDay, (pos.x)-40, (pos.y)+25);
     ctx.beginPath();
+    // Joonistatakse kellaring
     ctx.arc(pos.x, pos.y-117, r, 0, 2 * Math.PI);
+    // For-tsükkel joonistab kellale tunnikriipsud
     for (var i = 0; i < 360; i+=30) {
         ctx.moveTo(r * Math.cos(i * Math.PI / 180)+pos.x, r * Math.sin(i * Math.PI / 180)+pos.y-116);
         ctx.lineTo(r*0.8 * Math.cos(i * Math.PI / 180)+pos.x, r*0.8 * Math.sin(i * Math.PI / 180)+pos.y-116);
@@ -80,7 +84,7 @@ function draw () {
     ctx.lineWidth = 10;
     ctx.lineCap = "round";
     ctx.stroke();
-    // seconds
+    // Joonistab sekundiseierit
     ctx.beginPath();
     ctx.moveTo(-r*0.1 * Math.cos((d.getSeconds()-15)*6 * Math.PI / 180)+pos.x, -r*0.1 * Math.sin((d.getSeconds()-15)*6 * Math.PI / 180)+pos.y-115);
     ctx.lineTo(r/2 * Math.cos((d.getSeconds()-15)*6 * Math.PI / 180)+pos.x, r/2 * Math.sin((d.getSeconds()-15)*6 * Math.PI / 180)+pos.y-115);
@@ -89,11 +93,11 @@ function draw () {
     ctx.lineCap = "round";
     ctx.stroke();
     //console.log(d.getSeconds());
-    // hours
+    // Joonistab tunniseierit
     ctx.beginPath();
     ctx.moveTo(-r*0.1 * Math.cos((d.getHours()-3)*30 * Math.PI / 180)+pos.x, -r*0.1 * Math.sin((d.getHours()-3)*30 * Math.PI / 180)+pos.y-115);
     ctx.lineTo(r*0.33 * Math.cos((d.getHours()-3)*30 * Math.PI / 180)+pos.x, r*0.33 * Math.sin((d.getHours()-3)*30 * Math.PI / 180)+pos.y-115);
-    // minutes
+    // Joonistab minutiseierit
     ctx.moveTo(-r*0.1 * Math.cos((d.getMinutes()-15)*6 * Math.PI / 180)+pos.x, -r*0.1 * Math.sin((d.getMinutes()-15)*6 * Math.PI / 180)+pos.y-115);
     ctx.lineTo(r*0.66 * Math.cos((d.getMinutes()-15)*6 * Math.PI / 180)+pos.x, r*0.66 * Math.sin((d.getMinutes()-15)*6 * Math.PI / 180)+pos.y-115);
     ctx.strokeStyle = colorS;
