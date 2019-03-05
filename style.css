@@ -5,6 +5,10 @@ body {
     overflow: hidden;
 }
 
+a {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .bgPulse {
     width: 300px;
     height: 300px;
@@ -175,7 +179,7 @@ body {
     font-size: 0.7em;
     position: absolute;
     top: 90%;
-    left: 46%;
+    left: 40%;
 }
 
 @keyframes blink {
