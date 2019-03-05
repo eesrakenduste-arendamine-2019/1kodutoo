@@ -9,26 +9,26 @@
     <script src="clock.js"></script>
 </head>
 <body>
-<canvas id="clock" onclick="getCoordinates (event)">This browser doesn't support html canvas!</canvas>
+<video loop id="videoBg">
+     <source src="time.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+<canvas id="clock" onclick="getCoordinates (event)" style="z-index: 0;">This browser doesn't support html canvas!</canvas>
 <div class="container">
     <p>Click anywhere to change position.</p>
-    <label>Click here to play some music :)</label>
-    <audio controls loop>
-        <source src="time.mp3" type="audio/ogg">
-      Your browser does not support the audio element.
-      </audio>
-      <br>
-    <label>Size: </label>
-    <input type="range" min="150" max="500" value="250" class="slider" oninput="changeRadius(this.value)" id="range">
     <br>
+    <label>Size: </label>
+        <input type="range" min="150" max="500" value="250" class="slider" oninput="changeRadius(this.value)" id="range">
+    <br><br>
     <label>Background-color: </label>
-    <input type="color" name="favcolor" value="#000000" id="color">
+        <input type="color" name="favcolor" value="#000000" id="color">
     <label>Clock-color: </label>
-    <input type="color" name="favcolor" value="#ffffff" id="colorS">
+        <input type="color" name="favcolor" value="#ffffff" id="colorS">
     <button onclick="changeColor()">Change</button>
     <br><br>
+    <label>Play music: </label>
+        <button onclick="showVideo()" id="btn">Play/Pause</button>
 </div>
-    
     <footer>
         <a href="https://github.com/rasmus127/1kodutoo" target="_blank">Kaspar Rasmus Eelmaa (+ GITHUB)</a>
     </footer>

@@ -3,6 +3,7 @@ let d = new Date();
 let r = 250;
 let slider;
 let canvas;
+let isFullscreen;
 let colorS = "#ffffff";
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 let pos = {
@@ -106,4 +107,36 @@ function draw () {
     ctx.stroke();
 }
 
+
+// Funktsioon näitab ja peidab videot nupule vajutades
+  function showVideo() {
+    let video = document.getElementById("videoBg");
+    let btn = document.getElementById("btn");
+    if (video.paused) {
+        video.play();
+        if (!isFullscreen) {
+            toggleFullscreen(btn.event);
+        }
+        btn.innerHTML = "Pause";
+        video.style.display = "block";
+      } else {
+        video.pause();
+        document.cancelFullScreen();
+        video.style.display = "none";
+        btn.innerHTML = "Play";
+        
+      }
+    }
+
+    /* Kood võetud- https://gist.github.com/demonixis/5188326 - Funktsioon paneb nupule klikkides Browseri Fullscreeni.*/
+    function toggleFullscreen(event) {
+        var element = document.body;
+          if (event instanceof HTMLElement) {
+              element = event;
+          }
+          isFullscreen = document.webkitIsFullScreen || document.mozFullScreen || false;
+          element.requestFullScreen = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || function () { return false; };
+          document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen || function () { return false; };
+          isFullscreen ? document.cancelFullScreen() : element.requestFullScreen();
+      }
 

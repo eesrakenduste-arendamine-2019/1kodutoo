@@ -12,8 +12,9 @@ body, html {
 }
 canvas {
     position:absolute;
-    border: 5px solid white;
+   /* border: 5px solid white; */
     left: 10px;
+
 }
 
 footer {
@@ -28,12 +29,14 @@ footer {
     padding-left: 30px;
     position: absolute;
 
+
 }
+
 
 /*   Slaider võetud - https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 .slider {
     -webkit-appearance: none;
-    width: 25%;
+    width: 33%;
     height: 15px;
     border-radius: 5px;
     background: #d3d3d3;
@@ -64,3 +67,12 @@ footer {
     background: rgb(117, 214, 238);
     cursor: pointer;
     }
+/*  SLAIDERI LÕPP */
+
+#videoBg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
