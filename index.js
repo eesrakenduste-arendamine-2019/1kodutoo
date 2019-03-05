@@ -14,6 +14,7 @@ function init(){
   getDay();
 }
 
+//leiame päeva numbri, tõlgendame eestikeelseks päevaks
 function getDay(){
   const date=new Date();
   let day;
@@ -48,7 +49,7 @@ function getDay(){
         break;
   }
   let monthDay;
-  monthDay=checkTime((date.getDate()));
+  monthDay=checkTime((date.getDate()));  //leiame kuu, kasutame sama funktsiooni 0 lisamiseks kui päev on alla 10
   let month;
   month=checkTime((date.getMonth()+1));
 
@@ -56,7 +57,7 @@ function getDay(){
   document.getElementById('day').innerHTML=day+", "+monthDay+"."+month;
 }
 
-
+//funktsioon algselt ainult 24h formaadi jaoks, hiljem ka päeva ja kuu ette 0 llisamiseks(vajadusel)
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;
@@ -64,13 +65,14 @@ function checkTime(i) {
   return i;
 }
 
+//kella käimapanek ja vajadusel sekundite peitmine
 function startTime() {
   var secondCheckbox=document.getElementById("secondSelect");
   var today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
-  var s = today.getSeconds();
-  // add a zero in front of numbers<10
+  var s = today.getSeconds();  
+  h = checkTime(h);
   m = checkTime(m);
   s = checkTime(s);
   if (secondCheckbox.checked == true){
@@ -83,6 +85,7 @@ function startTime() {
   }, 500);
 }
 
+//kella suuremaks muutmine checkobxi jölgimisega
 function clockSize(){
   var sizeCheckbox=document.getElementById("superSize");
   if(sizeCheckbox.checked == true){
@@ -92,6 +95,7 @@ function clockSize(){
   }
 }
 
+//dark mode checkboxi jälgimisega
 function colorScheme(){
   var colorBox=document.getElementById("darkMode");
   if(colorBox.checked==true){
@@ -103,6 +107,8 @@ function colorScheme(){
   }
 }
 
+
+//suvaline number creatori nime näitamiseks
 function  rndCol(){
   const r = Math.round(Math.random()*255);
   const g = Math.round(Math.random()*255);
@@ -113,12 +119,12 @@ function  rndCol(){
   }, 80);
 }
 
-
+//checkboxi jälgimine ja vajadusel creatori nime ja git repo linkimine
 function showCreator(){
   rndCol();
   var infoBox=document.getElementById("showCreator");
   if(infoBox.checked == true){
-    document.getElementById('creator').innerHTML="Taavi Liivat";
+    document.getElementById('creator').innerHTML="Taavi Liivat <a href = 'https://github.com/taavlii/1kodutoo'  target= '_blank'>Repo Link</a>" ;
   }else{
     document.getElementById('creator').innerHTML="";
   }

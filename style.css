@@ -4,6 +4,7 @@ body {
   font-size: 20px;
 }
 
+/*checkboxide rea ühele reale surumine */
 .settings input,
 .settings label {
   display: inline-block;
@@ -21,11 +22,12 @@ body {
 
 .creator{
   font-size:300%;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", cursive; /*comic sans lol*/
 }
 
 
-
+/*--dark mode jaoks checkboxi värvid muudetud halliks ja tumedamaks halliks,
+checkmarki enda muutmine käis üle jõu*/
 input[type="checkbox"] {
   cursor: pointer;
   -webkit-appearance: none;

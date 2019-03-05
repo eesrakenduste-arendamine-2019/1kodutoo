@@ -1,4 +1,5 @@
-Tehtud esimene versioon 1kodutööst 05.03.
+05.03. Tehtud esimene versioon 1kodutööst .
+06.03. Lisatud rohkem kommentaare ning aru saadud kuidas markdown pildi lingid toimivad.
 
 Õpilane Taavi Liivat.
 
@@ -10,5 +11,5 @@ Kella on võimalik ka suuremaks teha, seda protsendiliselt(% etteantud). Kaalusi
 muutus juba infocheckboxi lisades veidi liiga "busyks", mulle meeldib minimalistlikum välimuse sellisele asjale. 
 
 
-
+Screenshot:
 ![Pilt kodusest tööst](1kod_TL.png?raw=true "Pilt kellast")
