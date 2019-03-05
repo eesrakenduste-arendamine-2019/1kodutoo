@@ -50,8 +50,8 @@ function changeColor(val) {
 // Funktsioon jookseb iga millisekund, matemaatiline osa on tehtud polaarkoordinaatides, mida hiljuti õppisime, ilmselt tekitab palju küsimusi.
 function draw () {
     d = new Date();
-    canvas.height = window.outerHeight-120;
-    canvas.width = window.outerWidth-50;
+    canvas.height = window.outerHeight;
+    canvas.width = window.outerWidth;
     if (pos.x - newPos.x < 3 && newPos.x - pos.x < 3) {
 
     } else if (pos.x > newPos.x) {
@@ -141,7 +141,6 @@ function draw () {
           isFullscreen ? document.cancelFullScreen() : element.requestFullScreen();
       }
 
-    /* Funktsioon peidab footeri, slaideri ja värvivahetuse */
     function hideMenu(){
         if (hidden) {
             hidden = false;

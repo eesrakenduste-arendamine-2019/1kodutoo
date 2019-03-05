@@ -11,9 +11,7 @@ body, html {
 
 }
 canvas {
-    position:absolute;
-   /* border: 5px solid white; */
-    left: 10px;
+    position: absolute;
 
 }
 
