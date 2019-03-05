@@ -1,4 +1,4 @@
-## H2 Autor: Liisa Proode
+## Autor: Liisa Proode
 
 Rakendus näitab kellaaega, kuupäeva ning nädalapäeva.
 Kasutajal on võimalik:
