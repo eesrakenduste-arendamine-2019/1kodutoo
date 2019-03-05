@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+  <title>Clock</title>
+</head>
+<body>
+  <div class="settings">
+    <label for="secondSelect">Hide seconds:</label>
+    <input type="checkbox" id="secondSelect" name="secondSelect">
+    <label for="darkMode">Dark mode:</label>
+    <input type="checkbox" id="darkMode" name="darkMode" onclick="colorScheme()">
+    <label for="superSize">Supersize clock:</label>
+    <input type="checkbox" id="superSize" name="superSize" onclick="clockSize()">
+    <label for="showCreator">Info:</label>
+    <input type="checkbox" id="showCreator" name="showCreator" onclick="showCreator()">
+  </div>
+  <div class="creator" id="creator"></div>
+  <div class="big1" id="day"></div>
+  <div class="big2" id="time"></div>
+</body>
+</html>
