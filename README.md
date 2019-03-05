@@ -17,8 +17,8 @@ Repository - Avab projekti GitHub lehe.
 ## Kujundused
 Kellal on olemas kolm kujundust. Igal kujundusel on oma taustapilt ja font.
 
-Theme 1 - Esimene kujundus on nn "Premium" kujundus. Kujunduse taust on erinev olenedes kella ajast. Vahemikud on: 00:00 - 05:59, 06:00 - 11:59, 12:00 - 17:59, 18:00 - 23:59.  
-Theme 2 ja 3 - Mõlemal on oma taust ja font.
+Theme 1 - Esimene kujundus on nn "Premium" kujundus. Kujunduse taust on erinev olenedes kellaajast. Vahemikud on: 00:00 - 05:59, 06:00 - 11:59, 12:00 - 17:59, 18:00 - 23:59.  
+Theme 2 ja 3 - Mõlemal on oma taust ja font. Taust ei muutu kellaajaga.
 ## Muusika nupud
 Muusika nuppudele saab ligi vajutades "Now playing" nupule, mis avab väikese menüü.  
 Menüü saab kinni panna vajutades "Music controls" peale.  
@@ -30,4 +30,4 @@ Volume - - Muudab muusikat 10% vaiksemaks.
 Kell - greeny.cs.tlu.ee/~erkksul/eesrakendustearendus/Kodutööd/1kodutoo/  
 GitHub - https://github.com/erkkisula/1kodutoo
 
-Kuvatõmmised - greeny.cs.tlu.ee/~erkksul/eesrakendustearendus/Kodutööd/1kodutoo/screens või GitHubis screens kaustas.
+Kuvatõmmised - greeny.cs.tlu.ee/~erkksul/eesrakendustearendus/Kodutööd/1kodutoo/screens või https://imgur.com/a/VszI4ve
