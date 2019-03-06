@@ -1,0 +1,77 @@
+body{
+  margin: auto;
+  height: 600px;
+  width: 100%;
+  background: #ffffff url("wallpaper.jpg") no-repeat;
+  color: #fff;
+  background-size:cover;
+}
+div{
+  position: fixed;
+  text-align: center;
+  width: 4%;
+  height: 8%;
+  padding: 1px;
+  display: inline;
+  font-size: 30px;
+  border-radius: 10px;
+  color: black;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#clock{
+  position: fixed;
+  top:30%;
+  left:40%;
+  width: 12%;
+  height: 6%;
+}
+
+#date{
+  position:fixed;
+  top: 40%;
+  bottom: 40%;
+  width: 30%;
+  left: 33%;
+}
+#settings {
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  width: 1%;
+  height: 15%;
+  background: initial;
+
+}
+#size {
+  position: fixed;
+  top:50%;
+  left:44%;
+  font-size: 20px;
+  background: initial;
+  display: inline-block;
+  border-radius: 6px;
+  width: 50px;
+  box-shadow: 0 0 24px rgba(0,0,0.4);
+  padding: 10px;
+  border-radius: 10px;
+}
+#name {
+  position: absolute;
+  bottom: 25px;
+  left: 50px;
+  font-size: 30px;
+  width: 20%;
+  color:white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+#repo {
+  position: absolute;
+  bottom: 45px;
+  right:50px;
+  font-size: 30px;
+  width: 20%;
+  color:white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-decoration: none;
+}

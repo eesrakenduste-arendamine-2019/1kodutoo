@@ -1,65 +1,137 @@
-/*jshint esversion:6*/
-let clockContainer;
-let changeColor;
-let dayContainer;
-window.onload = function(){
-  init();
-};
+/*jshint esversion: 6*/
 
 function init(){
-  startClock();
-  changeColor = document.querySelector('#change-color');
+  setTimeout(startTime(), 1000);
 
-  changeColor.addEventListener('click', changeBackgroundColor);
-  window.addEventListener('mousewheel', changeBackgroundColor);
+  startDate();
+  changeClockSize();
+  var str = "Githubi repositoorium";
+
+  document.getElementById('name').innerHTML = "Jaagup Aland";
+
 }
 
-function startClock(){
-  clockContainer = document.querySelector('#clockContainer');
-  updateClock();
-  window.setInterval(function(){
-    updateClock();
-  }, 1000);
+
+
+function startTime() {
+  var today = new Date();
+  var hour = today.getHours();
+  var minute = today.getMinutes();
+  var second = today.getSeconds();
+  var time;
+
+  hour = checkTime(hour);
+  minute = checkTime(minute);
+  second = checkTime(second);
+  time = hour + ":" + minute + ":" + second;
+
+
+  document.getElementById('clock').innerHTML = time;
+
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
 }
 
-function updateClock(){
-  const date = new Date();
-  clockContainer.innerHTML = date;
-  dayContainer = document.querySelector('#dayContainer');
-  let day;
-  switch(new Date().getDay()){
+function startDate() {
+  var dateToday = new Date();
+  var dd = dateToday.getDate();
+  var mm = dateToday.getMonth();
+  var yyyy = dateToday.getFullYear();
+
+/*  if (dd < 10){
+    dd = '0' + dd;
+  }
+
+  if (mm < 10){
+    mm = '0' + mm;
+  } */
+
+  var day = dateToday.getDay();
+  switch (day){
     case 0:
-      day = "Pühapäev";
+      day = "Pühapäev ";
       break;
     case 1:
-      day = "Esmaspäev";
+      day = "Esmaspäev ";
       break;
     case 2:
-      day = "Teisipäev";
+      day = "Teisipäev ";
       break;
     case 3:
-      day = "Kolmapäev";
+      day = "Kolmapäev ";
       break;
     case 4:
-      day = "Neljapäev";
+      day = "Neljapäev ";
       break;
     case 5:
-      day = "Reede";
+      day = "Reede ";
+      break;
+    case  6:
+      day = "Laupäev ";
+      break;
+  }
+
+  switch(mm){
+    case 0:
+      mm = "jaanuar ";
+      break;
+    case 1:
+      mm = "veebruar ";
+      break;
+    case 2:
+      mm = "märts ";
+      break;
+    case 3:
+      mm = "aprill ";
+      break;
+    case 4:
+      mm = "mai ";
+      break;
+    case 5:
+      mm = "juuni ";
       break;
     case 6:
-      day = "Laupäev";
+      mm = "juuli ";
       break;
-    default :
-      day = "See pole päev";
+    case 7:
+      mm = "august ";
+      break;
+    case 8:
+      mm = "september ";
+      break;
+    case 9:
+      mm = "oktoober ";
+      break;
+    case 10:
+      mm = "november ";
+      break;
+    case 11:
+      mm = "detsember ";
+      break;
   }
-  dayContainer.innerHTML = day;
+
+  var today = day + dd + ". " + mm + yyyy;
+  document.getElementById('date').innerHTML = today;
 }
 
-function changeBackgroundColor(){
-  const red= Math.round(Math.random()*255);
-  const green= Math.round(Math.random()*255);
-  const blue= Math.round(Math.random()*255);
-  console.log(red);
-  //document.body.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
-  //document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+function changeClockSize(){
+  document.getElementById('date').style.fontSize = document.getElementById('size').value + "px";
+  document.getElementById('clock').style.fontSize = document.getElementById('size').value + "px";
+}
+
+function changeColor(){
+ nextColor();
+
+    console.log("tekst");
+  }
+function nextColor(){
+  var colors = ["white", "black", "green", "red", "yellow", "blue", "purple", "grey", "brown"];
+  var rand = Math.floor(Math.random()*9);
+  document.getElementById('date').style.color = colors[rand];
+  document.getElementById('clock').style.color = colors[rand];  
+  console.log("tekst");
+
 }
