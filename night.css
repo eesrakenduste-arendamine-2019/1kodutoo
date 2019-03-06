@@ -1,0 +1,15 @@
+/*kommentaar*/
+body{
+
+    background-image: url("bgdark.jpg"); 
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+    background-color: blue;
+
+
+}
+h3 {
+    margin: right;
+}

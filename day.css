@@ -1,0 +1,12 @@
+/*kommentaar*/
+body{
+
+    background-image: url("bg.jpg"); 
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(132, 221, 221);
+    color: black;
+
+
+}
