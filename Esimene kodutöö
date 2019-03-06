@@ -1,0 +1,25 @@
+<!-- Mainin, et soovin teha mitmeid põhimõttelisi muudatusi siin, sellehulgas .js faili lisamine.
+Paraku võtab see veel pisut aega.  -->
+
+<!DOCTYPE html>
+<link rel="shortcut icon" href="#">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="teine_tund.js"></script>
+  <title>Clock</title>
+</head>
+<body>
+  <button id="textColor">Teksti värv</button>
+  <button id="backgroundColor">Tausta värv</button>
+  <button id="defaultSettings">Algseaded tagasi</button>
+  <br>
+  <a>Kella mõõtmed: </a>
+  <br>
+  <button id="clockSmall">Kell väikseks</button>
+  <button id="clockMedimum">Kell keskmiseks</button>
+  <button id="clockBig">Kell suureks</button>
+</body>
+</html>
