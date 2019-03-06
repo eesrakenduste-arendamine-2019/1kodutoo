@@ -1,18 +1,16 @@
-/* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
   }
   
-  /* The navigation menu links */
   .sidenav a, button {
     text-decoration: none;
     font-size: 25px;
@@ -31,9 +29,6 @@
     color: #f1f1f1;
   }
 
-  #button:hover{
-    background-color: #3e8e41;
-  }
 
   #size{
     font-family: 'Ubuntu', sans-serif;
@@ -85,7 +80,6 @@
     color:  #ffa64d;
   }
   
-
   #quote {
     transition: margin-left .5s;
     text-align: center;
@@ -134,10 +128,6 @@
     font-size: 14px;
   }
 
-
-
-
-
   .theme-content {
     display: none;
     position: absolute;
@@ -149,7 +139,6 @@
     border-radius: 8px;
   }
   
-  /* Links inside the dropdown */
   .theme-content a {
     color: black;
     padding: 12px 16px;
@@ -158,30 +147,29 @@
     font-size: 14px;
   }
 
-
   #open{
     color: #ffa64d;
   }
   
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  #author{
+    color: #ffa64d;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    top: 93%;
+    left: 92%;
+    position: absolute;
+  }
 
-  
+.dropdown-content a:hover {background-color: #ddd;}
 
+.dropdown:hover .dropdown-content {display: block;}
 
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+#button:hover{background-color: #3e8e41;}
 
-  /* Change color of dropdown links on hover */
-  .theme-content a:hover {background-color: #ddd;}
+.theme-content a:hover {background-color: #ddd;}
 
-  /* Show the dropdown menu on hover */
-  .dropdown-theme:hover .theme-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown-theme:hover .dropbtn {background-color: #3e8e41;}
+.dropdown-theme:hover .theme-content {display: block;}
+
+.dropdown-theme:hover .dropbtn {background-color: #3e8e41;}

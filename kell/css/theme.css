@@ -12,7 +12,9 @@
 #page{
     text-align: center;
     justify-content: center;
-    padding: 4%
+    padding: 4%;
+    background-color: 'black';
+    color: 'white';
 }
 #themeBar button{
     margin-top: 30px;
@@ -37,6 +39,15 @@
     background-color: #90ee90;
     color: #331;
 }
+
+#author{
+    color: #ffa64d;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    top: 93%;
+    left: 92%;
+    position: absolute;
+  }
 
 #navigateButton{
     margin-top: 70px;
