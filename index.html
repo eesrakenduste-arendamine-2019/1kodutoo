@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kodutoo1</title>
+  <style>
+
+  body{
+    height: 10vh;
+    width: 100%;
+    padding: 1px 1px;
+    margin: 8px 0;
+    display: inline-block;
+    justify-content: left;
+    -ms-align-items: left;
+    align-items: left;
+    background: linear-gradient(270deg, #16b415, #bf233d, #1dc2d4);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+  }
+ 
+  #Сlock{
+    height:20vh;
+    float: left-side;
+     text-align: left;
+     font-size: 120px;
+     margin: 0 27.5%;
+     color: black;
+     padding: 60px;
+     width: 40%;
+     border-radius: 50px;
+  }
+
+  #Date{
+    width:40vh;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  #DateAndClock{
+    width: 1000px;
+    margin: 15% auto;
+  }
+
+  #Author{
+  font-size: 60px;
+  width: 20%;
+  padding: 20px;
+  width: 100vh;
+  margin: 0 36%;
+  color: orange;
+}
+
+  button{
+    font-size: 2.8vh;
+    height: 5vh;
+    width: 50%;
+    background-color: orange;
+    color: white;
+    padding: 5px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  @-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    35%{background-position:100% 50%}
+    69%{background-position:0% 50%}
+}
+  @-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    35%{background-position:100% 50%}
+    69%{background-position:0% 50%}
+}
+  @keyframes AnimationName {
+    0%{background-position:0% 50%}
+    35%{background-position:100% 50%}
+    69%{background-position:0% 50%}
+}
+</style>
+</head>
+<body>
+  <div id="Author">
+  <span>Jevgeni Prostsenko</span>
+  <span>Kodutoo1</span>
+  <h1 id="Сlock">00:00:00</h1>
+  <script src="index.js"></script>
+  <div id="DateAndClock">
+    <div id="Date"></div>
+    <button id="Color">Change date color</button>
+    <button id="Size">Format date</button>
+    <button id="Language">Change language</button>
+</body>
+</html>
