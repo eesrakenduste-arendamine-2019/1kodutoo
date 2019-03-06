@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt");
+@import url("https://fonts.googleapis.com/css?family=VT323");
+body {
+  color: white;
+  background-color: black;
+  font-family: "Rock Salt", cursive;
+}
+
+#clock-time {
+  font-size: 8vw;
+  text-align: center;
+  width: 100%;
+  margin-top: 0;
+}
+
+#day {
+  font-size: 2vw;
+  font-weight: 100;
+  display: inline-block;
+  text-align: right;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+#date {
+  font-size: 2vw;
+  font-weight: 100;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.container {
+  display: inline-block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  visibility: visible;
+}
+
+.day-and-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-icon {
+  z-index: 99;
+  top: 0;
+  left: 0;
+  height: 8%;
+  width: 8%;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.menubox {
+  visibility: hidden;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.menubox ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menubox li {
+  font-size: 30px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.menubox li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.menubox p {
+  margin: 0;
+  padding: 30px 0 0 0;
+}
+/*# sourceMappingURL=stylesheet.css.map */
