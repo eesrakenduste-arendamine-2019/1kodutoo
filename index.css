@@ -1,0 +1,154 @@
+@font-face {
+  font-family: digital;
+  src:url(alarm-clock.ttf);
+}
+@font-face {
+  font-family: regular;
+  src:url(fools-errand.otf);
+}
+
+body {
+  background-color: #000;
+  background-size: initial;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#clock {
+  font-family: digital;
+  font-size: 10vw;
+  color: #FFF;
+  margin-top: 5vw;
+}
+
+#date {
+  font-family: regular;
+  font-size: 5.7vw;
+  color: #FFF;
+  margin-top: -12vw;
+}
+
+#weekDay {
+  font-family: regular;
+  font-size: 5.7vw;
+  color: #FFF;
+  margin-top: -5vw;
+}
+
+button {
+  font-family: regular;
+  font-size: 2vw;
+  color: #888;
+  background-color: #222;
+  border: #222;
+  border-radius: 0.2vw;
+  outline: none;
+  cursor: pointer;
+  margin-top: 27vw;
+  width: 13.5vw;
+  height: 3.5vw;
+}
+
+button:hover {background-color: #555}
+#changeBg:active {
+	background-color: #0077DD;
+  transform: scale(0.98) translate(-15.2vw, -1.5vw);
+}
+#colorBtn:active {
+  background-color: #0077DD;
+  transform: scale(0.98) translate(0.25vw, -1.5vw);
+}
+#alarmSet:active {
+  background-color: #00B035;
+  transform: scale(0.98) translate(0.25vw, -6.5vw);
+}
+#alarmStop:active {
+  background-color: #B50000;
+  transform: scale(0.98) translate(-15.2vw, -6.5vw);
+}
+
+#changeBg {
+  transform: translate(-15vw, -1.5vw);
+}
+
+#colorBtn {
+  transform: translate(0.25vw, -1.5vw);
+}
+
+#alarmSet {
+  transform: translate(0.25vw, -6.5vw);
+  background-color: #00A025;
+  color: #222;
+}
+
+#alarmStop {
+  transform: translate(-15vw, -6.5vw);
+  background-color: #A50000;
+  color: #222;
+}
+
+select {
+  font-family: regular;
+  font-size: 2vw;
+  margin-top: 17vw;
+  padding: 0.5vw 2vw;
+  outline: none;
+  width: 7.7vw;
+  position: absolute;
+}
+
+option:hover{
+  background-color: #60C6FF;
+}
+
+#alarmHrs {
+  transform: translate(-15vw, -100%);
+}
+
+#alarmMins {
+  transform: translate(-4.4vw, -100%);
+}
+
+#alarmSecs {
+  transform: translate(6vw, -100%);
+}
+
+.centered {
+  position: fixed;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#autor {
+  background-color: #FFF;
+  font-family: regular;
+  font-size: 150%;
+  text-align: center;
+  border-radius: 5%;
+  padding-top: 2%;
+  padding-bottom: 0.5%;
+  margin-right: 90%;
+  transform: translate(-10%, -30%);
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  color: #8300FF;
+  font-weight: bold;
+}
