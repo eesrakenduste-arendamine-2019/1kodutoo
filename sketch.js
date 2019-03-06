@@ -1,3 +1,4 @@
+// clock
 let posX = 100;
 let posY = 100;
 let rad = 100;
@@ -10,12 +11,23 @@ let img;
 let colorVal = 1;
 let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 let bodyStyle, dateText, sliderX, sliderY, sliderRad, sliderColor;
+let clock;
+// game
+let square;
+let lastSpawnTime = 0;
+let spawnRate = 2000;
+let enemies = [];
+let gameOver = true;
+let showGame = false;
+let score = 0;
+let scoreBoard;
 
 function preload() {
     music = loadSound('assets/time.mp3');
 }
 
 function setup() {
+    // clock
     width = window.innerWidth-25;
     height = window.innerHeight-162
     createCanvas(width, height);
@@ -27,81 +39,52 @@ function setup() {
     sliderY = document.getElementById("y");
     sliderRad = document.getElementById("sizeR");
     sliderColor = document.getElementById("color");
+    scoreBoard = document.getElementById("score");
     moveLimit();
     loadLocal();
+    clock = new Clock(posX, posY, rad);
+    // game
+    square = new Square(width/2.5, height-150, 50);
 }
 
 function draw() {
     clear();
     //background(0);
+    // clock
     d = new Date();
     // converting integers to binary string using toString()
     second = Number(d.getSeconds()).toString(2);
     minute = Number(d.getMinutes()).toString(2);
     hour = Number(d.getHours()).toString(2);
 
-    // drawing circles
-    let current;
-    for (let i = 0; i < 3; i ++) {
-        if (i == 0) {
-            current = hour;
-        } else if (i == 1) {
-            current = minute;
-        } else {
-            current = second;
+    dateText.innerHTML = " | " + d.toISOString().slice(0,10) + " " + days[d.getDay()];
+
+    // rendering clock
+    clock.x = posX;
+    clock.y = posY;
+    clock.r = rad;
+    clock.render();
+    // game
+    if (showGame) {
+        // spawning an enemy and increasing spawnRate
+        if (lastSpawnTime < d.getTime() && !gameOver) {
+            spawnRate -= 5;
+            lastSpawnTime = d.getTime() + spawnRate;
+            let rnd = Math.floor((Math.random() * 2) + 1);
+            enemies.push(new Enemy(width, height- 100 - 50 * rnd, 50));
+            score ++;
+            scoreBoard.innerHTML = score.toString();
         }
-        // while binary digit count value is less than 6, add 0 in front
-        while (current.length < 6) {
-            current = "0" + current;
+        // rendering game objecys
+        square.update();
+        for (let i = 0; i < enemies.length; i++) {
+            enemies[i].update();
         }
-        for (let j = 0; j < 6; j ++) {
-            // first element is play button
-            if (i == 0 && j == 0) {
-                let newRad = rad + amp.getLevel()*200;
-                image(img, posX-newRad/2, posY-newRad/2, newRad, newRad);
-            } else {
-                if (current.charAt(j) == "1") {
-                    switch(colorVal) {
-                        case 1:
-                            fill(255, 247, 72);
-                            bodyStyle.backgroundColor = "#3C1A5B";
-                            break;
-                        case 2:
-                            fill(139, 216, 189);
-                            bodyStyle.backgroundColor = "#243665";
-                            break;
-                        case 3:
-                            fill(41, 95, 45);
-                            bodyStyle.backgroundColor = "#FFE67C";
-                            break;
-                        case 4:
-                            fill(235, 33, 136);
-                            bodyStyle.backgroundColor = "#080A52";
-                            break;
-                        case 5:
-                            fill(204, 243, 129);
-                            bodyStyle.backgroundColor = "#4831D4";
-                            break;
-                        case 6:
-                            fill(249, 97, 103);
-                            bodyStyle.backgroundColor = "#FCE77D";
-                            break;
-                        case 7:
-                            fill(223, 103, 140);
-                            bodyStyle.backgroundColor = "#3D155F";
-                            break;
-                        default:
-                    }
-                } else {
-                    fill(255);
-                }
-                strokeWeight(5);
-                // drawing circle with radius, which is based on the amp level
-                ellipse(posX + j * 2*rad, posY + i * 2*rad, rad + amp.getLevel()*200);
-            }
+        // delete old enemies
+        if (enemies[0].x < -100) {
+            enemies.splice(0, 1);
         }
     }
-    dateText.innerHTML = " | " + d.toISOString().slice(0,10) + " " + days[d.getDay()];
 }
 
 // detecting if play button is pressed
@@ -116,42 +99,7 @@ function mousePressed() {
     }
 }
 
-function changeSize(e) {
-    rad = parseInt(e);
-    resetPos();
-    moveLimit();
-    saveLocal();
-}
-
-function changeX(e) {
-    posX = parseInt(e);
-    saveLocal();
-}
-
-function changeY(e) {
-    posY = parseInt(e);
-    saveLocal();
-}
-
-function changeColor(e) {
-    colorVal = parseInt(e);
-    saveLocal();
-}
-
-// limit the x and y value based on radius vale
-function moveLimit() {
-    sliderX.max = (width-11*rad).toString();
-    sliderY.max = (height-5*rad).toString();
-}
-
-// reset pos if user is changing the x or y value
-function resetPos() {
-    posX = 100;
-    posY = 100;
-    sliderX.value = "100";
-    sliderY.value = "100";
-}
-
+// saving clock data
 function saveLocal(){
     let obj = {
         x: posX,
@@ -162,6 +110,7 @@ function saveLocal(){
     localStorage.setItem('data', JSON.stringify(obj));
 }
 
+// loading clock data
 function loadLocal(){
     const localData = localStorage.getItem('data');
     if(localData){

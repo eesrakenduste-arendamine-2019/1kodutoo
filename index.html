@@ -8,6 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
     <script src="sketch.js"></script>
+    <script src="game.js"></script>
+    <script src="clock.js"></script>
     <title>BinaryClock</title>
     <style>
         *{
@@ -64,6 +66,20 @@
             background: rgba(0, 0, 0, 0.7);
             cursor: pointer;
         }
+        /* slider css is taken from here: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+
+        #score {
+            position: fixed;
+            width: 100px;
+            bottom: 10px;
+            left: 1%;
+            color: rgb(237, 0, 78);
+            background-color: black;
+            border: 10px solid black;
+            border-radius: 10px;
+            text-align: center;
+            animation: blink 3s linear infinite;
+        }
 
         /* animations */
         @keyframes pulse
@@ -75,6 +91,19 @@
                   box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0);
              }
         }
+
+        @keyframes blink
+        {
+             0% {
+                  opacity: 1;
+             }
+             60% {
+                  opacity: 1;
+             }
+             80% {
+                  opacity: 0;
+             }
+        }
     </style>
 </head>
 <body>
@@ -82,6 +111,7 @@
     <input type="range" min="100" max="500" value="100" oninput="changeX(this.value)" class="slider" id="x">
     <input type="range" min="100" max="500" value="100" oninput="changeY(this.value)" class="slider" id="y">
     <input type="range" min="1" max="7" value="1" oninput="changeColor(this.value)" class="slider" id="color">
+    <span id="score">Press space if you are bored ;)</span>
     <span class="footer">Kent Pirma: <a href="https://github.com/internet8/1kodutoo">Github</a><span id="date"></span></span>
 </body>
 </html>
