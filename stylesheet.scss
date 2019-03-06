@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+$rocky: 'Rock Salt', cursive;
+$vt: 'VT323', monospace;
+
+body {
+    color: white;
+    background-color: black;
+    font-family: $rocky;
+}
+
+#clock-time {
+    font-size: 8vw;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+#day {
+    font-size: 2vw;
+    font-weight: 100;
+    display: inline-block;
+    text-align: right;
+    flex: 50%;
+}
+
+#date {
+    font-size: 2vw;
+    font-weight: 100;
+    flex: 50%;
+}
+
+.container {
+    display: inline-block;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    visibility: visible;
+
+}
+
+.day-and-date {
+    display: flex;
+}
+
+.menu-icon {
+    z-index: 99;
+    top:0;
+    left: 0;
+    height: 8%;
+    width: 8%;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.menubox {
+    visibility: hidden;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        font-size: 30px;
+        list-style-type: none;
+        margin:0;
+    }
+    li:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    p{
+        margin: 0;
+        padding:30px 0 0 0;
+    }
+}
