@@ -36,6 +36,7 @@ function clockDown(){
 
     document.getElementById("dateContainer").style.marginTop = "-8px";
     document.getElementById("dateContainer").style.fontSize = "180%";
+
   } else {
     document.getElementById("clockContainer").style.fontSize = "450%";
 
@@ -45,7 +46,6 @@ function clockDown(){
     document.getElementById("dateContainer").style.fontSize = "450%";
     document.getElementById("dateContainer").style.marginTop = "68px";
   }
-
 }
 
 function changeBackgroundColor(){
@@ -59,6 +59,7 @@ function startClock(){
   window.setInterval(function(){
     updateClock();
   },1000);
+
 }
 function updateClock(){
   const date = new Date();
@@ -91,6 +92,7 @@ function getDay(){
         day = "Laupäev";
         break;
     }
+
 }
 getDay();
 dayContainerElement.innerHTML = day;
