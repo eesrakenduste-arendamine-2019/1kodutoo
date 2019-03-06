@@ -4,22 +4,20 @@ let changeColorButton,backgroundChange;
 let dayContainer, timeContainer;
 let changeSize;
 let changeFontButton, fontChanged;
-let change;
 let allHands, hourHand, minuteHand, secondHand;
 let changeClock;
 
 window.onload = function (){
   init();
   changeBackgroundColor();
-  dayContainer = document.querySelector('#dayContainer');
-  timeContainer = document.querySelector('#timeContainer');
+  createDigitalElements();
   changeColorButton = document.querySelector('#change-color');
   changeColorButton.addEventListener('click', changeBackgroundColor);
   changeClockType = document.querySelector('#changeClockType');
   changeClockType.addEventListener('click', changeClockT);
   changeFontButton = document.querySelector('#change-text-font');
   changeFontButton.addEventListener('click', changeTextFont);
-  fontChanged = 0; changeClock = 0;
+  fontChanged = 0;
 };
 function moveHands() {
   const now = new Date();
@@ -38,7 +36,7 @@ function moveHands() {
   } else {
     allHands.forEach(hand => hand.style.transition = '') 
   }
-}
+} /* Source: https://github.com/Murkrage/javascript30/blob/master/02/index.html */
 function init(){
   startClock();
 }
@@ -96,13 +94,13 @@ function updateClock() {
   month[11] = "detsember";
   let n = month[date.getMonth()];
   let a = date.getDate();
-  dayContainer.innerHTML = day + ", " + a + ". " + n;
+  dayContainer.innerHTML = day + "&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;" + a + ". " + n;
 
   let time = document.querySelector('#timeContainer');
   let h = addZero(date.getHours());
   let m = addZero(date.getMinutes());
   let s = addZero(date.getSeconds());
-  time.innerHTML = h + ":" + m + ":" + s;
+  time.innerHTML = h + "|" + m + "|" + s;
   } else {
     return;
   }
@@ -121,9 +119,7 @@ function changeBackgroundColor(){
   const blue = Math.round(Math.random()*255);
   document.body.style.backgroundColor = 'rgb('+red+','+green+','+blue+')';
 }
-function changeSizeClock(){
-  document.querySelector('#container').style.width = "10%";
-}
+
 function setZoom(zoom,el) {
       
   transformOrigin = [0,0];
@@ -136,11 +132,11 @@ function setZoom(zoom,el) {
       el.style[p[i] + "Transform"] = s;
       el.style[p[i] + "TransformOrigin"] = oString;
   }
-  el.style["transform"] = s;
+  el.style["transform"] = "translate(-50%, -50%)" + s;
   //el.style["transformOrigin"] = oString;
-  el.style.transformOrigin = "center center 0";
+  document.querySelector('#container').style.transformOrigin = "center center 0";
   
-}
+} /* Source: https://jsfiddle.net/ex1f181o/ */
 
 function showVal(a){
   let zoomScale = Number(a)/10;
@@ -158,12 +154,12 @@ function changeTextFont(){
   if(fontChanged == 0) {
     dayContainer.style.fontFamily = "Arial";
     timeContainer.style.fontFamily = "Arial";
-    changeFontButton.innerHTML = "Times New Roman";
+    changeFontButton.innerHTML = "Lato";
     fontChanged = 1;
     
   } else {
-    dayContainer.style.fontFamily = "Times New Roman";
-    timeContainer.style.fontFamily = "Times New Roman";
+    dayContainer.style.fontFamily = "Lato";
+    timeContainer.style.fontFamily = "Lato";
     changeFontButton.innerHTML = "Arial";
     fontChanged = 0;
     
@@ -222,11 +218,14 @@ function changeClockT() {
     dayCont.setAttribute('id', 'dayContainer');
     document.querySelector('#container').appendChild(timeCont);
     document.querySelector('#container').appendChild(dayCont);
-    dayContainer = document.querySelector('#dayContainer');
-    timeContainer = document.querySelector('#timeContainer');
+    createDigitalElements();
     changeClockType.innerHTML = "Analoog kell";
-    changeClock = 0;
   }
+}
+function createDigitalElements(){
+  dayContainer = document.querySelector('#dayContainer');
+  timeContainer = document.querySelector('#timeContainer');
+  changeClock = 0;
 }
 function removeElement(elementId) {
   let element = document.getElementById(elementId);

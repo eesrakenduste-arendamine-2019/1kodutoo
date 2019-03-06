@@ -1,23 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
 
 div.container {
-    margin: 150px auto;
-    height: 5%;
-    width: 70%; 
-    float:left; 
+  display: flex;
+  display: -webkit-flex;
+  top: 40%;
+  left: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 div.timeContainer{
+    display: flex;
     color: white;
-    font-family: Times New Roman;
-    font-size: 150px;
-    font-weight: bold;
+    font: 300 150px/1 'Lato', sans-serif;
+    /*font-size: 150px;
+    font-weight: bold;*/
     text-align: center;
+    align-self: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    position: relative;
   }
 div.dayContainer{
+    display: flex;
     color: white;
-    font-family: Times New Roman;
-    font-size: 50px;
-    font-weight: bold;
+    font-family: 300 50px/1 'Lato', sans-serif;
+    /*font-size: 50px;
+    font-weight: bold;*/
     text-align: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: inherit;
+    position: relative;
+
   }
 button, label {
     height: 20px;
@@ -32,16 +50,17 @@ button, label {
     margin:5px;
 }
 div.buttonContainer{
-  padding: 40px;
+  position: fixed;
   text-align: center;
   border-width: 3px;
   border-style: double; 
   border-color: rgba(12, 12, 12, 0.315);
   background-color: rgba(98, 116, 124, 0.192);
   border-radius: 20px;
-  width:20%; 
-  float:right; 
-  margin: 150px 20px;
+  width:15%;
+  top: 5%;
+  left: 80%;
+  padding: 10px 10px;
 }
 .buttoncontainer.h1 {
   color: white;
@@ -62,8 +81,8 @@ footer {
 }
 .slider {
   -webkit-appearance: none;
-  width: 200px;
-  height: 15px;
+  width: 160px;
+  height: 10px;
   border-radius: 5px;   
   background: rgba(168, 157, 157, 0.61);
   outline: none;
@@ -92,9 +111,9 @@ footer {
 input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
-  width: 32px;
+  width: 20px;
   margin: 5px;
-	height: 32px;
+	height: 20px;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
@@ -104,6 +123,8 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .clock {
+  flex-grow: 0;
+  flex-shrink: inherit;
   width: 22rem;
   height: 22rem;
   border:6px solid white;

@@ -9,22 +9,21 @@
   <title>Clock</title>
 </head>
 <body>
-
 <div id="container" class="container">
   <div id="timeContainer" class="timeContainer"></div>
   <div id="dayContainer" class ="dayContainer"></div>
 </div>
   <div id="buttonContainer" class="buttonContainer">
-    <button id="change-color">Suvaline värv</button>
-    <button id="change-text-font">Arial</button>
+    <button id="change-color">Suvaline värv</button><br>
+    <button id="change-text-font">Arial</button><br>
     <button id="changeClockType">Analoog kell</button><br>
     <label for="colorChange">Taustavärv: </label>
-    <input id="colorChange" type="color" onchange="changeColor(this.value)" value="#FFFFFF"/>
+    <input id="colorChange" type="color" onchange="changeColor(this.value)" value="#FFFFFF"/><br>
     <label for="textColorChange">Kirjavärv: </label>
-    <input id="textColorChange" type="color" onchange="changeTextColor(this.value)" value="#FFFFFF"/><br>
+    <input id="textColorChange" type="color" onchange="changeTextColor(this.value)" value="#FFFFFF"/><br><br>
     <div class="slidercontainer"><input id="slider" class="slider" min="1" max="10" value='10' step="1" onchange="showVal(this.value)" type="range"/></div> 
   </div>
 
 </body>
-<footer><p>maded by Gertin Pakkonen. <a href="http://github.com/gertpak/1kodutoo" target="_blank">Repositoorium</a></p></footer>
+<footer><p>Gertin Pakkonen. <a href="http://github.com/gertpak/1kodutoo" target="_blank">Repositoorium</a></p></footer>
 </html>
