@@ -1,17 +1,15 @@
 let posX = 100;
 let posY = 100;
 let rad = 100;
-let width;
-let height;
+let width, height;
 let d;
 let music;
 let amp;
-let hour;
-let minute;
-let second;
+let hour, minute, second;
 let img;
 let colorVal = 1;
-var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+let bodyStyle, dateText, sliderX, sliderY, sliderRad, sliderColor;
 
 function preload() {
     music = loadSound('assets/time.mp3');
@@ -23,6 +21,12 @@ function setup() {
     createCanvas(width, height);
     amp = new p5.Amplitude();
     img = loadImage('assets/play.png');
+    bodyStyle = document.body.style;
+    dateText = document.getElementById("date");
+    sliderX = document.getElementById("x");
+    sliderY = document.getElementById("y");
+    sliderRad = document.getElementById("sizeR");
+    sliderColor = document.getElementById("color");
     moveLimit();
     loadLocal();
 }
@@ -60,31 +64,31 @@ function draw() {
                     switch(colorVal) {
                         case 1:
                             fill(255, 247, 72);
-                            document.body.style.backgroundColor = "#3C1A5B";
+                            bodyStyle.backgroundColor = "#3C1A5B";
                             break;
                         case 2:
                             fill(139, 216, 189);
-                            document.body.style.backgroundColor = "#243665";
+                            bodyStyle.backgroundColor = "#243665";
                             break;
                         case 3:
                             fill(41, 95, 45);
-                            document.body.style.backgroundColor = "#FFE67C";
+                            bodyStyle.backgroundColor = "#FFE67C";
                             break;
                         case 4:
                             fill(235, 33, 136);
-                            document.body.style.backgroundColor = "#080A52";
+                            bodyStyle.backgroundColor = "#080A52";
                             break;
                         case 5:
                             fill(204, 243, 129);
-                            document.body.style.backgroundColor = "#4831D4";
+                            bodyStyle.backgroundColor = "#4831D4";
                             break;
                         case 6:
                             fill(249, 97, 103);
-                            document.body.style.backgroundColor = "#FCE77D";
+                            bodyStyle.backgroundColor = "#FCE77D";
                             break;
                         case 7:
                             fill(223, 103, 140);
-                            document.body.style.backgroundColor = "#3D155F";
+                            bodyStyle.backgroundColor = "#3D155F";
                             break;
                         default:
                     }
@@ -97,7 +101,7 @@ function draw() {
             }
         }
     }
-    document.getElementById("date").innerHTML = " | " + d.toISOString().slice(0,10) + " " + days[d.getDay()];
+    dateText.innerHTML = " | " + d.toISOString().slice(0,10) + " " + days[d.getDay()];
 }
 
 // detecting if play button is pressed
@@ -136,16 +140,16 @@ function changeColor(e) {
 
 // limit the x and y value based on radius vale
 function moveLimit() {
-    document.getElementById("x").max = (width-11*rad).toString();
-    document.getElementById("y").max = (height-5*rad).toString();
+    sliderX.max = (width-11*rad).toString();
+    sliderY.max = (height-5*rad).toString();
 }
 
 // reset pos if user is changing the x or y value
 function resetPos() {
     posX = 100;
     posY = 100;
-    document.getElementById("x").value = "100";
-    document.getElementById("y").value = "100";
+    sliderX.value = "100";
+    sliderY.value = "100";
 }
 
 function saveLocal(){
@@ -166,9 +170,9 @@ function loadLocal(){
         posY = data.y;
         rad = data.size;
         colorVal = data.color;
-        document.getElementById("x").value = posX;
-        document.getElementById("y").value = posY;
-        document.getElementById("sizeR").value = rad;
-        document.getElementById("color").value = colorVal;
+        sliderX.value = posX;
+        sliderY.value = posY;
+        sliderRad.value = rad;
+        sliderColor.value = colorVal;
     }
 }
