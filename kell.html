@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Kodutöö</title>
+</head>
+<body>
+  <div class="content">
+  <div id="aeg"></div>
+  <div id="kuupaev"></div>
+  </div>
+  <div id="nupud">
+    <button type="button" id="nupp1" onclick=changeColor("blue")>Sinine</button> </br>
+    <button type="button" id="nupp2" onclick=changeColor("black")>Must</button> </br>
+    <button type="button" id="nupp3" onclick=changeColor("white")>Valge</button> </br>
+    <button type="button" id="nupp4" onclick=changeColor("red")>Punane</button> </br>
+  </div>
+  <div id="nupud2">
+  <button type="button" id="default" onclick=clockSize("100px","50px")>Tavaline</button>
+  <button type="button" id="vaiksemaks" onclick=clockSize("50px","25px")>Väiksem</button>
+  <button type="button" id="suuremaks" onclick=clockSize("150px","75px")>Suurem</button>
+  </div>
+  <a id="repo" href="https://github.com/eesrakenduste-arendamine-2019/1kodutoo" target=_blank>Rakenduse repositoorium</a>
+  <p id="nimi">Revor Jan Nuiamäe. TA II</p>
+  <script src="kell.js"></script>
+
+</body>
+</html>

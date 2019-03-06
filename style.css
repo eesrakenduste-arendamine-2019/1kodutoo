@@ -1,0 +1,91 @@
+body {
+background-image: url("https://pixelz.cc/wp-content/uploads/2016/11/annapurna-massif-himalayas-nepal-4k-wallpaper.jpg");
+background-size: 100%;
+}
+#aeg {
+  color: white;
+  max-width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  font-size: 100px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-shadow: 2px 2px 4px #000000;
+}
+#kuupaev {
+  color: white;
+  max-width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-shadow: 2px 2px 4px #000000;
+}
+#nimi {
+  font-size: 17px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+}
+#nupud {
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+#repo {
+  color: white;
+  position: absolute;
+  bottom: 60px;
+}
+#nupp1{
+  background-color: blue;
+  border: 0;
+  color: white;
+  border-radius: 50%;
+  width: 100px;
+}
+#nupp2{
+  background-color: black;
+  border: 0;
+  color: white;
+  border-radius: 50%;
+  margin-left: 3%;
+  width: 100px;
+}
+#nupp3{
+  background-color: white;
+  border: 0;
+  color: black;
+  border-radius: 50%;
+  margin-left: 3%;
+  width: 100px;
+}
+#nupp4{
+  background-color: red;
+  border: 0;
+  color: white;
+  border-radius: 50%;
+  margin-left: 3%;
+  width: 100px;
+}
+#nupud2{
+  position: absolute;
+  top: 20px;
+}
+@media screen and (max-width:700px){
+  .content{
+    width: 20%;
+  }
+  #nupud{
+    margin-left: 15%;
+  }
+  #kuupaev{
+    font-size: 50px;
+    display: flex;
+    margin-left: 80px;
+  }
+}
