@@ -10,5 +10,5 @@ Samuti on võimalik panna muusika mängima.
 
 Kella asukoht: http://greeny.cs.tlu.ee/~kaspeel/EesrakendusteArendamine/1kodutoo/ ja http://www.tlu.ee/~ras127/kell/
 
-<img src="kell.png">
+<img src="kell3.png">
 <img src="kell2.png">
