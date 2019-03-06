@@ -1,0 +1,28 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #505050;
+    color: #ffffff;
+    font-family: Georgia;
+}
+
+a{
+    color: #ADD8E6;
+}
+button{
+    padding: 5px 20px;
+}
+#wrapper {
+    text-align: center;
+}
+
+#time{
+    margin-top: 20%;
+}
+
+#footer {
+    position:absolute;
+    width: 100%;
+    bottom:0;
+}

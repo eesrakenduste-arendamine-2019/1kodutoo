@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kell</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1 id="date"></h1>
+        </div>
+        <hr>
+        <div id="body">
+            <h1 id="time"></h1>
+            <button type="button" name="alarm" id="alarm" onclick="setAlarm()">Seadista äratus</button>
+            <button type="button" name="timer" id="timer" onclick="setTimer()">Seadista taimer</button>
+            <br><br><span id="alarmNotice"></span>
+            <span id="timerNotice"></span>
+        </div>
+        <div id="footer">
+            <hr>
+            <p>Autor: Martin Tšerdantsev | <a href="https://github.com/iamcatcus/TLU_kell" target="_blank">Lähtekood</a></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
