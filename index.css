@@ -1,69 +1,76 @@
 body{
-	background-color: black;	
+  background-color: grey;	
 }
 
 .li{
-	color: yellow;
+  color: yellow;
 }
 
+
 .date{
-	position: absolute;
-	top: 53%;
-    	left: 50%;
-	transform: translateX(-53%) translateY(-50%);
-	color: #00FFFF;
-	font-family:Lucida Console;
-	font-size: 25px;
-	text-shadow: 2px 2px green;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-53%) translateY(-50%);
+  font-family:Lucida Console;
+  font-size: 25px;
 }
 
 .time{
-	position: absolute;
-	top: 55%;
-    	left: 50%;
-	transform: translateX(-55%) translateY(-50%);
-	color: #00FFFF;
-	font-family:Lucida Console;
-	font-size: 65px;
-	text-shadow: 3px 3px red;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-55%) translateY(-50%);
+  font-family:Lucida Console;
+  font-size: 65px;
 }
 
 .day{
-	position: absolute;
-	top: 47%;
-    	left: 49.5%;
-	transform: translateX(-47%) translateY(-49.5%);
-	color: #00FFFF;
-	font-family:Lucida Console;
-	text-shadow: 2px 2px green;
-	font-size: 25px;
+  position: absolute;
+  top: 47%;
+  left: 49.5%;
+  transform: translateX(-47%) translateY(-49.5%);
+  font-family:Lucida Console;
+  font-size: 25px;
 }
 
 .input{
-	position: absolute;
-	top: 74%;
-    	left: 40%;
-	transform: translateX(-74%) translateY(-40%);
-	
+  position: absolute;
+  top: 73.5%;
+  left: 36%;
+  transform: translateX(-73.5%) translateY(-36%);
 }
 
 .decrease{
-	position: absolute;
-	top: 74%;
-    	left: 46%;
-	transform: translateX(-74%) translateY(-46%);
+  position: absolute;
+  top: 74%;
+  left: 44%;
+  transform: translateX(-74%) translateY(-44%);
 }
-	
+
 .increase{
-	position: absolute;
-	top: 74.2%;
-    	left: 53%;
-	transform: translateX(-74.2%) translateY(-53%);
+  position: absolute;
+  top: 74.3%;
+  left: 53%;
+  transform: translateX(-74.3%) translateY(-53%);
 }
-	
+
+.v2rv{
+  position: absolute;
+  top: 74.4%;
+  left: 61%;
+  transform: translateX(-74.4%) translateY(-61%);
+}
+
+.v2rv1{
+  position: absolute;
+  top: 78%;
+  left: 60.8%;
+  transform: translateX(-78%) translateY(-60.8%);
+}
 
 h3{
-	color: white;
+  color: white;
 }
 
 
