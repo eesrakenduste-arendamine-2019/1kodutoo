@@ -50,9 +50,9 @@ function keyPressed () {
             lastSpawnTime = 0;
             gameOver = false;
             score = 0;
-            square.acceleration = 23;
+            square.acceleration = 22;
         } else {
-            square.acceleration = 23;
+            square.acceleration = 22;
         }
     }
 }

@@ -68,7 +68,7 @@ function draw() {
     if (showGame) {
         // spawning an enemy and increasing spawnRate
         if (lastSpawnTime < d.getTime() && !gameOver) {
-            spawnRate -= 5;
+            spawnRate -= 20;
             lastSpawnTime = d.getTime() + spawnRate;
             let rnd = Math.floor((Math.random() * 2) + 1);
             enemies.push(new Enemy(width, height- 100 - 50 * rnd, 50));
