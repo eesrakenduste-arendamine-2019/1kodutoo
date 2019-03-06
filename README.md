@@ -1,4 +1,4 @@
-# 1kodutoo Kristjan Põldmets
+# 1kodutoo Kristjan Põldmets http://greeny.cs.tlu.ee/~krispol/2019/Eesrakenduste_arendus/1kodutoo/Kodut%c3%b6%c3%b6%20screenshot.png
 1. kodutöö Eesrakenduste arendamises.
 
 ## Tähtaeg 06.03.2018 23:59
