@@ -97,8 +97,8 @@ function draw () {
     //console.log(d.getSeconds());
     // Joonistab tunniseierit
     ctx.beginPath();
-    ctx.moveTo(-r*0.1 * Math.cos((d.getHours()-3)*30 * Math.PI / 180)+pos.x, -r*0.1 * Math.sin((d.getHours()-3)*30 * Math.PI / 180)+pos.y-115);
-    ctx.lineTo(r*0.33 * Math.cos((d.getHours()-3)*30 * Math.PI / 180)+pos.x, r*0.33 * Math.sin((d.getHours()-3)*30 * Math.PI / 180)+pos.y-115);
+    ctx.moveTo(-r*0.1 * Math.cos(((d.getHours()+d.getMinutes()/60)-3)*30 * Math.PI / 180)+pos.x, -r*0.1 * Math.sin(((d.getHours()+d.getMinutes()/60)-3)*30 * Math.PI / 180)+pos.y-115);
+    ctx.lineTo(r*0.33 * Math.cos(((d.getHours()+d.getMinutes()/60)-3)*30 * Math.PI / 180)+pos.x, r*0.33 * Math.sin(((d.getHours()+d.getMinutes()/60)-3)*30 * Math.PI / 180)+pos.y-115);
     // Joonistab minutiseierit
     ctx.moveTo(-r*0.1 * Math.cos((d.getMinutes()-15)*6 * Math.PI / 180)+pos.x, -r*0.1 * Math.sin((d.getMinutes()-15)*6 * Math.PI / 180)+pos.y-115);
     ctx.lineTo(r*0.66 * Math.cos((d.getMinutes()-15)*6 * Math.PI / 180)+pos.x, r*0.66 * Math.sin((d.getMinutes()-15)*6 * Math.PI / 180)+pos.y-115);
@@ -141,7 +141,7 @@ function draw () {
           isFullscreen ? document.cancelFullScreen() : element.requestFullScreen();
       }
 
-    /* Funktsioon peidab footeri,slaideri, värvidemuutja ja play/pause nupu */
+    // Peidab footeri, slaideri jne
     function hideMenu(){
         if (hidden) {
             hidden = false;
