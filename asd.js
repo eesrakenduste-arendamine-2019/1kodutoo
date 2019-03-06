@@ -1,5 +1,8 @@
 /*jshint esversion:6*/
 
+
+
+document.getElementById('clockContainer');
 let clockContainer;
 let changeColorButton;
 let dayContainer;
@@ -22,29 +25,27 @@ function init (){
 
 function startClock(){
 
-  var today = new Date();
-  var hr = today.getHours();
-  var min = today.getMinutes();
-  var sec = today.getSeconds();
-
-  clockContainer = document.querySelector('#clockContainer');
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  document.getElementById('clockContainer').innerHTML = h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
   updateClock();
   window.setInterval(function(){
     updateClock();
   }, 1000);
 
+
 }
 
 function updateClock(){
   const date = new Date();
-  var hr = date.getHours();
-  var min = date.getMinutes();
-  var sec = date.getSeconds();
-  hr = (hr < 10) ? "0" + hr : hr;
-  min = (min < 10) ? "0" + min : min;
-  sec = (sec < 10) ? "0" + sec : sec;
 
-  clockContainer.innerHTML = hr+":"+min+":"+sec;
+  var hr = today.getHours();
+  var min = today.getMinutes();
+  var sec = today.getSeconds();
+  clockContainer.innerHTML = date;
+
   dayContainer = document.querySelector('#dayContainer');
   let day;
   var audio = new Audio('tick.mp3');
@@ -52,31 +53,30 @@ function updateClock(){
   function getDay(){
     switch(new Date().getDay()){
       case 0:
-        day = "PÜHAPÄEV";
+        day = "Pühapäev";
         break;
       case 1:
-        day = "ESMASPÄEV";
+        day = "Esmaspäev";
         break;
       case 2:
-        day = "TEISIPÄEV";
+        day = "Teisipäev";
         break;
       case 3:
-        day = "KOLMAPÄEV";
+        day = "Kolmapäev";
         break;
       case 4:
-        day = "NELJAPÄEV";
+        day = "Neljapäev";
         break;
       case 5:
-        day = "REEDE";
+        day = "Reede";
         break;
       case 6:
-        day = "LAUPÄEV";
+        day = "Laupäev";
         break;
     }
   }
 
   getDay();
-
   dayContainer.innerHTML = day;
 }
 
