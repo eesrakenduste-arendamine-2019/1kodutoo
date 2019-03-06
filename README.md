@@ -15,22 +15,15 @@ Kujunda kellanäide vastavalt maitsele või kindlale teemale, mahutades kella t�
 1. Kood on vormistatud vastavalt stiilijuhendile
 1. `README.md` failis on välja toodud autori nimi, ekraanipilt rakendusest ja kirjeldatud funktsionaalsus
 
-## Mõned ideed võimalikeks täiendusteks (lihtsalt, et mõte hakkaks jooksma)
+## Autor
 
-* Vahetuda võivad taustapildid, taustal võib mängida muusika
-* Taustale klikkides muudetakse kella taustaväri
-* Kellale klõpsides muudetakse numbrite värvi või numbrite suurust;
-* Iga numbri suurust saab eraldi muuta
-* Nooleklahvidega saab kella ekraanil liigutada
-* Küsi enne kella näitamise alustamist kasutajalt tema lemmikvärv ja tee sellest lähtudes midagi
-* Muuda kella ja tausta värvi vastavalt ajale (päev/öö)
-* Kella suurus ja asukoht sõltuvad hiire asukohast ekraanil
-* Äkki võiks tegu olla hoopis analoogkellaga
-* Kirjatüüpi saab ka muuta, [google.com/fonts](https://www.google.com/fonts)
-* Kasutaja saab lisada või kasutajaöe näidatakse mitu kellaaega erinevatest maailma kohtadest
+Autor: Martin Tšerdantsev
+Screenshot: https://prnt.sc/mu8ght
+Funktsionaalsus: Kell töötab. Kell näitab kuupäeva, kellaaega ja eestikeelset kuu ja päeva nime. 
+Kella sisse on ehitatud äratuskell ja taimer.
+Äratuskella ja taimerit saab käivitada vastava nupu vajutusel. Neid on võimalik käivitada samaaegselt.
 
-## Abimaterjal
+Äratuskell võtab sisse kaks muutujat: tund ja minutid. Pärast seda, kui kasutaja neid sisestab, hakkab kell loendama järgmise korrani, kui sisestatud kellaaeg esineb (täna või homme)
+Taimer võtab sisse ühe muutuja: minutid. Pärast seda, kui kasutaja neid sisestab, arvutab programm distantsi praegusest momendist ning loendab niikaua, kuni distants ei ole <= 0.
 
-* Sündmuste loetelu [HTML DOM Events](http://www.w3schools.com/jsref/dom_obj_event.asp)
-* Ajal põhinevad sündmused [JavaScript Timing Events](http://www.w3schools.com/js/js_timing.asp)
-* CSSi muutmine [HTML DOM Style Object](http://www.w3schools.com/jsref/dom_obj_style.asp)
+Programis kindlasti esineb vigu - esinemise juhul palun nendest teatada e-posti kaudu: mcherda@tlu.ee
