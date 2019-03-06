@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="index.js"></script>
-  <title>Clock</title>
-</head>
-<body>
-  <div id="clockContainer"></div>
-  <button id = "clockButton">Muuda värvi</button>
-  <div id="dayContainer"></div>
+<html lang="en-US">
 
+<head>
+    <meta charset="utf-8">
+    <title>Kell</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+    <script src="./assets/js/app.js"></script>
+
+</head>
+
+<body>
+
+    <div class="clock">
+
+        <div class="box"></div>
+        <button type="button" class="timebox" ></button>
+
+        <div class="hand">
+            <div class="hr-hand"></div>
+        </div>
+
+        <div class="hand">
+            <div class="min-hand"></div>
+        </div>
+
+        <div class="hand">
+            <div class="sec-hand"></div>
+        </div>
+        <div class="date">
+          <div id="daymonthyear"></div>
+        </div>
+        <div class="dot"></div>
+    </div>
+
+    <button class="author" id = "clockButton"><b>Autor:</b> Kristjan Kelk</button>
 </body>
+
 </html>
