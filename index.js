@@ -2,6 +2,7 @@
 window.onload = setInterval(clock,1000);
 let changeColorButton;
 let changeTextButton;
+let changeClockPos;
 
 window.onload = function () {
   init();
@@ -11,7 +12,9 @@ function init() {
 	 changeColorButton = document.querySelector('#colorButtonBackground');
 	  changeTextButton = document.querySelector('#textColorButton');
 	 changeColorButton.addEventListener('click', changeBackgroundColor);
-	 changeTextButton.addEventListener('click', changeTextColor)
+	 changeTextButton.addEventListener('click', changeTextColor);
+	 changeClockPos = document.getElementById("#clockPos");
+	 changeClockPos.addEventListener('click', clockPos);
 }
 
 function changeBackgroundColor() {
