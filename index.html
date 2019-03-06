@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="index.js"></script>
-  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <title>Clock</title>
 </head>
 <body>
-  <div id="clockContainer"></div>
-  <button id="clockButton">Muuda värvi</button>
-  <div id="dayContainer"></div>
+  <div>
+    <input type="color" id="bgColor" name="bgColorN"
+           value="#666666">
+    <label for="bgColorN">Vali taustavärv</label>
+</div>
+<button id=changeBgColor class="myButton">Muuda taustavärvi</button>
+<div id="date">
+  <span id=dayC></span>
+  <span id=dayCc></span>
+  <span id=monthC></span>
+  <span id=yearC></span>
+  <div id=clock class="clock"></div>
+</div>
+ <div class="footer">Markus Must 2019</div>
 </body>
+<script src="index.js"></script>
 </html>
