@@ -6,9 +6,9 @@ Leheküljel: http://greeny.cs.tlu.ee/~stevsal/Eesrakendused/1kodutoo/
 Steven Saluri
 
 # Funktsionaalsus
-Nightmode(Muudab värvi tumedaks).
-Saab muuta kella suurust.
-Võimalik näha kellaaega ilma kuupäevata.
+* Nightmode(Muudab värvi tumedaks).
+* Saab muuta kella suurust.
+* Võimalik näha kellaaega ilma kuupäevata.
 
 # Pildid
 
