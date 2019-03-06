@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js"></script>
+  <title>Time</title>
+</head>
+<body>
+    <div class="container unselectable">
+      <div id="time">
+        <div id="date" class="centered">
+        </div>
+        <div id="weekDay" class="centered">
+        </div>
+        <div id="clock" class="centered">
+        </div>
+      </div>
+
+      <div id="autor">
+        <p>David Erlich<br>
+          <a href="https://github.com/daviderl99/1kodutoo">Repo</a>
+        </p>
+      </div>
+
+      <div id="buttons">
+        <button id="changeBg" class="centered" onclick="changeBackground()">Background</button>
+        <button id="colorBtn" class="centered" onclick="changeColor()">Color</button>
+        <button id="alarmSet" class="centered" onclick="setAlarm()">Set Alarm</button>
+        <button id="alarmStop" class="centered" onclick="StopAlarm()">Stop Alarm</button>
+      </div>
+
+      <label>
+      <div>
+        <select id="alarmHrs" class="centered" onmousedown="size=5" onchange="size=0" onblur="size=0"></select>
+      </div>
+      </label>
+      <label>
+      <div>
+        <select id="alarmMins" class="centered" onmousedown="size=5" onchange="size=0" onblur="size=0"></select>
+      </div>
+      </label>
+      <label>
+      <div>
+        <select id="alarmSecs" class="centered" onmousedown="size=5" onchange="size=0" onblur="size=0"></select>
+      </div>
+      </label>
+
+    </div>
+</body>
+</html>
