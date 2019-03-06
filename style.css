@@ -1,0 +1,174 @@
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('fonts/Braciola MS ExB.ttf');
+}
+@font-face{
+  font-family: 'lcd-clock';
+  src: url('fonts/digital-7\ \(mono\).ttf');
+}
+
+@font-face{
+  font-family: 'beach';
+  src: url('fonts/software_tester_7.ttf');
+}
+
+@font-face{
+  font-family: 'menu1';
+  src: url('fonts/Formula1-Regular.ttf');
+}
+
+body {
+  background-color: #2E2E2E;
+  /*background-image: url('backgrounds/theme1day.jpeg');*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-position: center center;*/
+}
+
+#author {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family:'digital-clock-font';
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+}
+#song {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family:'digital-clock-font';
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+
+}
+
+.dateAndTime{
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family:'digital-clock-font';
+  transition: margin-left .5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size:150px;
+}
+
+.dateAndTime #clockContainer{
+  text-align: center;
+  font-size: 90%;
+}
+
+.dateAndTime #dateContainer{
+  font-size: 40%;
+}
+
+.dateAndTime #dayContainer{
+  font-size: 40%;
+}
+
+.dateAndTime:hover{
+  cursor: pointer;
+}
+
+.musicnav{
+  width: 250px;
+  height: 0;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  background-color: #2E2E2E;
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.6;
+}
+.musicnav h1 {
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-family: menu1;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+.musicnav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: menu1;
+  font-size: 20px;
+  color: #bebcbcef;
+  display: block;
+  transition: 0.3s;
+}
+.musicnav a:hover, .offcanvas a:focus{
+  color: #f1f1f1;
+  background-color: #bebcbc65;
+  cursor: pointer;
+}
+
+.musicnav h2 {
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-family: menu1;
+  font-size: 20px;
+  color: #bebcbcef;
+  display: block;
+  transition: 0.3s;
+}
+
+/*Originaalne kood sidebari tarvis võetud: https://www.w3schools.com/howto/howto_js_sidenav.asp*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2E2E2E;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  opacity: 0.6;
+}
+.sidenav h1 {
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-family: menu1;
+  font-size: 35px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: menu1;
+  font-size: 20px;
+  color: #bebcbcef;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover, .offcanvas a:focus{
+  color: #f1f1f1;
+  cursor: pointer;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

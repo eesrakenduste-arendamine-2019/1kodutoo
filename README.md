@@ -1,36 +1,33 @@
 # 1kodutoo
 1. kodutöö Eesrakenduste arendamises.
 
-## Tähtaeg 06.03.2018 23:59
+## Kell
+Kell on 24h formaadis. 
+Kella, kuupäeva või nädala päeva peale vajutades muudavad kõik teksti elemendid värvust.  
+Kella, kuupäeva ja nädalapäeva suurust on võimalik muuta sidebar menüüd kasutades.
 
-Kujunda kellanäide vastavalt maitsele või kindlale teemale, mahutades kella täisekraanile, et saaks kasutada lauakella või ekraanisäästja asemel. Selleks, et see sobiks paljudele ekraanidele, kasuta kujunduse loomisel protsendilisi väärtusi (nt width: 100%; ) või nt võimalda kella suurust kasutajal muuta.
+## Menüü
+Sidebar saab avada vajutades üleval vasakus nurgas asuvale nupule.  
+Sidebar saab kinni panna vajutades "x" nupule, mis on sidebari üleval paremal nurgas.
 
-## Nõuded
+Change theme - Vahetab kolme erineva kujunduse vahel.  
+Change font size - Muudab kella, kuupäeva ja nädalapäeva fontide suurust. Suurused on: Small, Medium, Large; Algne suurus on Medium.  
+Reset color - Muudab elementide teksti värvi tagasi algse värvi(valge) peale.  
+Repository - Avab projekti GitHub lehe.
+## Kujundused
+Kellal on olemas kolm kujundust. Igal kujundusel on oma taustapilt ja font.
 
-1. Veebirakendus töötab. Näitab kella, kuupäeva ja nädalapäeva.
-1. Vastavalt kasutaja tegevusele on võimalik muuta **kolme** lauakella atribuuti muuta (nt suurus, värv, asukoht vms)
-1. Kell on originaalne ning kasutajaliides on maitsekalt kujundatud
-1. Autori ees- ja perenimi on lehel välja toodud
-1. Lehel on viide rakenduse repositooriumile
-1. Kood on vormistatud vastavalt stiilijuhendile
-1. `README.md` failis on välja toodud autori nimi, ekraanipilt rakendusest ja kirjeldatud funktsionaalsus
+Theme 1 - Esimene kujundus on nn "Premium" kujundus. Kujunduse taust on erinev olenedes kellaajast. Vahemikud on: 00:00 - 05:59, 06:00 - 11:59, 12:00 - 17:59, 18:00 - 23:59.  
+Theme 2 ja 3 - Mõlemal on oma taust ja font. Taust ei muutu kellaajaga.
+## Muusika nupud
+Muusika nuppudele saab ligi vajutades "Now playing" nupule, mis avab väikese menüü.  
+Menüü saab kinni panna vajutades "Music controls" peale.  
 
-## Mõned ideed võimalikeks täiendusteks (lihtsalt, et mõte hakkaks jooksma)
+Play/Pause - Saab panna muusika pausile või käima.  
+Volume + - Muudab muusikat 10% valjemaks.  
+Volume - - Muudab muusikat 10% vaiksemaks.  
+## Lingid
+Kell - greeny.cs.tlu.ee/~erkksul/eesrakendustearendus/Kodutööd/1kodutoo/  
+GitHub - https://github.com/erkkisula/1kodutoo
 
-* Vahetuda võivad taustapildid, taustal võib mängida muusika
-* Taustale klikkides muudetakse kella taustaväri
-* Kellale klõpsides muudetakse numbrite värvi või numbrite suurust;
-* Iga numbri suurust saab eraldi muuta
-* Nooleklahvidega saab kella ekraanil liigutada
-* Küsi enne kella näitamise alustamist kasutajalt tema lemmikvärv ja tee sellest lähtudes midagi
-* Muuda kella ja tausta värvi vastavalt ajale (päev/öö)
-* Kella suurus ja asukoht sõltuvad hiire asukohast ekraanil
-* Äkki võiks tegu olla hoopis analoogkellaga
-* Kirjatüüpi saab ka muuta, [google.com/fonts](https://www.google.com/fonts)
-* Kasutaja saab lisada või kasutajaöe näidatakse mitu kellaaega erinevatest maailma kohtadest
-
-## Abimaterjal
-
-* Sündmuste loetelu [HTML DOM Events](http://www.w3schools.com/jsref/dom_obj_event.asp)
-* Ajal põhinevad sündmused [JavaScript Timing Events](http://www.w3schools.com/js/js_timing.asp)
-* CSSi muutmine [HTML DOM Style Object](http://www.w3schools.com/jsref/dom_obj_style.asp)
+Kuvatõmmised - greeny.cs.tlu.ee/~erkksul/eesrakendustearendus/Kodutööd/1kodutoo/screens või https://imgur.com/a/VszI4ve
