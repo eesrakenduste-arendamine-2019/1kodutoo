@@ -11,7 +11,9 @@ Tegin kella, kus vastavalt ikoonidele vajutades saab kella tunni, minuti, sekund
 
 
 Tagasiside: Ma arvan, et säärane töö esimeseks tööks on väga ebapraktiline ja ebaotstarbekas, kuna otseselt CSSi ei ole meile öpetatud ja 80% töö ajast läks CSSi möistmisele ja parima praktikate leidmisele (milles endiselt kahtlen). Arvestustööna vöiksid olla sellised ülesanded, mida tunniti läbime ja mida läbi tehes saame praktiseerida ja teadmised kokku panna ning midagi suuremat teha (ehk öppides, korrates ja rakendades samu teadmisi). 
+
 Minu eesmärk koolis on öppida korralikult erinevaid keeli ja oleks vahva, kui koolis saaks öppida parimaid praktikaid ning selgitusi ka, miks on teatud algoritmid paremad kui teised, ehk saaks mingisugust eelist internetist öppimisele. 
+
 Vabandan, kui tagasiside on liiga kriitiline.
 
 
