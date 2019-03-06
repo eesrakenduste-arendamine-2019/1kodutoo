@@ -1,0 +1,169 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kell</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('pilt1.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .TeineClass {
+            background-image: url('pilt2.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #clock {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            color: white;
+            font-family: 'Times New Roman';
+            font-size: 25px;
+            text-align: center;
+        }
+
+        div2 {
+            position: absolute;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-family: 'Times New Roman';
+            font-size: 20px;
+        }
+
+        .button {
+            background-color: red;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            border: 1px solid black;
+            border-radius: 15px;
+        }
+
+        .button2 {
+            background-color: white;
+        }
+
+        .button3 {
+            background-color: LawnGreen;
+        }
+
+        .button4 {
+            background-color: Coral  ;
+        }
+
+        .button5 {
+            background-color: black;
+        }
+        .button6 {
+            background-color: DodgerBlue ;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 100%;
+            left: 0%;
+            margin-top: 0px;
+            cursor: pointer;
+        }
+
+
+    </style>
+    <script src="clock.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle glyphicon glyphicon-cog" type="button" data-toggle="dropdown" >
+        <span class="caret"></span></button>
+
+        <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="#">Päev/Öö<br><input id="btnBack" value="On/Off" type="button"></span></a></li>
+
+            <li class="dropdown-submenu">
+              <li><a tabindex="-1" href="#">Font Värv<br>    <button type="button" class="button" onclick="document.getElementById('clock').style.color = 'red'"></button>
+              <button type="button" class="button button2" onclick="document.getElementById('clock').style.color = 'white'"></button>
+              <button type="button" class="button button3" onclick="document.getElementById('clock').style.color = 'GreenYellow'"></button>
+              <button type="button" class="button button4" onclick="document.getElementById('clock').style.color = 'Coral   '"></button>
+              <button type="button" class="button button5" onclick="document.getElementById('clock').style.color = 'black'"></button>
+              <button type="button" class="button button6" onclick="document.getElementById('clock').style.color = 'DodgerBlue '"></button>
+      </span>
+    </a>
+    </li>
+
+                <li class="dropdown-submenu">
+                    <a class="suurus" tabindex="-1">Teksti suurus<span class="caret"></span></a>
+                    <ul class="dropdown-menu" tabindex="-1">
+                        <li><a tabindex="-1">Teksti suurus <span1>20</span1> px <input type="range" default="18" min="10" max="50"></a></li>
+                    </ul>
+                </li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.dropdown-submenu a.suurus').on("click", function(e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+
+        $('input').on('change', function() {
+            var v22rtus = $(this).val();
+            $('div').css('font-size', v22rtus + 'px');
+            $('span1').html(v22rtus);
+        });
+
+        var myArray = ["pilt1.png", "pilt2.png"];
+        $(":checkbox").on('click', function() {
+            $("body").click(function() {
+                $(this).css('background-image', 'url(' + myArray[0] + ')');
+            });
+        });
+
+        var btnBack = document.getElementById('btnBack');
+            btnBack.addEventListener('click',function() {
+        document.body.classList.toggle('TeineClass');
+        });
+
+    </script>
+    <div id="clock">
+        </div>
+        <div2> Martin Kasak || <a href="https://github.com/MartinKasak/1kodutoo">https://github.com/MartinKasak/1kodutoo</a>
+
+         </div2>
+</body>
+
+</html>
