@@ -6,7 +6,6 @@ background-size: 100%;
   color: white;
   max-width: 50%;
   margin: auto;
-  /*border: 2px solid black;*/
   text-align: center;
   padding: 10px;
   font-size: 100px;
@@ -17,7 +16,6 @@ background-size: 100%;
   color: white;
   max-width: 50%;
   margin: auto;
-  /*border: 2px solid black;*/
   text-align: center;
   padding: 10px;
   font-size: 50px;
@@ -33,9 +31,61 @@ background-size: 100%;
 #nupud {
   position: absolute;
   bottom: 100px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
 }
 #repo {
   color: white;
   position: absolute;
   bottom: 60px;
+}
+#nupp1{
+  background-color: blue;
+  border: 0;
+  color: white;
+  border-radius: 50%;
+  width: 100px;
+}
+#nupp2{
+  background-color: black;
+  border: 0;
+  color: white;
+  border-radius: 50%;
+  margin-left: 3%;
+  width: 100px;
+}
+#nupp3{
+  background-color: white;
+  border: 0;
+  color: black;
+  border-radius: 50%;
+  margin-left: 3%;
+  width: 100px;
+}
+#nupp4{
+  background-color: red;
+  border: 0;
+  color: white;
+  border-radius: 50%;
+  margin-left: 3%;
+  width: 100px;
+}
+#nupud2{
+  position: absolute;
+  top: 20px;
+}
+@media screen and (max-width:700px){
+  .content{
+    width: 20%;
+  }
+  #nupud{
+    margin-left: 15%;
+  }
+  #kuupaev{
+    font-size: 50px;
+    display: flex;
+    margin-left: 80px;
+  }
 }

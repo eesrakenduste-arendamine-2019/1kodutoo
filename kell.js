@@ -23,4 +23,8 @@ function changeColor(clr){
   document.getElementById("aeg").style.color = clr;
   document.getElementById("kuupaev").style.color = clr;
 }
+function clockSize(x, y){
+  document.getElementById("aeg").style.fontSize = x;
+  document.getElementById("kuupaev").style.fontSize = y;
+}
 clock();
