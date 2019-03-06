@@ -1,10 +1,10 @@
 # Üldine kirjeldus
-**Autor: Andreas Malleus
+Autor: Andreas Malleus
 Link: http://greeny.cs.tlu.ee/~andrmal/eesarendamine/kella_kodutoo/index.html
 Screenshot:
 
 <img width="1440" alt="screenshot 2019-03-06 at 23 05 49" src="https://user-images.githubusercontent.com/42979748/53913688-8ee83280-4064-11e9-8fd4-eba666d98052.png">
-Funktisonaalsus:**
+Funktisonaalsus:
 
 1. Backgroundile clickides vahetatakse background-i värvi.
 2. AWSD klahvidel vajutades liigub kell ülesse, alla, paremale ja vasakule.
