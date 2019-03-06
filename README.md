@@ -13,7 +13,7 @@ Võimalik näha kellaaega ilma kuupäevata.
 # Pildid
 
 Default:
-![default](https://imgur.com/a/2vFzbMw)
+![default](https://imgur.com/565xnQJ)
 
 Modified:
-![modified](https://imgur.com/a/P5s9qyk)
+![modified](https://imgur.com/G2FwERm)
