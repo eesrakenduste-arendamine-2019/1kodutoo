@@ -2,7 +2,6 @@
 window.onload = function(){
   changeColorButton = document.querySelector('#changeBgColor');
   changeColorButton.addEventListener('click', changeBackgroundColor);
-  bgColor = document.querySelector('#bgColor');
 };
 //keskel asuv kell
 function clock() {// We create a new Date object and assign it to a variable called "time".
@@ -25,10 +24,8 @@ setInterval(clock, 1000);
 //taustavärvi vahetus
 function changeBackgroundColor(){
   bgColorr=(bgColor.value);
-  console.log("Muudan värvi");
   document.body.style.backgroundColor = (bgColorr);
 }
-
 //päeva saamine
 let day;
 function getDay(){
@@ -57,12 +54,10 @@ function getDay(){
     }
   }
   getDay();
-  console.log(day);
   dayC.innerHTML = day;
   //kuupäeva päeva saamine
   var d = new Date();
   var dayDate = d.getDate();
-  console.log(dayDate);
   dayCc.innerHTML = dayDate+".";
   //kuu saamine
   let month;
@@ -107,10 +102,8 @@ function getDay(){
       }
     }
     getMonth();
-    console.log(month);
     monthC.innerHTML = month;
     //aasta saamine
     var y = new Date();
     var year = y.getFullYear();
-    console.log(year);
     yearC.innerHTML = year;

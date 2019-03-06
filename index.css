@@ -20,6 +20,26 @@
   width: 100%;
 }
 
+#home {
+  position: fixed;
+  text-align: left;
+  bottom: 19px;
+  width: 100%;
+  left: 95px;
+}
+
+.repo{
+  font-family: 'Cinzel', serif;
+  color: blue;
+  position: fixed;
+  text-align: left;
+  bottom: 17px;
+  width: 100%;
+}
+.labelc{
+  font-family: 'Cinzel', serif;
+}
+
 .myButton {
 	-moz-box-shadow:inset 0px 0px 15px 3px #23395e;
 	-webkit-box-shadow:inset 0px 0px 15px 3px #23395e;
@@ -39,7 +59,7 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Trebuchet MS;
+	font-family: 'Cinzel', serif;
 	font-size:12px;
 	font-weight:bold;
 	padding:3px 8px;
