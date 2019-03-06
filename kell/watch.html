@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="watch.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="theme.js"></script>
+    <script src="watch.js"></script>
+
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="options">
+            <div class="dropdown-theme">
+                <button class="drop" id="button">Theme</button>
+                <div class="theme-content">
+                    <a href="#" onclick="createDark()">Dark</a>
+                    <a href="#" onclick="createLight()">Light</a>
+                    <a href="#" onclick="createVintage()">Vintage</a>
+                    <a href="#" onclick="createRandom()">Random</a>
+                </div>
+            </div>
+            <p id="size">Clock Size</p><input type="number" id="input" onchange="changeSize()">
+            <div class="dropdown">
+                <button class="dropbtn">Move Watch</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="moveRightUp()">Right Upper Corner</a>
+                    <a href="#" onclick="moveLeftUp()">Left Upper Corner</a>
+                    <a href="#" onclick="moveMiddle()">Center</a>
+                    <a href="#" onclick="moveRightDown()">Right Down Corner</a>
+                    <a href="#" onclick="moveLeftDown()">Left Down Corner</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span style="font-size:40px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
+    <div id="quote">
+    </div>
+
+</body>
+</html>

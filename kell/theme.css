@@ -1,0 +1,62 @@
+#timeQuote{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 80px;
+    margin-top: 8%;   
+}
+
+#chooseTheme{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px
+}
+
+#page{
+    text-align: center;
+    justify-content: center;
+    padding: 4%
+}
+#themeBar button{
+    margin-top: 30px;
+    font-size: 30px;
+    padding: 0.8%;
+    border-radius: 10px;
+    margin-left: 16px;
+    font-weight: 500;
+}
+
+#dark{
+    background-color: black;
+    color: white;
+}
+
+#vintage{
+    background-color: #c9af98;
+    color: #3a4660;
+}
+
+#random{
+    background-color: #90ee90;
+    color: #331;
+}
+
+#navigateButton{
+    margin-top: 70px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    border-radius: 6px;
+    padding: 1%;
+
+}
+
+#dark:hover, #vintage:hover, #light:hover, #random:hover{
+    background-color: #ffa64d;
+    color: white;
+    font-weight: 700;
+}
+
+#navigateButton:hover{
+    background-color: #ffa64d;
+    color: white;
+    font-weight: 400;
+}
+
+
