@@ -1,100 +1,120 @@
 /*jshint esversion: 6*/
-let clockContainer;
+let clock;
+let day;
+let timeContainer;
+let dateContainer;
+let clockElementClass;
 let changeColorButton;
-let dayContainer;
-
-
-window.onload = function (){
-  init();
-};
+let changeSizeButton;
+let changeLocationButton;
+window.onload = function (){ init(); };
 
 function init(){
-  changeColorButton = document.querySelector('#clockButton');
-  clockContainer = document.querySelector('#clockContainer');
-  dayContainerElement = document.querySelector('#dayContainer');
-  //changeColorButton.addEventListener('click', changeBackgroundColor);
-  window.addEventListener('click', changeBackgroundColor);
-
+  clockContainer = document.querySelector('#clock');
+  dateContainer = document.querySelector("#date");
+  timeContainer = document.querySelector("#time");
+  dayContainer = document.querySelector("#day");
+  clockElementClass = document.querySelector('.clockElementClass');
+  clockContainer = document.querySelector("#clock");
   startClock();
+  readDate(date);
+  getDay();
 }
 
+function toggleColor(item){
+   if(item.className == "on") {
+      item.className="off";
+      clockElementClass.style.color = "#FFF";
+   } else {
+      item.className="on";
+      clockElementClass.style.color = "#84dcc6";
+   }
+}
 
-function changeBackgroundColor(){
-  console.log("Muudan värvi");
-  const r = Math.round(Math.random()*255);
-  const g = Math.round(Math.random()*255);
-  const b = Math.round(Math.random()*255);
+function toggleSize(item){
+   if(item.className == "on") {
+      item.className="off";
+      clockContainer.style.fontSize = "100%";
+   } else {
+      item.className="on";
+      clockContainer.style.fontSize = "250%";
 
-  clockContainer.style.backgroundColor = 'rgb('+r+' , '+g+' , '+b+')';
-  //document.body.style.backgroundColor = 'rgb('+r+' , '+g+' , '+b+')';
+   }
+}
+
+function toggleLoc(item){
+   if(item.className == "on") {
+      item.className="off";
+      document.body.style.backgroundColor = "#664147";
+   } else {
+      item.className="on";
+      document.body.style.backgroundColor = "#31263e";
+
+   }
 }
 
 function startClock(){
   updateClock();
-  window.setInterval(function(){
-    updateClock();
-  }, 1000);
+  window.setInterval(function(){ updateClock(); }, 1000);
 }
 
 function updateClock(){
   const date = new Date();
-  clockContainer.innerHTML = date;
-  let day;
-  dayContainerElement =
-  function getDay(){
-    switch(new Date().getDay()){
-      case 0:
-        day = "Pühapäev";
-        // console.log(day);
-        break;
-      case 1:
-        day = "Esmaspäev";
-        // console.log(day);
-        break;
-      case 2:
-        day = "Teisipäev";
-        // console.log(day);
-        break;
-      case 3:
-        day = "Kolmapäev";
-        // console.log(day);
-        break;
-      case 4:
-        day = "Neljapäev";
-        // console.log(day);
-        break;
-      case 5:
-        day = "Reede";
-        // console.log(day);
-        break;
-      case 6:
-        day = "Laupäev";
-        // console.log(day);
-        break;
-      default:
-        day ="See pole päev";
-    }
+  h = date.getHours();
+  m = date.getMinutes();
+  s = date.getSeconds();
+  if (h < 10){
+    h = "0" + h;
   }
-  getDay();
-  dayContainerElement.innerHTML = day;
+  if (m < 10){
+    m = "0" + m;
+  }
+  if (s < 10){
+    s = "0" + s;
+  }
+  clockContainer.innerHTML = h + " : " + m + " : " + s;
 }
 
-/*
-let a = 6;
-const short = 5;
-function doMath(){
-  const short = document.getElementById("math");
-  let number = 5;
-  var number2 = 2;
-  //short.innerHTML = Math.round(4.4);
-  //short.innerHTML = Math.ceil(4.1);
-  //short.innerHTML = Math.floor(4.9);
-  //short.innerHTML = Math.pow(4, 3);
-  //short.innerHTML = Math.round(Math.random()*100); //ümardatud sajavahemikus random
-  //short.innerHTML = Math.sqr(16); //ruutjuur
+function readDate(){
+  const date = new Date();
+  d = date.getDate();
+  m = date.getMonth() + 1;
+  y = date.getYear() - 100;
+  if (d < 10){
+    d = "0" + d;
+  }
+  if (m < 10){
+    m = "0" + m;
+  }
+    dateContainer.innerHTML = d + "." + m + "." + y;
 }
-window.onload = function (){
-  doMath();
-  console.log(short + " " + number2);
-};
-*/
+
+function getDay(){
+  switch(new Date().getDay()){
+  default:
+    day = "Viga! See pole päev!";
+    break;
+  case 0:
+    day ="Pühapäev";
+    break;
+  case 1:
+    day = "Esmaspäev";
+    break;
+  case 2:
+    day = "Teisipäev";
+    break;
+  case 3:
+    day = "Kolmapäev";
+    break;
+  case 4:
+    day = "Neljapäev";
+    break;
+  case 5:
+    day = "Reede";
+    break;
+  case 6:
+    day = "Laupäev";
+    break;
+  }
+  dayContainer.innerHTML = day;
+}

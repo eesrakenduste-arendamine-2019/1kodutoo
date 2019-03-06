@@ -1,4 +1,4 @@
-# 1kodutoo
+# 1kodutoo Kristjan Põldmets
 1. kodutöö Eesrakenduste arendamises.
 
 ## Tähtaeg 06.03.2018 23:59

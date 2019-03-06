@@ -2,17 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta author="Kristjan Põldmets">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="index.js"></script>
-  <title>Document</title>
-
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto:300" rel="stylesheet">
+  <title>1. Kodutöö: Kell</title>
 </head>
 <body>
-  <!-- <div id="math"></div>
-  <button onclick="doMath()">Arvuta</button> -->
-  <div id="clockContainer"></div>
-  <button id="clockButton" style="margin-left:auto;margin-right:auto;">Muuda Värvi</button>
-  <div id="dayContainer"></div>
+  <div class="clockAppClass">
+    <div class="clockElementClass">
+      <div id="time">
+        <div id="clock"></div>
+        <div id="day"></div>
+        <div id="date"></div>
+      </div>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="color" class="off" onclick="toggleColor(this)" />
+      <span class="slider round"></span>
+    </label>
+    <label class="switch">
+      <input type="checkbox" id="size" class="off" onclick="toggleSize(this)" />
+      <span class="slider round"></span>
+    </label>
+    <label class="switch">
+      <input type="checkbox" id="location" class="off" onclick="toggleLoc(this)" />
+      <span class="slider round"></span>
+    </label>
+    <div class="footerClass">
+      <div id="author">Kristjan Põldmets</div>
+      <a href="http://greeny.cs.tlu.ee/~krispol/2019/Eesrakenduste_arendus/1kodutoo/">Link rakenduse repole</a>
+    </div>
+  </div>  
 </body>
 </html>
