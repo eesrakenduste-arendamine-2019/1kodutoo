@@ -1,64 +1,60 @@
-/*jshint esversion:6*/
-let clockContainer;
-let changeColor;
-let dayContainer;
-window.onload = function(){
-  init();
-};
+setInterval(function(){
+  var date = new Date();
+  updateTime(date);
+  updateClock(date);
+}, 1000);
 
-function init(){
-  startClock();
-  changeColor = document.querySelector('#change-color');
+function updateClock(date){
+  var secHand = document.getElementById("sec-hand").style;
+  var minHand = document.getElementById("min-hand").style;
+  var hrHand = document.getElementById("hr-hand").style;
 
-  changeColor.addEventListener('click', changeBackgroundColor);
-  window.addEventListener("wheel", changeBackgroundColor)
+  secHand.transform = "rotate(" + date.getSeconds() * 6 + "deg)";
+  minHand.transform = "rotate(" + date.getMinutes() * 6 + "deg)";
+  hrHand.transform = "rotate(" + (date.getHours() * 30 + date.getMinutes() * 0.5) + "deg)";
 }
 
-function startClock(){
-
-  clockContainer = document.querySelector('#clockContainer');
-  updateClock();
-  window.setInterval(function(){
-    updateClock();
-  }, 1000);
+function updateTime(date){
+  var timeDiv = document.getElementById("time");
+  var time = "Digitaanle kell näitab: " + date.getHours() + " : " + date.getMinutes() + " : " + date.getSeconds();
+  timeDiv.innerHTML = time;
 }
 
-function updateClock(){
-  const date = new Date();
-  clockContainer.innerHTML = date;
-  dayContainer = document.querySelector("#dayContainer");
-  let day;
-  switch(new Date().getDay()){
-    case 0:
-      day = "p[hapaev";
-      break;
-    case 1:
-      day = "esmaspäev";
-      break;
-    case 2:
-      day = "teisipäev";
-      break;
-    case 3:
-      day = "kolmapäev";
-      break;
-    case 4:
-      day = "neljapäev";
-      break;
-    case 5:
-      day = "reede";
-      break;
-    case 6:
-      day = "laupäev";
-      break;
+function myFunction() {
+  document.getElementById("demo").style.color;
+}
+
+function toggleBackgroundNight () {
+  let body = document.getElementsByTagName('body')[0];
+  body.style.backgroundImage = 'url(design/oo.jpg)';
+  body.style.backgroundSize = 'cover';
+
+}
+
+
+function toggleBackgroundDay () {
+  let body = document.getElementsByTagName('body')[0];
+  body.style.backgroundImage = 'url(design/paev.png)';
+  body.style.backgroundSize = 'cover';
+
+}
+function fullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {
+      document.documentElement.requestFullScreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullScreen) {
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
   }
-  dayContainer.innerHTML = day;
-}
-
-function changeBackgroundColor(){
-  const red = Math.round(Math.random()*255);
-  const green = Math.round(Math.random()*255);
-  const blue = Math.round(Math.random()*255);
-  console.log(red);
-  //document.body.style.backgroundColor = "rgb(" + red + "," + green + ","+ blue+")";
-  document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
