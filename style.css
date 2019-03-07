@@ -1,0 +1,76 @@
+body {
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+.container {
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Alef', sans-serif;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.clockClass {
+  display: inline-block;
+  text-align: center;
+  width: 500px;
+}
+.buttons {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 30px 32px;
+}
+#clock {
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke: 1px black;
+  font-weight: bold;
+  width: 300px;
+  background-color: darkgray;
+  opacity: 0.8;
+  border: 5px solid gray;
+  margin: auto;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#time {
+  width: 50%;
+  background-color: gray;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  color: blue;
+  opacity: inherit;
+}
+
+#date {
+  width: 50%;
+  background-color: gray;
+  margin: auto;
+  margin-bottom: 25px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  color: black;
+}
+
+#day {
+  width: 50%;
+  background-color: gray;
+  margin: auto;
+  margin-bottom: 25px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  color: white;
+}
+
+@media only screen and (max-width: 820px) {
+  .container {
+    font-size: 18px;
+  }
+  .clock {
+    width: 250px;
+  }
+}
