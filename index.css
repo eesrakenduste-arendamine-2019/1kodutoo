@@ -14,6 +14,7 @@ body{
   transform: translateX(-53%) translateY(-50%);
   font-family:Lucida Console;
   font-size: 25px;
+  color:green;
 }
 
 .time{
@@ -23,6 +24,7 @@ body{
   transform: translateX(-55%) translateY(-50%);
   font-family:Lucida Console;
   font-size: 65px;
+  color:green;
 }
 
 .day{
@@ -32,41 +34,42 @@ body{
   transform: translateX(-47%) translateY(-49.5%);
   font-family:Lucida Console;
   font-size: 25px;
+  color:green;
 }
 
 .input{
   position: absolute;
-  top: 73.5%;
-  left: 36%;
-  transform: translateX(-73.5%) translateY(-36%);
+  top: 74%;
+  left: 38%;
+  transform: translateX(-74%) translateY(-38%);
 }
 
 .decrease{
   position: absolute;
-  top: 74%;
+  top: 74.2%;
   left: 44%;
-  transform: translateX(-74%) translateY(-44%);
+  transform: translateX(-74.2%) translateY(-44%);
 }
 
 .increase{
   position: absolute;
-  top: 74.3%;
-  left: 53%;
-  transform: translateX(-74.3%) translateY(-53%);
+  top: 74.4%;
+  left: 51%;
+  transform: translateX(-74.4%) translateY(-51%);
 }
 
 .v2rv{
   position: absolute;
-  top: 74.4%;
-  left: 61%;
-  transform: translateX(-74.4%) translateY(-61%);
+  top: 74.5%;
+  left: 56.8%;
+  transform: translateX(-74.5%) translateY(-56.8%);
 }
 
 .v2rv1{
   position: absolute;
-  top: 78%;
-  left: 60.8%;
-  transform: translateX(-78%) translateY(-60.8%);
+  top: 74.6%;
+  left: 61.8%;
+  transform: translateX(-74.6%) translateY(-61.8%);
 }
 
 nav {
@@ -84,9 +87,9 @@ nav {
   padding: 30px;  
   border: 10px groove yellow;
   position: absolute;
-  top: 74.8%;
-  left: 59%;
-  transform: translateX(-74.8%) translateY(-59%);
+	top: 74.8%;
+  left: 57%;
+	transform: translateX(-74.8%) translateY(-57%);
 }
 
 h3{
