@@ -78,15 +78,15 @@ nav {
 }
 
 .lolz{
-	box-sizing: border-box;
-	width: 550px;
-	height: 20px;
-	padding: 30px;  
-	border: 10px groove yellow;
-	position: absolute;
-	top: 74.8%;
+  box-sizing: border-box;
+  width: 550px;
+  height: 20px;
+  padding: 30px;  
+  border: 10px groove yellow;
+  position: absolute;
+  top: 74.8%;
   left: 59%;
-	transform: translateX(-74.8%) translateY(-59%);
+  transform: translateX(-74.8%) translateY(-59%);
 }
 
 h3{
