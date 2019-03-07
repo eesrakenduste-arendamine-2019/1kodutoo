@@ -3,13 +3,7 @@ body {
   font-size: 200%;
   font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
-
-}
-
-.clockAppClass {
-  text-align: center;
-	margin: 10% auto;
-	width: 800px;
+  margin-top: 100px;
 }
 
 #author {
@@ -20,14 +14,14 @@ body {
 a {
   opacity: 0.5;
   font-family: 'Open Sans', sans-serif;
-	background: #FFF;
-	color: #000;
-	padding: 10px;
-	border-radius: 2px;
-	display: inline-block;
-	text-decoration: none;
-  font-size: 15px;
-  margin-top: 10px;
+  background: #FFF;
+  color: #000;
+  padding: 8px;
+  border-radius: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  margin-top: 8px;
 }
 
 
@@ -92,12 +86,58 @@ input:checked + .slider:before {
  border-radius: 50%;
 }
 
+@media only screen and (min-width: 961px) {
+  .clockAppClass {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    margin-top: 10px;
+  }
+  a {
+    opacity: 0.5;
+    font-family: 'Open Sans', sans-serif;
+  	background: #FFF;
+  	color: #000;
+  	padding: 6px;
+  	border-radius: 1px;
+  	display: inline-block;
+  	text-decoration: none;
+    font-size: 9px;
+    margin-top: 8px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    margin-top: 100px;
+    text-align: center;
+  }
+  a {
+    opacity: 0.5;
+    font-family: 'Open Sans', sans-serif;
+  	background: #FFF;
+  	color: #000;
+  	padding: 7px;
+  	border-radius: 1px;
+  	display: inline-block;
+  	text-decoration: none;
+    font-size: 11px;
+    margin-top: 8px;
+  }
+}
+
+/*
+#5f758e
+#664147
+#31263e
+
 @media only screen and (max-width: 800px) {
 	#container {
 		width: 100%;
 	}
 }
-/*
-#5f758e
-#664147
-#31263e
