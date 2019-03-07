@@ -87,9 +87,9 @@ nav {
   padding: 30px;  
   border: 10px groove yellow;
   position: absolute;
-	top: 74.8%;
+  top: 74.8%;
   left: 57%;
-	transform: translateX(-74.8%) translateY(-57%);
+  transform: translateX(-74.8%) translateY(-57%);
 }
 
 h3{
