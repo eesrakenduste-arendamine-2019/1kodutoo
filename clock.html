@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<html dir="rtl"> <!--Et kõik tekst oleks right to left, lihtsalt endale meeldib rohkem kui enamus paikneb paremal pool, kuidagi põnevam selle ülesande puhul -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--https://www.w3schools.com/css/css_rwd_viewport.asp -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" type="text/css" href="clock.css">
+
+  <title>Kodutöö</title>
+</head>
+<body>
+
+  <div class="content">
+  <div id="aeg"></div>
+  <div id="kuupaev"></div>
+  </div>
+  <div id="buttons">
+    <button type="button" id="button1" onclick=changeColor("pink")>Roosa</button> </br>
+    <button type="button" id="button2" onclick=changeColor("red")>Punane</button> </br>
+    <button type="button" id="button3" onclick=changeColor("white")>Valge</button> </br>
+    <button type="button" id="button4" onclick=changeColor("yellow")>Kollane</button> </br>
+  </div>
+  <div id="buttons2">
+    <button type="button" id="smaller" onclick=clockSize("62px","32px")>Väiksemaks</button>
+    <button type="button" id="bigger" onclick=clockSize("178px","87px")>Suuremaks</button>
+  </div>
+  <a id="github" href="https://github.com/martjag00/1kodutoo" target=_blank>Githubi kella kodutöö</a>
+  <p id="name" dir="ltr" >Martin Jagodin. tarkvaraarenduse 2. grupp</p>
+<script src="clock.js"></script>
+
+
+
+</body>
+</html>

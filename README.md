@@ -1,6 +1,11 @@
 # 1kodutoo
 1. kodutöö Eesrakenduste arendamises.
 
+Leheküljel saab muuta kella suurust nii väiksemaks kui suuremaks.
+Samuti on valida 3 värvi vahel ning võimalus originaalvärv tagasi saada.
+Vabandan, et hilinesin. Olin pea nädal aega temperatuuriga. 
+Samuti võttis kodutöö lahendamine väga palju aega just selle css-i faili tegemine, ise hakkama saada oli ikka suhteliselt keeruline.
+pilt: https://gyazo.com/2e6c0ddaa875c39803a44ad1dac2c34c
 ## Tähtaeg 06.03.2018 23:59
 
 Kujunda kellanäide vastavalt maitsele või kindlale teemale, mahutades kella täisekraanile, et saaks kasutada lauakella või ekraanisäästja asemel. Selleks, et see sobiks paljudele ekraanidele, kasuta kujunduse loomisel protsendilisi väärtusi (nt width: 100%; ) või nt võimalda kella suurust kasutajal muuta.
@@ -34,3 +39,5 @@ Kujunda kellanäide vastavalt maitsele või kindlale teemale, mahutades kella t�
 * Sündmuste loetelu [HTML DOM Events](http://www.w3schools.com/jsref/dom_obj_event.asp)
 * Ajal põhinevad sündmused [JavaScript Timing Events](http://www.w3schools.com/js/js_timing.asp)
 * CSSi muutmine [HTML DOM Style Object](http://www.w3schools.com/jsref/dom_obj_style.asp)
+
+
