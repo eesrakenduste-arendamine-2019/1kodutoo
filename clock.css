@@ -1,0 +1,90 @@
+
+#aeg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 150px;
+  font-family: digital;
+}
+#kuupaev {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 65px;
+  font-family: digital;
+}
+#name {
+  font-size: 23px;
+  color: white;
+  position: absolute;
+  bottom: 1%;
+}
+#buttons {
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+#github {
+  color: white;
+  position: absolute;
+  bottom: 90%;
+
+}
+#button1{
+  background-color: pink;
+  border: 0;
+  color: white;
+  position: relative;
+  width: 7%;
+}
+#button2{
+  background-color: red;
+  border: 0;
+  color: white;
+  position: relative;
+  width: 7%;
+}
+#button3{
+  background-color: white;
+  border: 0;
+  color: black;
+  position: relative;
+  width: 7%;
+}
+#button4{
+  background-color: yellow;
+  border: 0;
+  color: black;
+  position: relative;
+  width: 7%;
+}
+#buttons2{
+  position: absolute;
+  top: 20px;
+}
+@media screen and (max-width:700px){
+  .content{
+    width: 20%;
+  }
+  #buttons{
+    margin-left: 15%;
+  }
+  #kuupaev{
+    font-size: 50px;
+    display: flex;
+    margin-left: 80px;
+  }
+}
+body {
+background-image: url("https://images.pexels.com/photos/248159/pexels-photo-248159.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+background-size: 101%;
+}
