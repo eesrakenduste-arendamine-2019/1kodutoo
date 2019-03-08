@@ -1,0 +1,59 @@
+.clock {
+	width: 554px;
+	height: 945px;
+	position: relative;
+	animation: kellaliikumine 10s infinite linear both;
+}
+
+.clock *, .animarea * {
+	position: absolute;
+}
+
+
+.clockface {
+	width: 369px;
+	height: 369px;
+	left: 92px;
+	top: 90px;
+}
+
+.clockface * {
+	position: absolute;
+}
+
+
+.clockhand {
+	left: 158px;
+	top: 5px;
+	transform-origin: 50% 176px;
+}
+
+.secondhand
+	{
+	animation-duration:5s;
+	animation-timing-function:linear;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	}
+
+.minutehand
+	{
+	animation-duration:60s;
+	}
+	
+.hourhand
+	{
+	animation-duration:120s;
+	}
+	
+@keyframes spin 
+	{
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(360deg);}
+	}
+	
+@keyframes kellaliikumine
+	{
+		0% {bottom: 0px; left: 0px;}
+		100% {bottom: 0px; left: 1400px;}
+	}
