@@ -1,3 +1,22 @@
+## Esitlus
+Raimo Pregel
+
+Screenshot: http://greeny.cs.tlu.ee/~raimpre/js/_kodu/js.png
+
+Link: http://greeny.cs.tlu.ee/~raimpre/js/_kodu/clock.html
+
+
+Funktsionaalsuse kirjeldus:
+Tegin kella, kus vastavalt ikoonidele vajutades saab kella tunni, minuti, sekundi, päeva ja kuupäeva lahtreid nihutada alla, üles, vasakule, paremale ja teha suuremaks ja väiksemaks. Lisaks on vöimalus läbi for tsükli valida erinevaid font´e - kuna ma ei saanud hakkama mitme sönaliste fontidega, siis köik fontid valikus on ühe sönalised. Samuti on vöimalus muuta container´i (ehk köikidele kella osade) värvust ja tagatausta värvust.
+
+
+Tagasiside: Ma arvan, et säärane töö esimeseks tööks on väga ebapraktiline ja ebaotstarbekas, kuna otseselt CSSi ei ole meile öpetatud ja 80% töö ajast läks CSSi möistmisele ja parima praktikate leidmisele (milles endiselt kahtlen). Arvestustööna vöiksid olla sellised ülesanded, mida tunniti läbime ja mida läbi tehes saame praktiseerida ja teadmised kokku panna ning midagi suuremat teha (ehk öppides, korrates ja rakendades samu teadmisi). 
+
+Minu eesmärk koolis on öppida korralikult erinevaid keeli ja oleks vahva, kui koolis saaks öppida parimaid praktikaid ning selgitusi ka, miks on teatud algoritmid paremad kui teised, ehk saaks mingisugust eelist internetist öppimisele. 
+
+Vabandan, kui tagasiside on liiga kriitiline.
+
+
 # 1kodutoo
 1. kodutöö Eesrakenduste arendamises.
 
