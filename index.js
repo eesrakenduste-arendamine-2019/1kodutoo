@@ -3,26 +3,26 @@
 let clockContainer;
 let changeColorButton;
 let dayContainerElement;
-var formatStatus = window.localStorage.getItem("format");
-var session = window.localStorage.getItem("format");
-var clockSize = 60;
-var dateSize = 18;
+let formatStatus = window.localStorage.getItem("format");
+let session = window.localStorage.getItem("format");
+let clockSize = 60;
+let dateSize = 18;
 if(formatStatus == 0){
-	session = "";
-	formatStatus = 0;
+		session = "";
+		formatStatus = 0;
 } if (formatStatus == null){
-	session = "";
-	formatStatus = 0;
+		session = "";
+		formatStatus = 0;
 }
 
 window.onload = function(){
-  init();
-  if(window.localStorage.getItem("size") > 0){
-	var clock = document.getElementById( 'txt' );
-	clockSize = parseInt(window.localStorage.getItem("size"));
-	dateSize = parseInt(window.localStorage.getItem("dateSize"));
-	document.getElementById( 'txt' ).style.fontSize = clockSize+"px";
-	}
+	  init();
+	  if(window.localStorage.getItem("size") > 0){
+		let clock = document.getElementById( 'txt' );
+		clockSize = parseInt(window.localStorage.getItem("size"));
+		dateSize = parseInt(window.localStorage.getItem("dateSize"));
+		document.getElementById( 'txt' ).style.fontSize = clockSize+"px";
+		}
 	const localValue = localStorage.getItem('color');
 	if(JSON.parse(localValue).r != 0){
 		var color = JSON.parse(localValue);
@@ -31,31 +31,36 @@ window.onload = function(){
 };
 
 function init(){
-  startTime();
+	  startTime();
 }
 
 function startButtons(){
-	window.localStorage.setItem("format", formatStatus);
-	var color = document.getElementById( 'clockColor' );
-	var clockFormat = document.getElementById( 'clockFormat' );
-	var clockLarger = document.getElementById( 'clockLarger' );
-	var clockSmaller = document.getElementById( 'clockSmaller' );
-	var clock = document.getElementById( 'txt' );
-	clock.style.fontSize = clockSize+"px"; 
-	clockLarger.onclick = function(){
-		if(clockSize <= 500){
-			clockSize += 10;
-		}
-		clock.style.fontSize = clockSize+"px"; 
-		window.localStorage.setItem("size", clockSize);
+		window.localStorage.setItem("format", formatStatus);
+		let color = document.getElementById( 'clockColor' );
+		let clockFormat = document.getElementById( 'clockFormat' );
+		let clockLarger = document.getElementById( 'clockLarger' );
+		let clockSmaller = document.getElementById( 'clockSmaller' );
+		let clock = document.getElementById( 'txt' );
+		let date = document.getElementById('date');
+		clock.style.fontSize = clockSize+"px";
+		clockLarger.onclick = function(){
+			if(clockSize <= 500){
+				clockSize += 10;
+				dateSize += 3;
+			}
+			clock.style.fontSize = clockSize+"px";
+			window.localStorage.setItem("size", clockSize);
 	}
-	clockSmaller.onclick = function(){
+		clockSmaller.onclick = function(){
 		clock = document.getElementById( 'txt' );
 		date = document.getElementById('date');
 		if(clockSize > 10){
 			clockSize -= 10;
+			dateSize -= 3;
 		}
+		date.style.fontsize = dateSize+"px";
 		clock.style.fontSize = clockSize+"px";
+		window.localStorage.setItem("dateSize", dateSize);
 		window.localStorage.setItem("size", clockSize);
 	}
 	clockFormat.onclick = function(){
@@ -66,10 +71,10 @@ function startButtons(){
 		 session = "";
 	  }
   };
-	
+
 	 color.onclick= function(){
 	  const r = Math.round(Math.random()*255);
-      const g = Math.round(Math.random()*255);
+    const g = Math.round(Math.random()*255);
 	  const b = Math.round(Math.random()*255);
 	  const obj = {
 		r: r,
@@ -84,11 +89,11 @@ function startButtons(){
 
 
 function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  var dayOfMonth = today.getDate();
+  let today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let dayOfMonth = today.getDate();
   getDay();
   getMonth();
   startButtons();
@@ -100,7 +105,7 @@ function startTime() {
         h = h - 12;
 		session = "PM";
     }
-  };
+  }
   m = checkTime(m);
   s = checkTime(s);
   document.getElementById('txt').innerHTML =
@@ -109,7 +114,7 @@ function startTime() {
 }
 
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};
+  if (i < 10) {i = "0" + i;}
   return i;
 }
 
