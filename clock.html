@@ -43,23 +43,31 @@
 	<p onclick="changeFontSize('#date',-10)"><img src="minus.png" class="icons"></img></p>
 	
 	Move clock
-    <p onclick="clockUpDown(1);"><img src="down.png" class="icons"></img></p>
-    <p onclick="clockUpDown(-1);"><img src="up.png" class="icons"></img></p>
-    <p onclick="clockLeftRight(-1);"><img src="left.png" class="icons"></img></p>
-	<p onclick="clockLeftRight(1);"><img src="right.png" class="icons"></img></p>
+    <p onclick="clockUpDown(5);"><img src="down.png" class="icons"></img></p>
+    <p onclick="clockUpDown(-5);"><img src="up.png" class="icons"></img></p>
+    <p onclick="clockLeftRight(-5);"><img src="left.png" class="icons"></img></p>
+	<p onclick="clockLeftRight(5);"><img src="right.png" class="icons"></img></p>
 	
-	Change font
+	Change: font
     <p onclick="changeFont();"><img src="around.png" class="icons"></img></p>
 	
-	Change color
+	color
     <p onclick="changeColour();"><img src="around.png" class="icons"></img></p>
 	
-	Change background color
+	background color
     <p onclick="changeBackgroundColour();"><img src="around.png" class="icons"></img></p>
+	
+	shadow colors
+    <p onclick="changeShadow();"><img src="around.png" class="icons"></img></p>
+	
+	cursor
+	<p onclick="changeCursor();"><img src="around.png" class="icons"></img></p>
   </div>
   <div class="container">
     <div id="hours" class="hours"></div>
+	<div id="hoursminutes" class="hoursminutes"></div>
     <div id="minutes" class="minutes"></div>
+	<div id="minutesseconds" class="minutesseconds"></div>
     <div id="seconds" class="seconds"></div><br>
 	<div id="day" class="day"></div>
 	<div id="date" class="date"></div>

@@ -1,6 +1,7 @@
 body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+  
 }
 
 .raimo {
@@ -33,6 +34,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; // space-evenly
+  max-height: 50%;
 }
 
 .copyright {
