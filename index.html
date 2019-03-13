@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://functionheart.kentpirma.eu/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="game.js"></script>
+    <script src="clock.js"></script>
+    <title>BinaryClock</title>
+    <style>
+        *{
+            font-family: arial;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .footer {
+           position: fixed;
+           bottom: 10px;
+           width: 20%;
+           left: 40%;
+           right: 40%;
+           background-color: black;
+           color: white;
+           text-align: center;
+           border-radius: 10px;
+           animation: pulse 10s ease-out infinite;
+        }
+
+        /* slider css is taken from here: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 99%;
+            height: 25px;
+            background: #e7e7e7;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1; /* Fully shown on mouse-over */
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+        /* slider css is taken from here: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+
+        #score {
+            position: fixed;
+            width: 100px;
+            bottom: 10px;
+            left: 1%;
+            color: rgb(237, 0, 78);
+            background-color: black;
+            border: 10px solid black;
+            border-radius: 10px;
+            text-align: center;
+            animation: blink 3s linear infinite;
+        }
+
+        /* animations */
+        @keyframes pulse
+        {
+             0% {
+                  box-shadow: 0 0 0 0vh rgba(0, 0, 0, 0.1);
+             }
+             30% {
+                  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0);
+             }
+        }
+
+        @keyframes blink
+        {
+             0% {
+                  opacity: 1;
+             }
+             60% {
+                  opacity: 1;
+             }
+             80% {
+                  opacity: 0;
+             }
+        }
+    </style>
+</head>
+<body>
+    <input type="range" min="50" max="150" value="100" oninput="changeSize(this.value)" class="slider" id="sizeR">
+    <input type="range" min="100" max="500" value="100" oninput="changeX(this.value)" class="slider" id="x">
+    <input type="range" min="100" max="500" value="100" oninput="changeY(this.value)" class="slider" id="y">
+    <input type="range" min="1" max="7" value="1" oninput="changeColor(this.value)" class="slider" id="color">
+    <span id="score">Press space if you are bored ;)</span>
+    <span class="footer">Kent Pirma: <a href="https://github.com/internet8/1kodutoo">Github</a><span id="date"></span></span>
+</body>
+</html>
