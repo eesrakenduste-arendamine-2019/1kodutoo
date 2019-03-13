@@ -12,50 +12,39 @@
 
 </head>
 <body>
-<!--  <button type="button" id="myBtn" onclick="changeSize()">Nuppjupp</button>-->
-
   <div class="w3-sidebar" style="display:none" id="sidenav">
-    <button class="buttonclose" onclick="w3_close()">X</button><br>
+    <button class="buttonclose">X</button><br>
     <div id="nameContainer"></div>
     <p>Viide rakenduse <a href="https://github.com/kertliinat/1kodutoo" target="_blank">repositooriumile</a>
     <p>Fondi värvivalikud: </p>
-    <button class="buttoncolorwhite" onclick="changeFontColorToWhite()">V</button>
-    <button class="buttoncolorblack" onclick="changeFontColorToBlack()">M</button>
-    <!--<button type="button" id="my2ndColorBtn" onclick="changeColorToRed()">Font punaseks</button><br><br>-->
-    <button class="buttoncolorRND" onclick="randomizeFontColor()">J</button>
-    <br>
-    <p>Fondi stiilivalikud: </p>
-    <button class="buttonTNR" onclick="changeFont()">Times</button>
-    <button class="buttonAldrich" onclick="defaultFont()">Aldrich</button>
-    <p>Taustavärvi valikud: </p>
-    <button class="buttoncolorwhite" onclick="changeBckgColorToWhite()">V</button>
-    <button class="buttoncolorRND" onclick="randomizeBckColor()">J</button>
-    <p>Öö/päev valikud: </p>
-    <button class="buttonNightMode" onclick="nightMode()">Öö</button>
-    <button class="buttondayMode" onclick="dayMode()">Päev</button>
+    <button class="buttoncolorwhite">V</button>
+    <button class="buttoncolorblack">M</button>
+    <button class="buttoncolorRND">J</button><br>
+    <p>Fondi stiilivalikud:</p>
+    <button class="buttonTNR">Times</button>
+    <button class="buttonAldrich">Aldrich</button>
+    <p>Taustavärvi valikud:</p>
+    <button class="buttonBCKcolorwhite">V</button>
+    <button class="buttonBCKcolorRND">J</button>
+    <p>Öö/päev valikud:</p>
+    <button class="buttonNightMode">Öö</button>
+    <button class="buttondayMode">Päev</button>
     <p>Kella suurus:</p>
-    <button class="buttonReduce" onclick="decreaseSize()">50%</button>
-    <button class="buttonOriginalSize" onclick="returnSize()">100%</button>
+    <button class="buttonReduce">50%</button>
+    <button class="buttonOriginalSize">100%</button>
     <audio id="player" src="krabid.mp3"></audio>
       <div>
           <p>Muusika:</p>
-          <button class="playbutton" onclick="document.getElementById('player').play()"> ►</button>
-          <button class="pausebutton" onclick="document.getElementById('player').pause()">❚❚</button>
-          <button class="volplus" onclick="document.getElementById('player').volume += 0.1">🔊</button>
-          <button class="volminus" onclick="document.getElementById('player').volume -= 0.1">🔈</button>
+          <button class="playbutton"> ►</button>
+          <button class="pausebutton">❚❚</button>
+          <button class="volplus">🔊</button>
+          <button class="volminus">🔈</button>
       </div>
   </div>
-
-<button class="buttonopen" onclick="w3_open()">Ava</button>
-
-
-
+<button class="buttonopen">Ava</button>
   <div><div id="clockContainer"></div>
         <div id="dateContainer"></div>
         <div id="dayContainer"></div>
-
   </div>
-
-
 </body>
 </html>
