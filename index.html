@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="index.js"></script>
+  <title>Clock</title>
+
+</head>
+<body>
+  <div class="w3-sidebar" style="display:none" id="sidenav">
+    <button class="buttonclose">X</button><br>
+    <div id="nameContainer"></div>
+    <p>Viide rakenduse <a href="https://github.com/kertliinat/1kodutoo" target="_blank">repositooriumile</a>
+    <p>Fondi värvivalikud: </p>
+    <button class="buttoncolorwhite">V</button>
+    <button class="buttoncolorblack">M</button>
+    <button class="buttoncolorRND">J</button><br>
+    <p>Fondi stiilivalikud:</p>
+    <button class="buttonTNR">Times</button>
+    <button class="buttonAldrich">Aldrich</button>
+    <p>Taustavärvi valikud:</p>
+    <button class="buttonBCKcolorwhite">V</button>
+    <button class="buttonBCKcolorRND">J</button>
+    <p>Öö/päev valikud:</p>
+    <button class="buttonNightMode">Öö</button>
+    <button class="buttondayMode">Päev</button>
+    <p>Kella suurus:</p>
+    <button class="buttonReduce">50%</button>
+    <button class="buttonOriginalSize">100%</button>
+    <audio id="player" src="krabid.mp3"></audio>
+      <div>
+          <p>Muusika:</p>
+          <button class="playbutton"> ►</button>
+          <button class="pausebutton">❚❚</button>
+          <button class="volplus">🔊</button>
+          <button class="volminus">🔈</button>
+      </div>
+  </div>
+<button class="buttonopen">Ava</button>
+  <div><div id="clockContainer"></div>
+        <div id="dateContainer"></div>
+        <div id="dayContainer"></div>
+  </div>
+</body>
+</html>

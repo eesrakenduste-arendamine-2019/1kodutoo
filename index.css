@@ -1,0 +1,194 @@
+#clockContainer{
+  text-align: center;
+  font-size: 500%;
+  font-family: "Aldrich";
+  margin-left:auto;
+  margin-right:auto;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#dateContainer{
+  font-size: 250%;
+  font-family: "Aldrich";
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#dayContainer{
+  font-size: 250%;
+  font-family: "Aldrich";
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.buttoncolorwhite{
+  background-color: white;
+  color:white;
+  border-radius: 15px;
+  border:none;
+  box-shadow: inset 0 0 0 1px #27496d;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  width:25%;
+}
+.buttonBCKcolorwhite{
+  background-color: white;
+  color:white;
+  border-radius: 15px;
+  border:none;
+  box-shadow: inset 0 0 0 1px #27496d;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  width:25%;
+}
+.buttoncolorblack{
+  background-color: black;
+  color:black;
+  border-radius: 15px;
+  border:none;
+  /*box-shadow: inset 0 0 0 2px #ffffff;*/
+  width:25%;
+}
+.buttonBCKcolorRND{
+  /*background-color: black;
+  color:black;*/
+  border-radius: 15px;
+  border:none;
+  box-shadow: inset 0 0 0 1px #27496d;
+  background: #ffff00;
+  background: -webkit-linear-gradient(bottom left, #ffff00 0%, #ff3030 40%, #cc00ff 61%, #005dff 100%);
+  color:transparent;
+  width:25%;
+  /*background: -o-linear-gradient(bottom left, #ffff00 0%, #ff3030 50%, #cc00ff 51%, #005dff 100%);
+  background: linear-gradient(to top right, #ffff00 0%, #ff3030 50%, #cc00ff 51%, #005dff 100%);*/
+}
+.buttoncolorRND{
+  /*background-color: black;
+  color:black;*/
+  border-radius: 15px;
+  border:none;
+  box-shadow: inset 0 0 0 1px #27496d;
+  background: #ffff00;
+  background: -webkit-linear-gradient(bottom left, #ffff00 0%, #ff3030 40%, #cc00ff 61%, #005dff 100%);
+  color:transparent;
+  width:25%;
+  /*background: -o-linear-gradient(bottom left, #ffff00 0%, #ff3030 50%, #cc00ff 51%, #005dff 100%);
+  background: linear-gradient(to top right, #ffff00 0%, #ff3030 50%, #cc00ff 51%, #005dff 100%);*/
+}
+.buttoncolorBlue{
+  border-radius: 15px;
+  border:none;
+  background-color: #4db8ff;
+  color:transparent;
+  width:25%;
+  box-shadow: inset 0 0 0 1px #27496d;
+}
+.buttondayMode{
+  border-radius: 15px;
+  border:none;
+  background-color: #4db8ff;
+  color: #003366;
+  width:25%;
+  box-shadow: inset 0 0 0 1px #27496d;
+}
+.buttonNightMode{
+  border-radius: 15px;
+  border:none;
+  background-color:#003366;
+  color: #4db8ff;
+  width:25%;
+  box-shadow: inset 0 0 0 1px #27496d;
+}
+.buttonopen {
+  background-color: green;
+  color: white;
+  border: 2px solid teal;
+  /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+  text-decoration-color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /*border-radius: 12%;*/
+}
+.buttonclose {
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+  /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+  width: 100%;
+  text-decoration-color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  /*border-radius: 12%;*/
+}
+
+.buttonTNR{
+  background-color: white;
+  color:black;
+  border-radius: 15px;
+  border:none;
+  box-shadow: inset 0 0 0 1px #27496d;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  font-size: 110%;
+  font-family: "Times New Roman";
+  width:35%;
+}
+
+.buttonAldrich{
+  background-color: white;
+  color:black;
+  border-radius: 15px;
+  border:none;
+  font-size: 110%;
+  box-shadow: inset 0 0 0 1px #27496d;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  font-family: "Aldrich";
+  width:35%;
+}
+
+.buttonReduce{
+  background-color: white;
+  color:black;
+  border:none;
+  box-shadow: inset 0 0 0 1px #27496d;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  background: -webkit-linear-gradient(left, #ffff00 0%, #ff3030 50%, #ffffff 51%, #ffffff 100%);
+  width:35%;
+}
+
+.buttonOriginalSize{
+  background-color: white;
+  color:black;
+  border:none;
+  box-shadow: inset 0 0 0 1px #27496d;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  width:35%;
+  background: -webkit-linear-gradient(left, #ffff00 0%, #ff3030 50%);
+}
+.playbutton{
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 1px #000000;
+  border: none;
+  width:16%;
+
+}
+.pausebutton{
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 1px #000000;
+  border: none;
+  width:16%;
+}
+.volminus{
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0 1px #27496d;
+  border: none;
+  width:16%;
+
+}
+.volplus{
+  background-color: white;
+  color: #000000;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0 1px #27496d;
+  border: none;
+
+}
