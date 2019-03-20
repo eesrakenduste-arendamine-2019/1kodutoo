@@ -1,0 +1,48 @@
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background-color: "white";
+  /*background-image: url("pictures/2015-03-20 14.14.54j.jpg");*/
+  background-size: cover;
+  border-style: outset;
+
+}
+
+.container {
+  font-family: Consolas;
+  color: mediumaquamarine;
+  font-size: 80px;
+  margin-top: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  font-family: Consolas;
+  font-size: 25px;
+  display: flex;
+  margin: 0 auto;
+  background-color :rgba(230, 255, 255, 0.3);
+  justify-content: center;
+  padding: 14px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.hours, .minutes, .seconds {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin-right: 5px;
+}
+
+.day, .date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}

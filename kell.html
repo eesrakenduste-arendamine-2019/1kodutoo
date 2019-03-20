@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Digital clock</title>
+  <script src="kell.js"></script>
+  <link rel="stylesheet" type="text/css" href="kell.css">
+</head>
+<body>
+  <a href="https://github.com/Merilinv/1kodutoo">Eesrakenduste arendamine Merilin Võrk, 3.rühm (IF18), link repositooriumile</a>.
+
+  <div class="container">
+    <div id="hours" class="hours"></div>
+    <div id="minutes" class="minutes"></div>
+    <div id="seconds" class="seconds"></div><br>
+    <div id="day" class="day"></div>
+    <div id="date" class="date"></div>
+  </div>
+
+  <button onclick="changeSize('.container', 10)" class ="button">Suurus</button> <!--#container? millele peaksin referencima? css või html? siin html ja js-is css??-->
+  <br>
+  <button onclick="changeFont()" class ="button">Font</button>
+  <br>
+  <button onclick="changeFontColor()" class ="button">Fondi värvus</button>
+  <br>
+  <button onclick="backgroundColor()" class ="button">Taustavärv</button>
+  <br>
+  <button onclick="backgroundImage()" class ="button">Taustapilt</button>
+
+</body>
+</html>
