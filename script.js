@@ -1,18 +1,63 @@
+/*jshint esversion:6*/
 let hourContainer;
 let minuteContainer;
 let dateContainer;
 let dayContainer;
-let date = new Date();
-let hours = date.getHours();
-let minutes = date.getMinutes();
-let seconds = date.getSeconds();
-let milliseconds = date.getMilliseconds();
-
-
-
 
 window.onload = function () {
     init();
+    
+    $('#clockContainer').on('click', function() {
+        if ($("#analogContainer").css('display') == 'none') {
+            $('#clockDisp').fadeToggle(250, function() {
+                setDelays();
+                $('#analogContainer').fadeToggle(250);
+            });
+        } else {
+            $('#analogContainer').fadeToggle(250, function() {
+                setDelays();
+                $('#clockDisp').fadeToggle(250);
+            });
+        }
+    })
+
+    //asendab analoog kella svg failid inline svg path'idega (et saaks fill'i muuta).
+    //selle ma tegelikult võtsin stackOverflow'st otse.
+
+    jQuery('img.svg').each(function () {
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+
+        jQuery.get(imgURL, function (data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+
+            // Add replaced image's ID to the new SVG
+            if (typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if (typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass + ' replaced-svg');
+            }
+
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+
+            // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+            if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            }
+
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+
+        }, 'xml');
+
+    });
+
 }
 
 function init() {
@@ -21,11 +66,39 @@ function init() {
     colorMenuDiv.addEventListener('mouseenter', colorGenerate);
     dragElement(document.getElementById("clockContainer"));
     
+    setDelays();
+    /* let amoeba1 = document.querySelector('body'); */
+    /* amoeba1.addEventListener('click', clockTypeSwitch); */
+}
+
+function setDelays() {
+    let date = new Date();
+    //digital clock animation delays
+    let seconds = date.getSeconds();
+    let milliseconds = date.getMilliseconds();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+
     let delaySeconds = -seconds + 's';
     clockBar.style.animationDelay = (delaySeconds);
 
-    let delayMs = -5000 + ((((seconds * 1000) + milliseconds)) % 5000) + 'ms';
+    let delayMs = -5000 + ((seconds * 1000 + milliseconds) % 5000) + 'ms';
     bgPulse.style.animationDelay = delayMs;
+
+    //analog clock animation delays
+    let delayHours = -(hours * 3600 + minutes * 60 + seconds) + 's';
+    let delayMinutes = -(minutes * 60 + seconds) + 's'
+
+    
+    let clockMin = document.getElementById('clockMin');
+    let clockSec = document.getElementById('clockSec');
+    
+    clockSec.style.animationDelay = (delaySeconds);
+    clockMin.style.animationDelay = (delayMinutes);
+    clockHour.style.animationDelay = (delayHours);
+    console.log("sec: " + delaySeconds);
+    console.log("h: " + delayHours);
+    console.log("min: " + delayMinutes);
 }
 
 /* let colorMenuDiv = document.querySelector('.colorSelect');
@@ -37,6 +110,18 @@ class rndmColor {
         this.blue = b;
     }
 }
+
+function switchClocktype() {
+    $("#analogContainer").click(function () {
+        $("#animated").addClass("off");
+    });
+    $("#clockContainer").click(function () {
+        $("#animated").removeClass("off");
+    });
+}
+
+
+
 
 function colorGenerate() {
 
@@ -64,6 +149,8 @@ function changeBgColor() {
     document.querySelector('#clockDisp').style.color = this.style.backgroundColor;
     document.querySelector('#clockBarContainer').style.backgroundColor = this.style.backgroundColor;
     document.querySelector('#colorIcon').style.fill = this.style.backgroundColor;
+    $('#analogContainer').find('path').css("fill", this.style.backgroundColor);
+    $('#analogContainer').find('circle').css("fill", this.style.backgroundColor);
 }
 
 function startClock() {
@@ -73,13 +160,19 @@ function startClock() {
     }, 100);
 }
 
+
 function updateClock() {
+    let date = new Date();
+    
     hourContainer = document.querySelector('#hours');
     minuteContainer = document.querySelector('#minutes');
     dateContainer = document.querySelector('#date');
     dayContainer = document.querySelector('#day');
     clockBar = document.querySelector('#clockBar');
     bgPulse = document.querySelector('.bgPulse');
+
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
 
     if (minutes < 10) {
         minutes = "0" + date.getMinutes();
@@ -88,8 +181,11 @@ function updateClock() {
         hours = "0" + date.getHours();
     }
 
+    
     hourContainer.innerHTML = hours;
     minuteContainer.innerHTML = minutes;
+    
+    console.log(minutes);
 
     let day;
     function getDay() {
@@ -172,7 +268,8 @@ function updateClock() {
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     
-    elmnt.onmousedown = dragMouseDown;
+/*     elmnt.onmousedown = dragMouseDown; */
+    document.getElementById(elmnt.id + "clockContainer").onmousedown = dragMouseDown;
 
     function dragMouseDown(e) {
         e = e || window.event;
@@ -199,8 +296,9 @@ function dragElement(elmnt) {
     }
 
     function closeDragElement() {
-        /* stop moving when mouse button is released:*/
+        // stop moving when mouse button is released:
         document.onmouseup = null;
         document.onmousemove = null;
     }
+
 }
