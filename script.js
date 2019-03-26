@@ -6,24 +6,10 @@ let dayContainer;
 
 window.onload = function () {
     init();
-    
-    $('#clockContainer').on('click', function() {
-        if ($("#analogContainer").css('display') == 'none') {
-            $('#clockDisp').fadeToggle(250, function() {
-                setDelays();
-                $('#analogContainer').fadeToggle(250);
-            });
-        } else {
-            $('#analogContainer').fadeToggle(250, function() {
-                setDelays();
-                $('#clockDisp').fadeToggle(250);
-            });
-        }
-    })
+
 
     //asendab analoog kella svg failid inline svg path'idega (et saaks fill'i muuta).
     //selle ma tegelikult võtsin stackOverflow'st otse.
-
     jQuery('img.svg').each(function () {
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -66,6 +52,7 @@ function init() {
     colorMenuDiv.addEventListener('mouseenter', colorGenerate);
     dragElement(document.getElementById("clockContainer"));
     
+    clockSwitch();
     setDelays();
     /* let amoeba1 = document.querySelector('body'); */
     /* amoeba1.addEventListener('click', clockTypeSwitch); */
@@ -80,15 +67,14 @@ function setDelays() {
     let minutes = date.getMinutes();
 
     let delaySeconds = -seconds + 's';
-    clockBar.style.animationDelay = (delaySeconds);
-
+    
     let delayMs = -5000 + ((seconds * 1000 + milliseconds) % 5000) + 'ms';
     bgPulse.style.animationDelay = delayMs;
-
+    
     //analog clock animation delays
     let delayHours = -(hours * 3600 + minutes * 60 + seconds) + 's';
     let delayMinutes = -(minutes * 60 + seconds) + 's'
-
+    
     
     let clockMin = document.getElementById('clockMin');
     let clockSec = document.getElementById('clockSec');
@@ -96,13 +82,13 @@ function setDelays() {
     clockSec.style.animationDelay = (delaySeconds);
     clockMin.style.animationDelay = (delayMinutes);
     clockHour.style.animationDelay = (delayHours);
+    clockBar.style.animationDelay = (delaySeconds);
+
     console.log("sec: " + delaySeconds);
     console.log("h: " + delayHours);
     console.log("min: " + delayMinutes);
 }
 
-/* let colorMenuDiv = document.querySelector('.colorSelect');
-colorMenuDiv.addEventListener('hover', colorGenerate); */
 class rndmColor {
     constructor(r, g, b) {
         this.red = r;
@@ -111,15 +97,21 @@ class rndmColor {
     }
 }
 
-function switchClocktype() {
-    $("#analogContainer").click(function () {
-        $("#animated").addClass("off");
-    });
-    $("#clockContainer").click(function () {
-        $("#animated").removeClass("off");
+function clockSwitch() {
+    $('#clockContainer').on('click', function () {
+        if ($("#analogContainer").css('display') == 'none') {
+            $('#clockDisp').fadeToggle(250, function () {
+                setDelays();
+                $('#analogContainer').fadeToggle(250);
+            });
+        } else {
+            $('#analogContainer').fadeToggle(250, function () {
+                setDelays();
+                $('#clockDisp').fadeToggle(250);
+            });
+        }
     });
 }
-
 
 
 
@@ -180,12 +172,9 @@ function updateClock() {
     if (hours < 10) {
         hours = "0" + date.getHours();
     }
-
     
     hourContainer.innerHTML = hours;
     minuteContainer.innerHTML = minutes;
-    
-    console.log(minutes);
 
     let day;
     function getDay() {
@@ -269,7 +258,7 @@ function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     
 /*     elmnt.onmousedown = dragMouseDown; */
-    document.getElementById(elmnt.id + "clockContainer").onmousedown = dragMouseDown;
+    document.getElementById("clockContainer").onmousedown = dragMouseDown;
 
     function dragMouseDown(e) {
         e = e || window.event;
