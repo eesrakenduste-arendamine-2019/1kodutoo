@@ -2,7 +2,7 @@
 /*Body kujundus*/
 body {
     background: black; /*Kui pilt puudub*/
-    background-image: url("../Pictures/SkyNight.jpg");
+    background-image: url("/Pictures/SkyNight.jpg");
     background-size: cover; /*Viib pildi keskele*/
 }
 
