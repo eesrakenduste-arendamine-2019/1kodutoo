@@ -82,28 +82,28 @@ function backG(){
     backgroundCounter = 0;
   }
   if(backgroundCounter == 2){
-    document.body.style.backgroundImage = "url('../Pictures/SnowyMountains.jpg')";
+    document.body.style.backgroundImage = "url('/Pictures/SnowyMountains.jpg')";
     backgroundCounter++;
   }
   if(backgroundCounter == 1){
-    document.body.style.backgroundImage = "url('../Pictures/SpacePlanet.jpg')";
+    document.body.style.backgroundImage = "url('/Pictures/SpacePlanet.jpg')";
     backgroundCounter++;
   }
   if(backgroundCounter == 0){
-    document.body.style.backgroundImage = "url('../Pictures/SkyNight.jpg')";
+    document.body.style.backgroundImage = "url('/Pictures/SkyNight.jpg')";
     backgroundCounter++;
   }
 }
 
    /*Funktsioonid muusika muutmiseks*/
   function changeMusic1(){
-    document.getElementById("soundDisplay").src="../Muusika/Again.mp3";
+    document.getElementById("soundDisplay").src="/Muusika/Again.mp3";
   }
   function changeMusic2(){
-    document.getElementById("soundDisplay").src="../Muusika/Technicolor.mp3";
+    document.getElementById("soundDisplay").src="/Muusika/Technicolor.mp3";
   }
   function changeMusic3(){
-    document.getElementById("soundDisplay").src="../Muusika/Lemon.mp3";
+    document.getElementById("soundDisplay").src="/Muusika/Lemon.mp3";
   }
 
   //document.body.style.backgroundColor = "black";
@@ -137,10 +137,10 @@ function resizeText() {
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    let i;
     for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+      let openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
@@ -154,10 +154,10 @@ function changeColor() {
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content2");
-    var i;
+    let dropdowns = document.getElementsByClassName("dropdown-content2");
+    let i;
     for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+      let openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
@@ -171,10 +171,10 @@ function changeMusic() {
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content3");
-    var i;
+    let dropdowns = document.getElementsByClassName("dropdown-content3");
+    let i;
     for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+      let openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
@@ -185,15 +185,15 @@ window.onclick = function(event) {
 /*Funktsioon Kellaaja arvutamiseks, kuupäeva leidmiseks*/
 function showTime(){
 
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var mnth = date.getMonth();
-    var session = "AM";
+    let date = new Date();
+    let h = date.getHours(); // 0 - 23
+    let m = date.getMinutes(); // 0 - 59
+    let s = date.getSeconds(); // 0 - 59
+    let mnth = date.getMonth();
+    let session = "AM";
 
-    var d = new Date();
-    var weekday = new Array(7);
+    let d = new Date();
+    let weekday = new Array(7);
     weekday[0] =  "Sunday";
     weekday[1] = "Monday";
     weekday[2] = "Tuesday";
@@ -202,9 +202,9 @@ function showTime(){
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
 
-    var mon = new Date();
-    var monthNum;
-    var currentMonth = new Array(12);
+    let mon = new Date();
+    let monthNum;
+    let currentMonth = new Array(12);
     currentMonth[0] =  "January";
     currentMonth[1] = "February";
     currentMonth[2] = "March";
@@ -220,24 +220,24 @@ function showTime(){
 
 /*Lisab -st, -nd, -rd, -th kuupäeva taha*/
     function monthDay(){
-      if(date.getDay() == 1){
-        monthNum = date.getDay() + "st";
+      if(date.getDate() == 1){
+        monthNum = date.getDate() + "st";
       }else{
-        if(date.getDay() == 2){
-          monthNum = date.getDay() + "nd";
+        if(date.getDate() == 2){
+          monthNum = date.getDate() + "nd";
         }else{
-          if(date.getDay() == 2){
-              monthNum = date.getDay() + "rd";
+          if(date.getDate() == 2){
+              monthNum = date.getDate() + "rd";
           }else{
-            monthNum = date.getDay() + "th";
+            monthNum = date.getDate() + "th";
           }
         }
       }
     }
     monthDay();
 
-    var dayn = weekday[d.getDay()];
-    var monthn =  monthNum + " of " + currentMonth[mon.getMonth()];
+    let dayn = weekday[d.getDay()];
+    let monthn =  monthNum + " of " + currentMonth[mon.getMonth()];
 
     /*Lisab kellale nullid juurde ja näitab kas on päev või öö(am, pm)*/
     if(h == 0){
@@ -253,7 +253,7 @@ function showTime(){
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    var time = h + ":" + m + ":" + s + " " + session;
+    let time = h + ":" + m + ":" + s + " " + session;
 
     /*Kuvab tulemused lehel välja*/
     document.getElementById("MyClockDisplay").innerText = time;
