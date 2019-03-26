@@ -1,0 +1,326 @@
+body {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    background-color: #00ccbb;
+    margin: 0px;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bgPulse {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: radial-gradient( rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+    position: absolute;
+    z-index: 100;
+    top: 5px;
+    animation: sizePulse 5s cubic-bezier(0.170, 1.015, 0.305, 0.915) infinite normal;
+}
+
+#colorIcon {
+    fill: #00ccbb;
+    width: 80%;
+    height: auto;
+    top: 5px;
+    position: absolute;
+    transition-duration: 0.3s;
+    transition-delay: 1s;
+    z-index: 11;
+}
+
+.colorSelect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    position: fixed;
+    top: 10%;
+    left: 85%;
+    transition-delay: 0.8s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    padding: 3px 2px;
+    z-index: 10;
+    box-shadow: 0px 10px 20px #0000001e;
+}
+.colorSelect:hover {
+    height: 200px;
+    -webkit-transition: height 0.6s cubic-bezier(0.610, 0.210, 0.030, 1.000); /* Safari */
+    transition: height 0.6s cubic-bezier(0.610, 0.210, 0.030, 1.000);
+}
+
+.colorSelect:hover #colorIcon {
+    opacity: 0;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+}
+
+.colorSelect:hover .colorButton {
+    opacity: 1;
+    transition-delay: 0.25s;
+    transition-duration: .3s;
+}
+
+.colorButton {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+    position: relative;
+    z-index: 12;
+}
+
+#clockBarContainer {
+    height: 6px;
+    border-radius: 5px;
+    background-color: #00ccbb;
+    position: relative;
+    top: -8px;
+    margin: 5px 0px 5px 0px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 1px;
+}
+
+#clockBar {
+    height: 4px;
+    width: 198px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    animation: clockScale 60s linear infinite normal;
+    position: relative;
+}
+
+#clockContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 323px;
+    width: 350px;
+
+    position: absolute;
+}
+
+#clockDisp {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #00ccbb;
+    z-index: 5;
+    
+    top: 25%;
+}
+
+.disappear {
+    animation: 1s disappear ease-in-out normal;
+    animation-fill-mode: forwards;
+}
+
+.appear {
+    animation: 1s disappear ease-in-out normal;
+    animation-fill-mode: forwards;
+}
+
+#clockTime {
+    display: flex;
+    flex-direction: row;
+    font-size: 5em;
+    justify-content: space-evenly;
+}
+
+
+
+#clockDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.9em;
+    font-weight: 250;
+    letter-spacing: 0.1em
+}
+
+.bubbleAnim {
+    fill: #ffffff;
+    z-index: -1;
+    position: relative;
+    left: 28px;
+}
+
+#amoeba1 {
+    height: auto;
+    width: 400px;
+    position: absolute;
+/*     animation: rotate360 60s linear infinite;
+    transform-origin: 50% 38%; */
+}
+
+#bubbleAnim2 {
+    fill: white;
+    stroke: white;
+    stroke-width: 1px;
+    border: 1px;
+    border-color: white;
+}
+
+#colon {
+    animation: blink 1s ease-in-out normal infinite;
+}
+
+#name {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7em;
+    top: 92vh;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+}
+
+#name a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.fadeIn {
+    animation: appear 1.5s ease-in-out forwards;
+}
+.fadeOut {
+    animation: disappear 1.5s ease-in-out forwards;
+}
+
+@keyframes disappear {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes sizePulse {
+    0% {
+        transform: scale(1);
+        opacity: .5;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+@keyframes clockScale {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes clockFaceSize {
+    0% {
+        transform: scale(0.97);
+    }
+    100% {
+        transform: scale(0.99);
+    }
+}
+
+
+/* analoog-kell */
+
+#analogContainer {
+    width: 300px;
+    height: 300px;
+    z-index: 50;
+    position: absolute;
+    display: none;
+    top: 10px;
+}
+
+.svg path, .svg circle {
+    fill: #00ccbb;
+}
+
+#clockFace {
+    width: 283px;
+    height: 283px;
+    position: relative;
+    top: 9px;
+    left: 1px;
+    animation: clockFaceSize 5s ease-in-out alternate infinite;
+    transform-origin: 50% 50%;
+}
+
+#clockSec {
+    height: 152px;
+    transform-origin: 50% 149.5px;
+    position: absolute;
+    left: 148px;
+    animation: spinHand 60s infinite linear;
+}
+
+#clockMin {
+    height: 158px;
+    transform-origin: 50% 150px;
+    position: absolute;
+    left: 143px;
+    animation: spinHand 3600s linear infinite;
+    
+}
+
+#clockHour {
+    height: 107px;
+    transform-origin: 50% 99px;
+    position: absolute;
+    left: 143px;
+    top: 51px;
+    animation: spinHand 43200s infinite linear;
+}
+
+@keyframes spinHand {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

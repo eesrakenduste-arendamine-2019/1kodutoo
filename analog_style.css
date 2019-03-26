@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#analogContainer {
+    width: 300px;
+    height: 300px;
+}
+
+#clockFace {
+    width: 283px;
+    height: 283px;
+    position: relative;
+    top: 8.5px;
+    left: 8.5px;
+}
+
+#clockSec {
+    height: 152px;
+    transform-origin: 50% 149.5px;
+    position: absolute;
+    left: 148px;
+    animation: spinHand 60s linear infinite;
+}
+
+#clockMin {
+    height: 158px;
+    transform-origin: 50% 150px;
+    position: absolute;
+    left: 142px;
+    animation: spinHand 3600s linear infinite;
+    
+}
+
+#clockHour {
+    height: 107px;
+    transform-origin: 50% 99px;
+    position: absolute;
+    left: 142px;
+    top: 51px;
+    animation: spinHand 43200s infinite linear;
+}
+
+@keyframes spinHand {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
