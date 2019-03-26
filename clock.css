@@ -1,0 +1,87 @@
+@font-face{
+  font-family: 'mountain';
+  src: url('Fonts/Julietta-Messie-Demo.otf');
+}
+@font-face{
+  font-family: 'electronic';
+  src: url('Fonts/February 2 - Normal (Personal use).otf');
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    font-family:'times';
+    letter-spacing: 7px;
+}
+
+.date {
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    font-family:'times';
+    letter-spacing: 7px;
+}
+
+.day {
+    position:absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    font-family:'times';
+    letter-spacing: 7px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #A92B2B;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.7s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #6F2222;
+  display: block;
+  transition: 0.7s;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.7s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/*@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}*/
+
+body {
+  background-size: cover;
+}
