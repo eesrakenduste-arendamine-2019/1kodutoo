@@ -1,0 +1,160 @@
+
+/*Body kujundus*/
+body {
+    background: black; /*Kui pilt puudub*/
+    background-image: url("/Pictures/SkyNight.jpg");
+    background-size: cover; /*Viib pildi keskele*/
+}
+
+/*kasutaja ja reposatooriumi kujundamine*/
+.textAuthor {
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    transform: translateX(0%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 150%;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+
+  }
+
+  .textAuthor2 {
+      position: absolute;
+      top: 85%;
+      left: 2%;
+      transform: translateX(0%) translateY(0%);
+      color: #17D4FE;
+      font-size: 150%;
+      font-family: Orbitron;
+      letter-spacing: 7px;
+
+    }
+
+/*Muusika kasti kujundamine*/
+.sound {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 350%;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+
+  }
+
+/*Kellaaja, päeva ja kuupäeva kujundamine*/
+.clock {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 450%;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+
+  }
+
+  .day {
+      position: absolute;
+      top: 51%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: #17D4FE;
+      font-size: 450%;
+      font-family: Orbitron;
+      letter-spacing: 7px;
+
+    }
+
+    .month {
+        position: absolute;
+        top: 59%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: #17D4FE;
+        font-size: 450%;
+        font-family: Orbitron;
+        letter-spacing: 7px;
+
+      }
+
+  /* Dropdown nupp */
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 3px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-style: solid;
+  }
+
+  .dropbtn2 {
+    background-color: #00BFFF;
+    color: black;
+    padding: 3px;
+    font-size: 18px;
+    /*border: none;*/
+    cursor: pointer;
+    border-style: solid;
+    border-color: white;
+  }
+
+  /* Dropdown nupp hõljumisel */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+  /* Dropdown menüü positsioneerimine */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown  menüü andmed */
+  .dropdown-content {
+    display: none;
+    top: 125%;
+    position: absolute;
+    /*background-color: #f1f1f1;*/
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content2 {
+    display: none;
+    top: 245%;
+    position: absolute;
+    /*background-color: #f1f1f1;*/
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content3 {
+    display: none;
+    top: 360%;
+    position: absolute;
+    /*background-color: #f1f1f1;*/
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Linkid dropdown menüü sees */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Muudab Linkide värvi */
+  .dropdown-content a:hover {background-color: #ddd}
+
+  /* Näitab dropdown menüüd*/
+  .show {display:block;}
