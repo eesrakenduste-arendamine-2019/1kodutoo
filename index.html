@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+	<meta charset="utf-8">
+	<base target="_blank">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="index.js" defer></script>
+</head>
+<body>
+	<h3>Robert Pakosta</h3>
+	<button onclick="suuruseMuut()">kell suuremaks</button>
+	<button onclick="moveseierid()">seierite asukoht suurel kellal</button>
+	<button id="change-color">Tausta värvi vahetus</button>
+	<input id= "animController" type="submit" value="Peata kella liikumine">
+	<button onclick="write(today)">tänane kuupäev</button>
+	<main>
+		<section id="time">
+			<h2>Analoogkell</h2>
+			<div id="clock" class="clock">
+				<img id="kellakast" src="pildid/kellakast.png" alt="kellakast">
+				<div id="clockface" class="clockface">
+					<img id="hourhand" src="pildid/tunniseier.png" alt="tunniseier" class="clockhand hourhand">
+					<img id="minutehand" src="pildid/minutiseier.png" alt="minutiseier" class="clockhand minutehand">
+					<img id="secondhand" src="pildid/sekundiseier.png" alt="sekundiseier" class="clockhand secondhand">
+				</div>
+		</section>
+	</main>
+</body>
+</html>
