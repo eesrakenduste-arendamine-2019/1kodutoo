@@ -3,7 +3,7 @@ let textColor;
 let changeColorButton;
 let defaultSettings;
 let clockSmall;
-let clockMedium
+let clockMedium;
 let clockBig;
 let dayContainer;
 let dateContainer;
