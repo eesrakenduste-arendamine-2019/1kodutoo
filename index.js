@@ -45,10 +45,21 @@ function toggleSize(item){
 function toggleLoc(item){
    if(item.className == "on") {
       item.className="off";
-      document.body.style.backgroundColor = "#664147";
+      document.body.style.backgroundColor = "#31263e";
    } else {
       item.className="on";
-      document.body.style.backgroundColor = "#31263e";
+      document.body.style.backgroundColor = "#664147";
+
+   }
+}
+
+function toggleFont(item){
+   if(item.className == "on") {
+      item.className="off";
+      clockElementClass.style.fontFamily = "Roboto";
+   } else {
+      item.className="on";
+      clockElementClass.style.fontFamily = "Times New Roman";
 
    }
 }

@@ -1,4 +1,11 @@
 # 1kodutoo Kristjan Põldmets http://greeny.cs.tlu.ee/~krispol/2019/Eesrakenduste_arendus/1kodutoo/Kodut%c3%b6%c3%b6%20screenshot.png
+
+Kellarakenduses on 4 funktsionaalsust: Kella ja kuupäeva värvi muutus, kella ja kuupäeva suuruse muutus, taustavärvi muutus ning kella ja kuupäeva kirjašerifi muutus. Igale slaider tüüpi nupule rakendub eraldi lihtne funktsioon mis muudab css'i. Leht on responsive disainiga, muutudes kolmel erineval ekraani laiusel. Viisaka välimusega slaider tüüpi nupu css on leitud otse veebi näidisest
+
+Algselt tekkis probleeme js "camelcase" tüüpi lausete koostamisel.
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 1. kodutöö Eesrakenduste arendamises.
 
 ## Tähtaeg 06.03.2018 23:59
