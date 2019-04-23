@@ -1,0 +1,100 @@
+body{
+  background-color: grey;	
+}
+
+.li{
+  color: yellow;
+}
+
+
+.date{
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-53%) translateY(-50%);
+  font-family:Lucida Console;
+  font-size: 25px;
+  color:green;
+}
+
+.time{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-55%) translateY(-50%);
+  font-family:Lucida Console;
+  font-size: 65px;
+  color:green;
+}
+
+.day{
+  position: absolute;
+  top: 47%;
+  left: 49.5%;
+  transform: translateX(-47%) translateY(-49.5%);
+  font-family:Lucida Console;
+  font-size: 25px;
+  color:green;
+}
+
+.input{
+  position: absolute;
+  top: 74%;
+  left: 38%;
+  transform: translateX(-74%) translateY(-38%);
+}
+
+.decrease{
+  position: absolute;
+  top: 74.2%;
+  left: 44%;
+  transform: translateX(-74.2%) translateY(-44%);
+}
+
+.increase{
+  position: absolute;
+  top: 74.4%;
+  left: 51%;
+  transform: translateX(-74.4%) translateY(-51%);
+}
+
+.v2rv{
+  position: absolute;
+  top: 74.5%;
+  left: 56.8%;
+  transform: translateX(-74.5%) translateY(-56.8%);
+}
+
+.v2rv1{
+  position: absolute;
+  top: 74.6%;
+  left: 61.8%;
+  transform: translateX(-74.6%) translateY(-61.8%);
+}
+
+nav {
+  background-color: yellow; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.lolz{
+  box-sizing: border-box;
+  width: 550px;
+  height: 20px;
+  padding: 30px;  
+  border: 10px groove yellow;
+  position: absolute;
+  top: 74.8%;
+  left: 57%;
+  transform: translateX(-74.8%) translateY(-57%);
+}
+
+h3{
+  color: white;
+}
+
+
+
