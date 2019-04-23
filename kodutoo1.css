@@ -1,0 +1,20 @@
+body{
+  text-align: center;
+  color: black;
+  font-family: verdana;
+
+}
+button{
+  text-align: center;
+  width: 10%;
+  background-color: lightgray;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.day{
+  
+}
