@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emma Loore Tae, kell</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<button id="button1" type="button" onclick="alert('See leht on loodud eesrakenduste esimese kodutöö jaoks. Lehe autor on Emma Loore Tae.')">Hea teada</button>
+	<br>
+	<p>Siit saad muuta kella taustavärvi:</p>
+	<button onclick="must()" id="button1" type="button">Must</button>
+	<button onclick="sinine()" id="button1" type="button">Sinine</button>
+	<button onclick="oranz()" id="button1" type="button">Oranž</button>
+	<button onclick="trans()" id="button1" type="button">Puudub</button>
+	<br>
+	<br>
+	<div id="mustDiv">
+		<span id="clock">00:00.0</h1>
+	</div>
+	<p id="hex-color" >#000000</p>
+	<script src="kell.js"></script>
+	<br>
+	<h2 id="p2ev2">Täna on: </h2>
+	<p id="p2ev"></p>
+	<script>
+	var d = new Date();
+	var days = ["Pühapäev","Esmaspäev","Teisipäev","Kolmapäev","Neljapäev","Reede","Laupäev"];
+	var months = ["jaanuar", "veebruar", "märts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"];
+	document.getElementById("p2ev").innerHTML = days[d.getDay()] + ", " + d.getDate() + "." + months[d.getMonth()] + " " + d.getFullYear();
+	</script>
+</body>
+</html>
