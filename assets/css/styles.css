@@ -20,6 +20,7 @@ body {
     position: absolute;
     left: 300px;
     top: 300px;
+    
 }
 
 .hr-hand {
@@ -121,3 +122,4 @@ body {
   color:#000;
   font-size:1.5em;
 }
+
