@@ -54,30 +54,51 @@ window.onload = function () {
 
     run();
 
-    let changeColorButton;
 
+  
+    var author = document.querySelector(".author");
+    var hr_hand = document.querySelector(".hr-hand");
+    var min_hand = document.querySelector(".min-hand");
+    var hr_sec = document.querySelector(".sec-hand");
 
-    window.onload = function(){
-      init();
+      author.onclick = function() {
+      var red = Math.floor(Math.random() * 256);
+      var blue = Math.floor(Math.random() * 256);
+      var green = Math.floor(Math.random() * 256);
+
+      this.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
     };
 
-    function init(){
-      changeColorButton = document.querySelector('#clockButton');
 
 
-      changeColorButton.addEventListener('click', changeClockColor); //klikkil muudab
-      //window.addEventListener('click', changeClockColor); //hiire liigutusel muudab
-      startClock();
-    }
 
-    function changeClockColor(){
-      console.log("Muudan värvi");
-      const r = Math.round(Math.random()*255);
-      const g = Math.round(Math.random()*255);
-      const b = Math.round(Math.random()*255);
+    hr_hand.onclick = function() {
+    var red = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
 
-      //document.body.style.changeClockColor = 'rgb('+r+','+g+','+b+')';
-      document.body.style.ClockColor = `rgb(${r},${g},${b})`;
-      //clockContainer.style.changeClockColor = 'rgb('+r+','+g+','+b+')';
-    }
+    this.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
   };
+
+    min_hand.onclick = function() {
+    var red = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+
+    this.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+  };
+
+  hr_sec.onclick = function() {
+    var red = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+
+    this.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+  };
+
+
+
+
+
+
+};
