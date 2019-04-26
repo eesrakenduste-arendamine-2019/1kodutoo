@@ -2,16 +2,54 @@
 window.onload = function(){
   changeColorButton = document.querySelector('#changeBgColor');
   changeColorButton.addEventListener('click', changeBackgroundColor);
+  changeDateColorButton = document.querySelector('#dvb');
+  changeDateColorButton.addEventListener('click', changeDateColor);
+  changeClockButton = document.querySelector('#move');
+  changeClockButton.addEventListener('click', changeClockPos);
+  changeClockFont = document.querySelector('#font');
+  changeClockFont.addEventListener('click', changeClockFontSize);
+
 };
+
+function changeClockPos(){
+
+  if(document.getElementById("moveCheckbox").checked == true){
+    document.getElementById("clock").style.display = "none";
+    document.getElementById("clock1").style.display = "block";
+  } else {
+    document.getElementById("clock").style.display = "block";
+    document.getElementById("clock1").style.display = "none";
+  }
+
+}
 //keskel asuv kell
+function changeClockFontSize(){
+
+  if(document.getElementById("fontCheckbox").checked == false){
+    console.log("123");
+    document.getElementById("clock").style.fontSize = "6em";
+    document.getElementById("clock1").style.fontSize = "6em";
+  } else {
+
+    document.getElementById("clock").style.fontSize = "2em";
+    document.getElementById("clock1").style.fontSize = "2em";
+
+  }
+}
+
+
 function clock() {// We create a new Date object and assign it to a variable called "time".
 var time = new Date(),
     hours = time.getHours(),
     minutes = time.getMinutes(),
     seconds = time.getSeconds();
 
+
 document.querySelectorAll('.clock')[0].innerHTML = clockk(hours) + ":" + clockk(minutes) + ":" + clockk(seconds);
 //document.querySelectorAll('.date')[0].innerHTML = clockk(days) + ":" + clockk(months) + ":" + clockk(years);
+
+
+document.querySelectorAll('#clock1')[0].innerHTML = clockk(hours) + ":" + clockk(minutes) + ":" + clockk(seconds);
 
 function clockk(standIn) {
     if (standIn < 10) {
@@ -23,8 +61,20 @@ function clockk(standIn) {
 setInterval(clock, 1000);
 //taustavärvi vahetus
 function changeBackgroundColor(){
-  bgColorr=(bgColor.value);
-  document.body.style.backgroundColor = (bgColorr);
+  console.log("lammas");
+  // bgColorr=(bgColor.value);
+  // document.body.style.backgroundColor = (bgColorr);
+  document.body.style.backgroundColor = (bgColor.value);
+}
+
+function changeDateColor(){
+  for (var i = 0; i <= document.getElementsByClassName("dv").length - 1; i++) {
+    document.getElementsByClassName("dv")[i].style.color = (dateColor .value);
+  }
+  //document.getElementsByClassName("dv").style.color = "yellow";
+  //console.log(document.getElementsByClassName("dv").length)
+
+
 }
 //päeva saamine
 let day;

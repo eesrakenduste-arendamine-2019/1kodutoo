@@ -18,19 +18,40 @@
            value="#666666">
     <label for="bgColorN" class="labelc">Vali taustavärv</label>
   </div>
-  <button id=changeBgColor class="myButton">Muuda taustavärvi</button>
+
+  <button id="changeBgColor" class="myButton">Muuda taustavärvi</button>
+
   <p></p>
+
   <div>
     <input type="color" id="dateColor" name="dateColorN"
            value="#ffffff">
     <label for="dateColorN" class="labelc">Vali kuupäeva teksti värv</label>
   </div>
-  <button id=changeDColor class="myButton">Muuda teksti värvi</button>
+
+  <button id="dvb"  class="myButton">Muuda teksti värvi</button>
+<br><br>
+  <label class="switch" id="move" name="das">
+    <input type="checkbox" id="moveCheckbox">
+    <span class="slider round"></span>
+
+  </label>
+  <label for="das" class="labelc">Liiguta kella</label>
+<br><br>
+
+<label class="switch" id="font" name="das">
+  <input type="checkbox" id="fontCheckbox">
+  <span class="slider round"></span>
+
+</label>
+<label for="das" class="labelc">Kella suurus</label>
+
   <div id="date">
-    <span id=dayC></span>
-    <span id=dayCc></span>
-    <span id=monthC></span>
-    <span id=yearC></span>
+    <div id=clock1 class="clock1" style="display:none"></div>
+    <span id=dayC class="dv"></span>
+    <span id=dayCc class="dv"></span>
+    <span id=monthC class="dv"></span>
+    <span id=yearC class="dv"></span>
     <div id=clock class="clock"></div>
   </div>
   <a href=https://github.com/markusmust/1kodutoo style="text-decoration: none" class="repo">Repositorie</a>
