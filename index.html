@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="index.js"></script>
+</head>
+<style>
+  .clock{
+    position: absolute;
+    color: black;
+    font: italic bold 1px/75px Georgia, serif;
+    text-shadow: 2px 2px #ff0000;
+    text-decoration: underline;
+    top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   font-size: 50px;
+   transform: translate(-50%, -50%) }
+
+  }
+
+  h6{
+      font-family: 'Oswald', sans-serif;
+		}
+    input {
+      width: 15%;
+      padding: 8px 16px;
+      margin: 2px 0;
+      box-sizing: border-box;
+      border: 3px solid black;
+      border-radius: 4px;
+      color: solid black;
+    }
+    button{
+      width: 15%;
+      padding: 8px 16px;
+      margin: 2px 0;
+      box-sizing: border-box;
+      border: 3px solid black;
+      border-radius: 4px;
+
+    }
+
+}
+
+
+</style>
+<body>
+  <p><h3>Koostaja: Andreas Malleus</h3></p>
+  <a href="https://github.com/Andreasmalleus/1kodutoo">Link repositooriumile</a>
+<div class="clock" id="whole">
+  <div id="clockContainer"></div>
+  <div id="dayContainer"></div>
+  <div id="monthContainer"></div>
+</div>
+<h6>Size must be integers and values are taken as pixels</h6>
+<input type="text" id="changeclocksize" placeholder="time size in pixels"><br>
+<input type="text" id="changedaysize" placeholder="day size in pixels"><br>
+<input type="text" id="changemonthsize" placeholder="month size in pixels"><br>
+<h6>Colors must be strings and grammaticaly correct</h6>
+<input type="text" id="changeclockcolor" placeholder="change time color"><br>
+<input type="text" id="changedaycolor" placeholder="change day color"><br>
+<input type="text" id="changemonthcolor" placeholder="change month color"><br>
+
+
+
+<button id="submit" onclick="submit()">Submit</button>
+</body>
+</html>
