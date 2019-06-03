@@ -4,27 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="index.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css"></style>
-  <head>
+  <base target="_blank">
+  <link rel="stylesheet" type="text/css" href="style1.css">
+  <script src="index1.js" defer></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-
-</head>
   <title>Kell</title>
+  <div data-role="navbar">
+        <ul>
+          <li><a href="#electronic"  >Elektrooniline kell</a></li>
+          <li><a href="#analog"  >Analoogkell</a></li>
 
+        </ul>
+      </div>
 </head>
 <body>
-  <div id="clockContainer" class="clockContainer"></div>
-  <div id="dayContainer" class="dayContainer"></div>
-  <button id="change-color" class="changeBackgroundColor">Muuda värvi</button>
 
 
+
+
+    <div data-role="page" id="electronic">
+      <header data-role="header" data-theme="b">
+        <h1>Elektrooniline kell</h1>
+      </header>
+      <div data-role="navbar">
+            <ul>
+
+              <li><a href="#electronic"  >Elektrooniline kell</a></li>
+              <li><a href="#analog"  >Analoogkell</a></li>
+            </ul>
+          </div>
+      <div data-role="content">
+        <div id="clockContainer" class="clockContainer"></div>
+        <div id="dayContainer" class="dayContainer"></div>
+        <button id="change-color" class="changeBackgroundColor">Muuda värvi</button>
+      </div>
+      <p>Karl-Daniel Karu</p>
+      <p>https://github.com/kdkaru/1kodutoo</p>
+    </div>
+
+    <div data-role="page" id="analog">
+      <header data-role="header" data-theme="b">
+        <h1>Analoogkell</h1>
+      </header>
+      <div data-role="navbar">
+            <ul>
+              <li><a href="#electronic"  >Elektrooniline kell</a></li>
+              <li><a href="#analog"  >Analoogkell</a></li>
+            </ul>
+          </div>
+      <div data-role="content">
+
+        <canvas id="clock-canvas" width="450" height="450">
+</canvas>
+
+<script>
+var element = document.getElementById("clock-canvas");
+var graphic = element.getContext("2d");
+var radius = element.height / 2;
+graphic.translate(radius, radius);
+radius = radius * 0.90
+setInterval(startClock, 1000);
+//we are calling startClock every second which makes the clock look like its moving.
+
+function startClock() {
+  drawFace(graphic, radius);
+  drawNumbers(graphic, radius);
+  drawTime(graphic, radius);
+}
+
+function drawFace(graphic, radius) {
+  var grad;
+  graphic.beginPath();
+  graphic.arc(0, 0, radius, 0, 2*Math.PI);
+  graphic.fillStyle = 'white';
+  graphic.fill();
+
+  graphic.stroke();
+  graphic.beginPath();
+  graphic.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  graphic.fillStyle = '#333';
+  graphic.fill();
+}
+
+function drawNumbers(graphic, radius) {
+  var angle;
+  var number;
+  graphic.font = radius*0.15 + "px arial";
+  graphic.textBaseline="middle";
+  graphic.textAlign="center";
+  for(number = 1; number < 13; number++){
+    angle = number * Math.PI / 6;
+    graphic.rotate(angle);
+    graphic.translate(0, -radius*0.85);
+    graphic.rotate(-angle);
+    graphic.fillText(number.toString(), 0, 0);
+    graphic.rotate(angle);
+    graphic.translate(0, radius*0.85);
+    graphic.rotate(-angle);
+  }
+}
+
+function drawTime(graphic, radius){
+    var currentTime = new Date();
+    var hour = currentTime.getHours();
+    var minute = currentTime.getMinutes();
+    var second = currentTime.getSeconds();
+
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));
+    drawHand(graphic, hour, radius*0.5, radius*0.07);
+
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(graphic, minute, radius*0.8, radius*0.07);
+
+    second=(second*Math.PI/30);
+    drawHand(graphic, second, radius*0.9, radius*0.02);
+}
+function drawHand(graphic, position, length, width) {
+    graphic.beginPath();
+    graphic.lineWidth = width;
+    graphic.lineCap = "round";
+    graphic.moveTo(0,0);
+    graphic.rotate(position);
+    graphic.lineTo(0, -length);
+    graphic.stroke();
+    graphic.rotate(-position);
+}
+</script>
+      </div>
+      <p>Karl-Daniel Karu</p>
+      <p>https://github.com/kdkaru/1kodutoo</p>
+    </div>
 </div>
 
-
-  <p>Karl-Daniel Karu</p>
-  <p>https://github.com/kdkaru/1kodutoo</p>
-
-
+  
 </body>
 </html>
