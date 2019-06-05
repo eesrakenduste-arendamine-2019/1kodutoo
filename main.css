@@ -1,0 +1,87 @@
+body, html {
+    height: 100%;
+    background-image: url(deer.jpg);
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+  
+#flex-container {
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+
+#clock {
+    color: white;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Courier New', cursive;
+    padding-top: 60px;
+
+}
+
+#date {
+    color: white;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Helvetica', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+#outer {
+    width: auto;
+    margin: auto;
+    width: 400px;
+
+}
+.buttonList {
+    width:50%;
+    position:fixed;
+    width:100px;
+    height:100px;
+    left:10px;
+    top:450px;
+    
+}
+
+.button {
+    margin-top: 15px;
+    font-family: 'Courier New', cursive;
+    font-size: 15px;
+    color: rgb(197, 197, 197);
+    background: none;
+    outline: none;
+    border: none;
+    
+}
+
+.info {
+    position: fixed;
+    bottom: 2em;
+    right: 1em;
+    padding-right: 15px;
+    font-family: 'Courier New', cursive;
+}
