@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="index.js"></script>
-  <title>Clock</title>
+  <title>Document</title>
+  <script src="clock.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-  <div id="clockContainer"></div>
-  <div id="dayContainer"></div>
-  <button id="change-color">Demo</button>
-
+    <div id="flex-container">
+          <div id="outer">
+            <div id="clock" class="clock"></div>
+            <div id="date" class="date"></div>
+            <div class="buttonList">
+            <input type="button" class="button" value="Change color" onclick="changeColor()">
+            <br>
+            <input type="button" class="button" value="Fullscreen" onclick="fullScreen()">
+            <br>
+            <input type="button" class="button" value="Increase" onclick="fontSizeBigger()">
+            <br>
+            <input type="button" class="button" value="Decrease" onclick="fontSizeSmaller()">
+          </div>
+     </div>
+     <div id="info" class="info">
+      <a href="https://github.com//mariannearuste/1kodutoo">Github</a>
+      <p>Marianne Aruste</p>
+     </div>
 </body>
 </html>
