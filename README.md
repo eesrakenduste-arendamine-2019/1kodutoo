@@ -12,7 +12,7 @@ Funktsionaalsus
 
 http://localhost:5555/~mariaru/eesrakendused/kodut%C3%B6%C3%B6d/1kodutoo/1kodutoo/
 
-![alt text](ScreenShot2019-06-05at15.25.52.png)
+![alt text](Screen%20Shot%202019-06-05%20at%2015.25.52.png)
 
 ## Nõuded
 
