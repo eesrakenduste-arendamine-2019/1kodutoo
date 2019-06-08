@@ -34,3 +34,6 @@ Kujunda kellan채ide vastavalt maitsele v천i kindlale teemale, mahutades kella t�
 * S체ndmuste loetelu [HTML DOM Events](http://www.w3schools.com/jsref/dom_obj_event.asp)
 * Ajal p천hinevad s체ndmused [JavaScript Timing Events](http://www.w3schools.com/js/js_timing.asp)
 * CSSi muutmine [HTML DOM Style Object](http://www.w3schools.com/jsref/dom_obj_style.asp)
+
+Autor: Johanna Maarja Eller. 
+Fuktsionaalsused:Kella tausta-ja tekstiv채rvi saab randomiga muuta. Taustaks saab m채ngima panna laulu.
