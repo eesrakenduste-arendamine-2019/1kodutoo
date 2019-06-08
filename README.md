@@ -37,3 +37,4 @@ Kujunda kellanäide vastavalt maitsele või kindlale teemale, mahutades kella t�
 
 Autor: Johanna Maarja Eller. 
 Fuktsionaalsused:Kella tausta-ja tekstivärvi saab randomiga muuta. Taustaks saab mängima panna laulu.
+link: http://lin2.tlu.ee/~jmaarjae/Kell/kell.html
